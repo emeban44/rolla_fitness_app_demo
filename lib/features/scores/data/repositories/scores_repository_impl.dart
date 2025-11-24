@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import 'package:rolla_fitness_app_demo/core/error/failures.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
@@ -10,10 +11,11 @@ import 'package:rolla_fitness_app_demo/features/scores/domain/repositories/score
 import 'package:rolla_fitness_app_demo/features/scores/data/datasources/scores_local_datasource.dart';
 
 /// Repository implementation using local datasource
+@LazySingleton(as: ScoresRepository)
 class ScoresRepositoryImpl implements ScoresRepository {
   final ScoresLocalDataSource localDataSource;
 
-  ScoresRepositoryImpl({required this.localDataSource});
+  ScoresRepositoryImpl(this.localDataSource);
 
   @override
   Future<Either<Failure, List<Score>>> getScores() async {

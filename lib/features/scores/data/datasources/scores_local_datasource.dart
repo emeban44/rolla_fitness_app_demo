@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:injectable/injectable.dart';
 import 'package:rolla_fitness_app_demo/features/scores/data/models/score_model.dart';
 import 'package:rolla_fitness_app_demo/features/scores/data/models/metric_model.dart';
 import 'package:rolla_fitness_app_demo/features/scores/data/models/score_history_point_model.dart';
@@ -19,6 +20,7 @@ abstract class ScoresLocalDataSource {
 }
 
 /// Implementation of local datasource
+@LazySingleton(as: ScoresLocalDataSource)
 class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
   static const String _jsonPath = 'assets/data/scores_data.json';
   Map<String, dynamic>? _cachedData;
