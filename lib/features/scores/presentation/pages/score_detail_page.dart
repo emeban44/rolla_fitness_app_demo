@@ -13,6 +13,7 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metr
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radial_gauge.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/timeframe_selector.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/trend_chart.dart';
+import 'package:rolla_fitness_app_demo/main.dart';
 
 /// Score detail page - reusable for Health, Readiness, and Activity scores
 class ScoreDetailPage extends StatelessWidget {
@@ -43,12 +44,29 @@ class ScoreDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         title: Text(scoreType.displayName),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
+        actions: [
+          TextButton.icon(
+            onPressed: () {
+              RollaFitnessApp.of(context)?.toggleTheme();
+            },
+            icon: Icon(
+              isDark ? Icons.light_mode : Icons.dark_mode,
+              size: 20,
+            ),
+            label: Text(
+              isDark ? 'Light' : 'Dark',
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+          ),
+        ],
       ),
       body: BlocBuilder<ScoreDetailCubit, ScoreDetailState>(
         builder: (context, state) {

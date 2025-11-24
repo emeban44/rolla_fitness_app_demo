@@ -13,8 +13,27 @@ void main() async {
   runApp(const RollaFitnessApp());
 }
 
-class RollaFitnessApp extends StatelessWidget {
+class RollaFitnessApp extends StatefulWidget {
   const RollaFitnessApp({super.key});
+
+  @override
+  State<RollaFitnessApp> createState() => RollaFitnessAppState();
+
+  static RollaFitnessAppState? of(BuildContext context) {
+    return context.findAncestorStateOfType<RollaFitnessAppState>();
+  }
+}
+
+class RollaFitnessAppState extends State<RollaFitnessApp> {
+  ThemeMode _themeMode = ThemeMode.light;
+
+  void toggleTheme() {
+    setState(() {
+      _themeMode = _themeMode == ThemeMode.light
+          ? ThemeMode.dark
+          : ThemeMode.light;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +42,7 @@ class RollaFitnessApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
-      themeMode: ThemeMode.system,
+      themeMode: _themeMode,
       home: const ScoreDetailPage(scoreType: ScoreType.health),
     );
   }
