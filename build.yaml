@@ -1,0 +1,11 @@
+targets:
+  $default:
+    builders:
+      freezed:
+        options:
+          # Generate toString, == and hashCode
+          equal: true
+          to_string: true
+          # Don't generate JSON by default - only for data models
+          from_json: false
+          to_json: false
