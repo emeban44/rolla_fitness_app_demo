@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/service_locator.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_theme.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/score_detail_page.dart';
 
@@ -13,37 +15,25 @@ void main() async {
   runApp(const RollaFitnessApp());
 }
 
-class RollaFitnessApp extends StatefulWidget {
+class RollaFitnessApp extends StatelessWidget {
   const RollaFitnessApp({super.key});
 
   @override
-  State<RollaFitnessApp> createState() => RollaFitnessAppState();
-
-  static RollaFitnessAppState? of(BuildContext context) {
-    return context.findAncestorStateOfType<RollaFitnessAppState>();
-  }
-}
-
-class RollaFitnessAppState extends State<RollaFitnessApp> {
-  ThemeMode _themeMode = ThemeMode.light;
-
-  void toggleTheme() {
-    setState(() {
-      _themeMode = _themeMode == ThemeMode.light
-          ? ThemeMode.dark
-          : ThemeMode.light;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Rolla Fitness',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.light(),
-      darkTheme: AppTheme.dark(),
-      themeMode: _themeMode,
-      home: const ScoreDetailPage(scoreType: ScoreType.health),
+    return BlocProvider(
+      create: (context) => ThemeCubit(),
+      child: BlocBuilder<ThemeCubit, ThemeMode>(
+        builder: (context, themeMode) {
+          return MaterialApp(
+            title: 'Rolla Fitness',
+            debugShowCheckedModeBanner: false,
+            theme: AppTheme.light(),
+            darkTheme: AppTheme.dark(),
+            themeMode: themeMode,
+            home: const ScoreDetailPage(scoreType: ScoreType.health),
+          );
+        },
+      ),
     );
   }
 }

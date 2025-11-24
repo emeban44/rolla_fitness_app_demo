@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:rolla_fitness_app_demo/core/di/service_locator.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
@@ -13,7 +14,6 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metr
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radial_gauge.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/timeframe_selector.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/trend_chart.dart';
-import 'package:rolla_fitness_app_demo/main.dart';
 
 /// Score detail page - reusable for Health, Readiness, and Activity scores
 class ScoreDetailPage extends StatelessWidget {
@@ -55,7 +55,7 @@ class ScoreDetailView extends StatelessWidget {
         actions: [
           TextButton.icon(
             onPressed: () {
-              RollaFitnessApp.of(context)?.toggleTheme();
+              context.read<ThemeCubit>().toggleTheme();
             },
             icon: Icon(
               isDark ? Icons.light_mode : Icons.dark_mode,
