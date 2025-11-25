@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$Score {
   ScoreType get type => throw _privateConstructorUsedError;
-  int get value => throw _privateConstructorUsedError;
+  int? get value => throw _privateConstructorUsedError;
   List<Metric> get metrics => throw _privateConstructorUsedError;
 
   /// Create a copy of Score
@@ -32,7 +32,7 @@ abstract class $ScoreCopyWith<$Res> {
   factory $ScoreCopyWith(Score value, $Res Function(Score) then) =
       _$ScoreCopyWithImpl<$Res, Score>;
   @useResult
-  $Res call({ScoreType type, int value, List<Metric> metrics});
+  $Res call({ScoreType type, int? value, List<Metric> metrics});
 }
 
 /// @nodoc
@@ -51,7 +51,7 @@ class _$ScoreCopyWithImpl<$Res, $Val extends Score>
   @override
   $Res call({
     Object? type = null,
-    Object? value = null,
+    Object? value = freezed,
     Object? metrics = null,
   }) {
     return _then(
@@ -60,10 +60,10 @@ class _$ScoreCopyWithImpl<$Res, $Val extends Score>
                 ? _value.type
                 : type // ignore: cast_nullable_to_non_nullable
                       as ScoreType,
-            value: null == value
+            value: freezed == value
                 ? _value.value
                 : value // ignore: cast_nullable_to_non_nullable
-                      as int,
+                      as int?,
             metrics: null == metrics
                 ? _value.metrics
                 : metrics // ignore: cast_nullable_to_non_nullable
@@ -82,7 +82,7 @@ abstract class _$$ScoreImplCopyWith<$Res> implements $ScoreCopyWith<$Res> {
   ) = __$$ScoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ScoreType type, int value, List<Metric> metrics});
+  $Res call({ScoreType type, int? value, List<Metric> metrics});
 }
 
 /// @nodoc
@@ -100,7 +100,7 @@ class __$$ScoreImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? type = null,
-    Object? value = null,
+    Object? value = freezed,
     Object? metrics = null,
   }) {
     return _then(
@@ -109,10 +109,10 @@ class __$$ScoreImplCopyWithImpl<$Res>
             ? _value.type
             : type // ignore: cast_nullable_to_non_nullable
                   as ScoreType,
-        value: null == value
+        value: freezed == value
             ? _value.value
             : value // ignore: cast_nullable_to_non_nullable
-                  as int,
+                  as int?,
         metrics: null == metrics
             ? _value._metrics
             : metrics // ignore: cast_nullable_to_non_nullable
@@ -135,7 +135,7 @@ class _$ScoreImpl extends _Score {
   @override
   final ScoreType type;
   @override
-  final int value;
+  final int? value;
   final List<Metric> _metrics;
   @override
   List<Metric> get metrics {
@@ -179,7 +179,7 @@ class _$ScoreImpl extends _Score {
 abstract class _Score extends Score {
   const factory _Score({
     required final ScoreType type,
-    required final int value,
+    required final int? value,
     required final List<Metric> metrics,
   }) = _$ScoreImpl;
   const _Score._() : super._();
@@ -187,7 +187,7 @@ abstract class _Score extends Score {
   @override
   ScoreType get type;
   @override
-  int get value;
+  int? get value;
   @override
   List<Metric> get metrics;
 

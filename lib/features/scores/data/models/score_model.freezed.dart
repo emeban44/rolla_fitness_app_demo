@@ -22,7 +22,7 @@ ScoreModel _$ScoreModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ScoreModel {
   String get type => throw _privateConstructorUsedError;
-  int get value => throw _privateConstructorUsedError;
+  int? get value => throw _privateConstructorUsedError;
   List<MetricModel> get metrics => throw _privateConstructorUsedError;
 
   /// Serializes this ScoreModel to a JSON map.
@@ -42,7 +42,7 @@ abstract class $ScoreModelCopyWith<$Res> {
     $Res Function(ScoreModel) then,
   ) = _$ScoreModelCopyWithImpl<$Res, ScoreModel>;
   @useResult
-  $Res call({String type, int value, List<MetricModel> metrics});
+  $Res call({String type, int? value, List<MetricModel> metrics});
 }
 
 /// @nodoc
@@ -61,7 +61,7 @@ class _$ScoreModelCopyWithImpl<$Res, $Val extends ScoreModel>
   @override
   $Res call({
     Object? type = null,
-    Object? value = null,
+    Object? value = freezed,
     Object? metrics = null,
   }) {
     return _then(
@@ -70,10 +70,10 @@ class _$ScoreModelCopyWithImpl<$Res, $Val extends ScoreModel>
                 ? _value.type
                 : type // ignore: cast_nullable_to_non_nullable
                       as String,
-            value: null == value
+            value: freezed == value
                 ? _value.value
                 : value // ignore: cast_nullable_to_non_nullable
-                      as int,
+                      as int?,
             metrics: null == metrics
                 ? _value.metrics
                 : metrics // ignore: cast_nullable_to_non_nullable
@@ -93,7 +93,7 @@ abstract class _$$ScoreModelImplCopyWith<$Res>
   ) = __$$ScoreModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String type, int value, List<MetricModel> metrics});
+  $Res call({String type, int? value, List<MetricModel> metrics});
 }
 
 /// @nodoc
@@ -111,7 +111,7 @@ class __$$ScoreModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? type = null,
-    Object? value = null,
+    Object? value = freezed,
     Object? metrics = null,
   }) {
     return _then(
@@ -120,10 +120,10 @@ class __$$ScoreModelImplCopyWithImpl<$Res>
             ? _value.type
             : type // ignore: cast_nullable_to_non_nullable
                   as String,
-        value: null == value
+        value: freezed == value
             ? _value.value
             : value // ignore: cast_nullable_to_non_nullable
-                  as int,
+                  as int?,
         metrics: null == metrics
             ? _value._metrics
             : metrics // ignore: cast_nullable_to_non_nullable
@@ -149,7 +149,7 @@ class _$ScoreModelImpl extends _ScoreModel {
   @override
   final String type;
   @override
-  final int value;
+  final int? value;
   final List<MetricModel> _metrics;
   @override
   List<MetricModel> get metrics {
@@ -199,7 +199,7 @@ class _$ScoreModelImpl extends _ScoreModel {
 abstract class _ScoreModel extends ScoreModel {
   const factory _ScoreModel({
     required final String type,
-    required final int value,
+    required final int? value,
     required final List<MetricModel> metrics,
   }) = _$ScoreModelImpl;
   const _ScoreModel._() : super._();
@@ -210,7 +210,7 @@ abstract class _ScoreModel extends ScoreModel {
   @override
   String get type;
   @override
-  int get value;
+  int? get value;
   @override
   List<MetricModel> get metrics;
 

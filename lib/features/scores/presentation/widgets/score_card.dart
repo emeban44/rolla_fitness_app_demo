@@ -4,9 +4,10 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radi
 
 /// Reusable score card widget displaying a score with radial gauge
 /// Used on both home page and detail page
+/// Shows "N/A" when score is null (missing data)
 class ScoreCard extends StatelessWidget {
   final ScoreType scoreType;
-  final int score;
+  final int? score;
   final VoidCallback? onTap;
 
   const ScoreCard({

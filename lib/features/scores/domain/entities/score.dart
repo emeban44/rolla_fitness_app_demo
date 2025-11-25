@@ -9,7 +9,7 @@ part 'score.freezed.dart';
 class Score with _$Score {
   const factory Score({
     required ScoreType type,
-    required int value,
+    required int? value,
     required List<Metric> metrics,
   }) = _Score;
 

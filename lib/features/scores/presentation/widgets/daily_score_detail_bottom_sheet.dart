@@ -6,7 +6,7 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radi
 /// Bottom sheet showing daily score details with metrics and info
 class DailyScoreDetailBottomSheet extends StatelessWidget {
   final String scoreTitle;
-  final int scoreValue;
+  final int? scoreValue;
   final Color scoreColor;
   final List<Metric> metrics;
   final MetricInfo? info;
@@ -24,7 +24,7 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
   static void show({
     required BuildContext context,
     required String scoreTitle,
-    required int scoreValue,
+    required int? scoreValue,
     required Color scoreColor,
     required List<Metric> metrics,
     MetricInfo? info,

@@ -9,7 +9,7 @@ part of 'score_model.dart';
 _$ScoreModelImpl _$$ScoreModelImplFromJson(Map<String, dynamic> json) =>
     _$ScoreModelImpl(
       type: json['type'] as String,
-      value: (json['value'] as num).toInt(),
+      value: (json['value'] as num?)?.toInt(),
       metrics: (json['metrics'] as List<dynamic>)
           .map((e) => MetricModel.fromJson(e as Map<String, dynamic>))
           .toList(),

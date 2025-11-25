@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_typography.dart';
 
 /// Neumorphic circular radial gauge showing score 0-100
+/// Shows "N/A" when score is null (missing data)
 /// Clean, reusable widget without background decorations
 class RadialGauge extends StatelessWidget {
-  final int score;
+  final int? score;
   final Color color;
   final double size;
 
@@ -49,7 +50,7 @@ class RadialGauge extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              score.toString(),
+              score?.toString() ?? 'N/A',
               style: AppTypography.scoreValueLarge(context),
             ),
           ),
@@ -61,7 +62,7 @@ class RadialGauge extends StatelessWidget {
 
 /// Painter for the colored arc showing score with background track
 class ArcPainter extends CustomPainter {
-  final int score;
+  final int? score;
   final Color color;
   final double strokeWidth;
   final bool isDark;
@@ -101,23 +102,25 @@ class ArcPainter extends CustomPainter {
       backgroundPaint,
     );
 
-    // Draw colored arc (actual progress) on top
-    final progressPaint = Paint()
-      ..color = color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = strokeWidth
-      ..strokeCap = StrokeCap.round;
+    // Only draw colored arc if score is available (not null)
+    if (score != null) {
+      final progressPaint = Paint()
+        ..color = color
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = strokeWidth
+        ..strokeCap = StrokeCap.round;
 
-    const startAngle = -math.pi / 2; // Start at top
-    final sweepAngle = 2 * math.pi * (score / 100); // Score percentage
+      const startAngle = -math.pi / 2; // Start at top
+      final sweepAngle = 2 * math.pi * (score! / 100); // Score percentage
 
-    canvas.drawArc(
-      rect,
-      startAngle,
-      sweepAngle,
-      false,
-      progressPaint,
-    );
+      canvas.drawArc(
+        rect,
+        startAngle,
+        sweepAngle,
+        false,
+        progressPaint,
+      );
+    }
   }
 
   @override

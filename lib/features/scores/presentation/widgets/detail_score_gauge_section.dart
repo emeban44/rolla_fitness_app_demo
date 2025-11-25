@@ -5,9 +5,10 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radi
 
 /// Gauge with ripple dotted background
 /// Focused only on displaying the gauge with visual background effect
+/// Shows "N/A" when score is null (missing data)
 class DetailScoreGaugeSection extends StatelessWidget {
   final ScoreType scoreType;
-  final int score;
+  final int? score;
 
   const DetailScoreGaugeSection({
     super.key,

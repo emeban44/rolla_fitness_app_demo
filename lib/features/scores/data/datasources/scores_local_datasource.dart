@@ -91,8 +91,8 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
     final scoreData = scoresData[scoreType.toLowerCase()] as Map<String, dynamic>;
     final metricsData = scoreData['metrics'] as Map<String, dynamic>;
 
-    // Use the historical value if available, otherwise fall back to current_value
-    final scoreValue = historyPoint?.value ?? scoreData['current_value'] as int;
+    // Use the historical value - preserve null to indicate missing data
+    final scoreValue = historyPoint?.value;
 
     // Build metrics
     final metrics = <MetricModel>[];

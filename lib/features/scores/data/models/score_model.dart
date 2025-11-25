@@ -10,7 +10,7 @@ part 'score_model.g.dart';
 class ScoreModel with _$ScoreModel {
   const factory ScoreModel({
     required String type,
-    required int value,
+    required int? value,
     required List<MetricModel> metrics,
   }) = _ScoreModel;
 
