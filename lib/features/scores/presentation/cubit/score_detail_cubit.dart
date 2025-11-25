@@ -81,7 +81,8 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
   Future<void> changeTimeframe(Timeframe newTimeframe) async {
     state.maybeWhen(
       loaded: (score, history, insights, timeframe, scoreType, selectedDate) {
-        loadScoreDetail(scoreType, newTimeframe, selectedDate: selectedDate);
+        // Always reset to today when changing timeframe
+        loadScoreDetail(scoreType, newTimeframe, selectedDate: DateTime.now());
       },
       orElse: () {},
     );
