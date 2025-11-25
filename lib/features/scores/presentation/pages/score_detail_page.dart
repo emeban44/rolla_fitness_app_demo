@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:rolla_fitness_app_demo/core/di/service_locator.dart';
 import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
@@ -119,7 +120,13 @@ class ScoreDetailView extends StatelessWidget {
                           },
                           topRightWidget: Text(
                             DateFormat('d MMM').format(DateTime.now()),
-                            style: Theme.of(context).textTheme.titleMedium,
+                            style: GoogleFonts.outfit(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              height: 1.0,
+                              letterSpacing: 0,
+                              color: Theme.of(context).textTheme.bodyLarge?.color,
+                            ),
                           ),
                         ),
                       ] else ...[

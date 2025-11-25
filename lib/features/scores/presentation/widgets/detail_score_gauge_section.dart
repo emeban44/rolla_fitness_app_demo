@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radial_gauge.dart';
 
@@ -26,8 +27,7 @@ class DetailScoreGaugeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const gaugeSize = 140.0; // Fixed gauge size (per Figma)
-    const gaugeTopOffset =
-        128.0; // Fixed position from top (moved up for better ripple visibility)
+    const gaugeTopOffset = 130.0; // Fixed position from top
 
     return Container(
       width: double.infinity,
@@ -52,10 +52,16 @@ class DetailScoreGaugeSection extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(16, 24, 16, 0),
                 child: Row(
                   children: [
-                    // Title with info icon
+                    // Title with info icon (Figma: 20px, weight 400)
                     Text(
                       scoreType.displayName,
-                      style: Theme.of(context).textTheme.headlineSmall,
+                      style: GoogleFonts.outfit(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                        height: 1.0,
+                        letterSpacing: 0,
+                        color: Theme.of(context).textTheme.bodyLarge?.color,
+                      ),
                     ),
                     const SizedBox(width: 8),
                     if (onInfoTap != null)
@@ -66,14 +72,12 @@ class DetailScoreGaugeSection extends StatelessWidget {
                           height: 32,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Theme.of(context).textTheme.bodySmall?.color
-                                ?.withValues(alpha: 0.1),
+                            color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.1),
                           ),
                           child: Icon(
                             Icons.help_outline,
                             size: 18,
-                            color: Theme.of(context).textTheme.bodySmall?.color
-                                ?.withValues(alpha: 0.6),
+                            color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
                           ),
                         ),
                       ),
@@ -84,26 +88,26 @@ class DetailScoreGaugeSection extends StatelessWidget {
                 ),
               ),
 
-              // Subtitle (fixed position, doesn't affect gauge)
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-                child: SizedBox(
-                  height: 28,
-                  child: subtitle != null
-                      ? Text(
-                          subtitle!,
-                          style: Theme.of(context).textTheme.titleMedium
-                              ?.copyWith(
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyMedium
-                                    ?.color
-                                    ?.withValues(alpha: 0.7),
-                              ),
-                        )
-                      : const SizedBox.shrink(),
+              // Subtitle
+              // Figma: 16px, weight 400, 60% opacity
+              if (subtitle != null)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+                  child: Text(
+                    subtitle!,
+                    style: GoogleFonts.outfit(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      height: 1.0,
+                      letterSpacing: 0,
+                      color: Theme.of(
+                        context,
+                      ).textTheme.bodyLarge?.color?.withValues(alpha: 0.6),
+                    ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
-              ),
 
               const SizedBox(height: 32),
 
@@ -117,14 +121,19 @@ class DetailScoreGaugeSection extends StatelessWidget {
               ),
 
               // Description text
+              // Figma: 16px, weight 400, center aligned
               const SizedBox(height: 32),
               if (description != null) ...[
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Text(
                     description!,
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      height: 1.5,
+                    style: GoogleFonts.outfit(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      height: 1.0,
+                      letterSpacing: 0,
+                      color: Theme.of(context).textTheme.bodyLarge?.color,
                     ),
                     textAlign: TextAlign.center,
                     maxLines: 3,
@@ -167,13 +176,14 @@ class RippleDottedBackgroundPainter extends CustomPainter {
       // Calculate alpha - each wave fades out progressively
       final baseAlpha = isDark ? 0.12 : 0.20;
       final alphaDecrement = isDark ? 0.025 : 0.04;
-      final alpha = (baseAlpha - (circleIndex * alphaDecrement)).clamp(0.02, 1.0);
+      final alpha = (baseAlpha - (circleIndex * alphaDecrement)).clamp(
+        0.02,
+        1.0,
+      );
 
       // Create paint with progressive fade
       final paint = Paint()
-        ..color = isDark
-            ? Colors.white.withValues(alpha: alpha)
-            : Colors.grey.withValues(alpha: alpha)
+        ..color = isDark ? Colors.white.withValues(alpha: alpha) : Colors.grey.withValues(alpha: alpha)
         ..style = PaintingStyle.fill;
 
       // Each circle gets progressively larger, starting closer to gauge
@@ -195,7 +205,6 @@ class RippleDottedBackgroundPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant RippleDottedBackgroundPainter oldDelegate) {
-    return oldDelegate.isDark != isDark ||
-        oldDelegate.gaugeCenterOffset != gaugeCenterOffset;
+    return oldDelegate.isDark != isDark || oldDelegate.gaugeCenterOffset != gaugeCenterOffset;
   }
 }
