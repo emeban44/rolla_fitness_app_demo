@@ -4,6 +4,7 @@ import 'package:rolla_fitness_app_demo/core/di/service_locator.dart';
 import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/timeframe.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_cubit.dart';
@@ -91,7 +92,7 @@ class ScoreDetailView extends StatelessWidget {
                           );
                         },
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 24),
 
                       // Score Header (consistent across all timeframes)
                       ScoreHeader(
@@ -136,10 +137,7 @@ class ScoreDetailView extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Row(
                           children: [
-                            Text(
-                              'Metrics',
-                              style: Theme.of(context).textTheme.titleMedium,
-                            ),
+                            const SectionTitle(title: 'Metrics'),
                             const Spacer(),
                             if (timeframe != Timeframe.oneDay)
                               Text(
@@ -193,10 +191,7 @@ class ScoreDetailView extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                'About',
-                                style: Theme.of(context).textTheme.titleMedium,
-                              ),
+                              const SectionTitle(title: 'About'),
                               const SizedBox(height: 12),
                               Container(
                                 padding: const EdgeInsets.all(16),

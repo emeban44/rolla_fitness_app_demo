@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric_info.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radial_gauge.dart';
@@ -95,20 +96,14 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
                   const SizedBox(height: 24),
 
                   // Metrics section
-                  Text(
-                    'Metrics',
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
+                  const SectionTitle(title: 'Metrics'),
                   const SizedBox(height: 12),
                   ...metrics.map((metric) => MetricInfoRow(metric: metric)),
                   const SizedBox(height: 24),
 
                   // How It Works section
                   if (info != null) ...[
-                    Text(
-                      'How It Works?',
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
+                    const SectionTitle(title: 'How It Works?'),
                     const SizedBox(height: 12),
                     Text(
                       info!.description,

@@ -22,7 +22,7 @@ class DetailScoreGaugeSection extends StatelessWidget {
 
     return SizedBox(
       width: double.infinity,
-      height: 280, // Fixed height for consistent sizing
+      height: 200, // Fixed height for consistent sizing
       child: Stack(
         children: [
           // Ripple dotted background centered
