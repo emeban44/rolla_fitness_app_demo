@@ -41,19 +41,30 @@ class RadialGauge extends StatelessWidget {
             ),
           ],
         ),
-        child: CustomPaint(
-          painter: ArcPainter(
-            score: score,
-            color: color,
-            strokeWidth: 6,
-            isDark: Theme.of(context).brightness == Brightness.dark,
+        child: TweenAnimationBuilder<double>(
+          tween: Tween<double>(
+            begin: score?.toDouble() ?? 0,
+            end: score?.toDouble() ?? 0,
           ),
-          child: Center(
-            child: Text(
-              score?.toString() ?? 'N/A',
-              style: AppTypography.scoreValueLarge(context),
-            ),
-          ),
+          duration: const Duration(milliseconds: 600),
+          curve: Curves.easeInOut,
+          builder: (context, animatedValue, child) {
+            final displayScore = score == null ? null : animatedValue.round();
+            return CustomPaint(
+              painter: ArcPainter(
+                score: displayScore,
+                color: color,
+                strokeWidth: 6,
+                isDark: Theme.of(context).brightness == Brightness.dark,
+              ),
+              child: Center(
+                child: Text(
+                  displayScore?.toString() ?? 'N/A',
+                  style: AppTypography.scoreValueLarge(context),
+                ),
+              ),
+            );
+          },
         ),
       ),
     );

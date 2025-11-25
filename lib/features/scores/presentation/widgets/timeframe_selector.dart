@@ -47,15 +47,11 @@ class TimeframeSelector extends StatelessWidget {
                 return AnimatedAlign(
                   duration: const Duration(milliseconds: 250),
                   curve: Curves.easeInOut,
-                  alignment: Alignment(
-                    -1 + (selectedIndex * 2 / 3),
-                    0,
-                  ),
+                  alignment: Alignment(-1 + (selectedIndex * 2 / 3), 0),
                   child: Container(
                     width: tabWidth,
                     height: 2,
-                    color: Theme.of(context).textTheme.bodyLarge?.color ??
-                        Colors.black,
+                    color: Theme.of(context).textTheme.bodyLarge?.color ?? Colors.black,
                   ),
                 );
               },
@@ -126,10 +122,11 @@ class TimeframeTab extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 12),
           child: AnimatedDefaultTextStyle(
             duration: const Duration(milliseconds: 200),
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: textColor,
-                      fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
-                    ) ??
+            style:
+                Theme.of(context).textTheme.titleMedium?.copyWith(
+                  color: textColor,
+                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
+                ) ??
                 const TextStyle(),
             child: Text(
               label,
