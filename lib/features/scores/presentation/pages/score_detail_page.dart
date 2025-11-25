@@ -27,8 +27,9 @@ class ScoreDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<ScoreDetailCubit>()
-        ..loadScoreDetail(scoreType, Timeframe.oneDay),
+      create: (context) =>
+          getIt<ScoreDetailCubit>()
+            ..loadScoreDetail(scoreType, Timeframe.oneDay),
       child: ScoreDetailView(scoreType: scoreType),
     );
   }
@@ -87,9 +88,9 @@ class ScoreDetailView extends StatelessWidget {
                       TimeframeSelector(
                         selectedTimeframe: timeframe,
                         onTimeframeChanged: (newTimeframe) {
-                          context
-                              .read<ScoreDetailCubit>()
-                              .changeTimeframe(newTimeframe);
+                          context.read<ScoreDetailCubit>().changeTimeframe(
+                            newTimeframe,
+                          );
                         },
                       ),
                       const SizedBox(height: 16),
@@ -132,18 +133,18 @@ class ScoreDetailView extends StatelessWidget {
                                 children: [
                                   Text(
                                     'History',
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .titleMedium,
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.titleMedium,
                                   ),
                                   const Spacer(),
                                   // Date range
                                   if (history.isNotEmpty) ...[
                                     Text(
                                       '${DateFormat('d MMM').format(history.first.date)} - ${DateFormat('d MMM').format(history.last.date)}',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium,
+                                      style: Theme.of(
+                                        context,
+                                      ).textTheme.bodyMedium,
                                     ),
                                   ],
                                 ],
@@ -158,7 +159,7 @@ class ScoreDetailView extends StatelessWidget {
                         ),
                       ],
 
-                      const SizedBox(height: 32),
+                      const SizedBox(height: 16),
 
                       // Metrics section
                       Padding(
@@ -173,9 +174,7 @@ class ScoreDetailView extends StatelessWidget {
                             if (timeframe != Timeframe.oneDay)
                               Text(
                                 'Daily Avg.',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodySmall
+                                style: Theme.of(context).textTheme.bodySmall
                                     ?.copyWith(
                                       color: Theme.of(context)
                                           .textTheme
@@ -195,10 +194,8 @@ class ScoreDetailView extends StatelessWidget {
                             // Make Readiness and Activity metrics tappable on Health page
                             final isNavigatable =
                                 scoreType == ScoreType.health &&
-                                    (metric.title.toLowerCase() ==
-                                            'readiness' ||
-                                        metric.title.toLowerCase() ==
-                                            'activity');
+                                (metric.title.toLowerCase() == 'readiness' ||
+                                    metric.title.toLowerCase() == 'activity');
 
                             return MetricTile(
                               metric: metric,
@@ -207,14 +204,13 @@ class ScoreDetailView extends StatelessWidget {
                                   ? () {
                                       final targetScoreType =
                                           metric.title.toLowerCase() ==
-                                                  'readiness'
-                                              ? ScoreType.readiness
-                                              : ScoreType.activity;
+                                              'readiness'
+                                          ? ScoreType.readiness
+                                          : ScoreType.activity;
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) =>
-                                              ScoreDetailPage(
+                                          builder: (context) => ScoreDetailPage(
                                             scoreType: targetScoreType,
                                           ),
                                         ),
@@ -243,17 +239,16 @@ class ScoreDetailView extends StatelessWidget {
                               Container(
                                 padding: const EdgeInsets.all(16),
                                 decoration: BoxDecoration(
-                                  color: Theme.of(context)
-                                      .cardColor
-                                      .withValues(alpha: 0.5),
+                                  color: Theme.of(
+                                    context,
+                                  ).cardColor.withValues(alpha: 0.5),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: insights.map((insight) {
                                     return Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 8),
+                                      padding: const EdgeInsets.only(bottom: 8),
                                       child: Text(
                                         insight.text,
                                         style: Theme.of(context)

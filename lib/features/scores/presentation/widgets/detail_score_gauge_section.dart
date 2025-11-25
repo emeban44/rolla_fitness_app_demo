@@ -25,12 +25,12 @@ class DetailScoreGaugeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const gaugeSize = 200.0; // Fixed gauge size
-    const gaugeTopOffset = 140.0; // Fixed position from top
+    const gaugeSize = 180.0; // Fixed gauge size
+    const gaugeTopOffset =
+        130.0; // Fixed position from top (moved up for better ripple visibility)
 
     return Container(
       width: double.infinity,
-      height: 500, // Fixed height to prevent layout shifts
       child: Stack(
         children: [
           // Ripple dotted background centered on gauge
@@ -66,19 +66,13 @@ class DetailScoreGaugeSection extends StatelessWidget {
                           height: 32,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Theme.of(context)
-                                .textTheme
-                                .bodySmall
-                                ?.color
+                            color: Theme.of(context).textTheme.bodySmall?.color
                                 ?.withValues(alpha: 0.1),
                           ),
                           child: Icon(
                             Icons.help_outline,
                             size: 18,
-                            color: Theme.of(context)
-                                .textTheme
-                                .bodySmall
-                                ?.color
+                            color: Theme.of(context).textTheme.bodySmall?.color
                                 ?.withValues(alpha: 0.6),
                           ),
                         ),
@@ -98,7 +92,8 @@ class DetailScoreGaugeSection extends StatelessWidget {
                   child: subtitle != null
                       ? Text(
                           subtitle!,
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          style: Theme.of(context).textTheme.titleMedium
+                              ?.copyWith(
                                 color: Theme.of(context)
                                     .textTheme
                                     .bodyMedium
@@ -123,19 +118,23 @@ class DetailScoreGaugeSection extends StatelessWidget {
 
               // Description text
               const SizedBox(height: 32),
-              if (description != null)
+              if (description != null) ...[
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Text(
                     description!,
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          height: 1.5,
-                        ),
+                      height: 1.5,
+                    ),
                     textAlign: TextAlign.center,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
+                const SizedBox(
+                  height: 32.0,
+                ),
+              ],
             ],
           ),
         ],
@@ -191,6 +190,6 @@ class RippleDottedBackgroundPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant RippleDottedBackgroundPainter oldDelegate) {
     return oldDelegate.isDark != isDark ||
-           oldDelegate.gaugeCenterOffset != gaugeCenterOffset;
+        oldDelegate.gaugeCenterOffset != gaugeCenterOffset;
   }
 }
