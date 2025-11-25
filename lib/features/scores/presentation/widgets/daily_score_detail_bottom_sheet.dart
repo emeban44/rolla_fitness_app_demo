@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/section_description.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric_info.dart';
@@ -10,7 +11,7 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
   final int? scoreValue;
   final Color scoreColor;
   final List<Metric> metrics;
-  final MetricInfo? info;
+  final MetricInfo info;
 
   const DailyScoreDetailBottomSheet({
     super.key,
@@ -18,7 +19,7 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
     required this.scoreValue,
     required this.scoreColor,
     required this.metrics,
-    this.info,
+    required this.info,
   });
 
   /// Show the bottom sheet
@@ -28,7 +29,7 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
     required int? scoreValue,
     required Color scoreColor,
     required List<Metric> metrics,
-    MetricInfo? info,
+    required MetricInfo info,
   }) {
     showModalBottomSheet(
       context: context,
@@ -102,35 +103,12 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
                   const SizedBox(height: 24),
 
                   // How It Works section
-                  if (info != null) ...[
-                    const SectionTitle(title: 'How It Works?'),
+                  const SectionTitle(title: 'How It Works?'),
+                  const SizedBox(height: 12),
+                  SectionDescription(text: info.description),
+                  if (info.baselineInfo?.isNotEmpty ?? false) ...[
                     const SizedBox(height: 12),
-                    Text(
-                      info!.description,
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: Theme.of(context)
-                                .textTheme
-                                .bodySmall
-                                ?.color
-                                ?.withValues(alpha: 0.7),
-                            height: 1.5,
-                          ),
-                    ),
-                    if (info!.baselineInfo != null) ...[
-                      const SizedBox(height: 12),
-                      Text(
-                        info!.baselineInfo!,
-                        style:
-                            Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodySmall
-                                      ?.color
-                                      ?.withValues(alpha: 0.7),
-                                  height: 1.5,
-                                ),
-                      ),
-                    ],
+                    SectionDescription(text: info.baselineInfo ?? ''),
                   ],
                   const SizedBox(height: 24),
                 ],

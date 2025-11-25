@@ -4,6 +4,7 @@ import 'package:rolla_fitness_app_demo/core/di/service_locator.dart';
 import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/section_description.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/timeframe.dart';
@@ -104,7 +105,7 @@ class ScoreDetailView extends StatelessWidget {
                             scoreValue: score.value,
                             scoreColor: scoreType.accentColor,
                             metrics: score.metrics,
-                            info: null,
+                            info: scoreType.getInfo(),
                           );
                         },
                         selectedDate: selectedDate,
@@ -193,30 +194,12 @@ class ScoreDetailView extends StatelessWidget {
                             children: [
                               const SectionTitle(title: 'About'),
                               const SizedBox(height: 12),
-                              Container(
-                                padding: const EdgeInsets.all(16),
-                                decoration: BoxDecoration(
-                                  color: Theme.of(
-                                    context,
-                                  ).cardColor.withValues(alpha: 0.5),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: insights.map((insight) {
-                                    return Padding(
-                                      padding: const EdgeInsets.only(bottom: 8),
-                                      child: Text(
-                                        insight.text,
-                                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                          height: 1.5,
-                                          color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.8),
-                                        ),
-                                      ),
-                                    );
-                                  }).toList(),
-                                ),
-                              ),
+                              ...insights.map((insight) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 12),
+                                  child: SectionDescription(text: insight.text),
+                                );
+                              }).toList(),
                             ],
                           ),
                         ),
