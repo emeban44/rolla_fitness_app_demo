@@ -81,7 +81,7 @@ class TimeframeTab extends StatelessWidget {
                 color: isSelected
                     ? Theme.of(context).textTheme.bodyLarge?.color ??
                         Colors.black
-                    : Colors.transparent,
+                    : Theme.of(context).dividerColor,
                 width: 2,
               ),
             ),
