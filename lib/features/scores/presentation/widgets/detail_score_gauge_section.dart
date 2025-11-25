@@ -25,27 +25,32 @@ class DetailScoreGaugeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const gaugeSize = 200.0; // Fixed gauge size
+    const gaugeTopOffset = 140.0; // Fixed position from top
+
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 24),
+      height: 500, // Fixed height to prevent layout shifts
       child: Stack(
         children: [
-          // Ripple dotted background
+          // Ripple dotted background centered on gauge
           Positioned.fill(
             child: CustomPaint(
               painter: RippleDottedBackgroundPainter(
                 isDark: Theme.of(context).brightness == Brightness.dark,
+                gaugeCenterOffset: gaugeTopOffset + (gaugeSize / 2),
               ),
             ),
           ),
+
           // Content overlaid on background
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Top row: Title + Info | Timeframe/Date
-                Row(
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Top row: Title + Info | Timeframe/Date
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 24, 16, 0),
+                child: Row(
                   children: [
                     // Title with info icon
                     Text(
@@ -83,49 +88,55 @@ class DetailScoreGaugeSection extends StatelessWidget {
                     if (topRightWidget != null) topRightWidget!,
                   ],
                 ),
+              ),
 
-                // Subtitle
-                if (subtitle != null) ...[
-                  const SizedBox(height: 8),
-                  Text(
-                    subtitle!,
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          color: Theme.of(context)
-                              .textTheme
-                              .bodyMedium
-                              ?.color
-                              ?.withValues(alpha: 0.7),
+              // Subtitle (fixed position, doesn't affect gauge)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+                child: SizedBox(
+                  height: 28,
+                  child: subtitle != null
+                      ? Text(
+                          subtitle!,
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium
+                                    ?.color
+                                    ?.withValues(alpha: 0.7),
+                              ),
+                        )
+                      : const SizedBox.shrink(),
+                ),
+              ),
+
+              const SizedBox(height: 32),
+
+              // Gauge at fixed position
+              Center(
+                child: RadialGauge(
+                  score: score,
+                  color: scoreType.accentColor,
+                  size: gaugeSize,
+                ),
+              ),
+
+              // Description text
+              const SizedBox(height: 32),
+              if (description != null)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Text(
+                    description!,
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          height: 1.5,
                         ),
-                  ),
-                ],
-
-                const SizedBox(height: 32),
-
-                // Centered gauge
-                Center(
-                  child: RadialGauge(
-                    score: score,
-                    color: scoreType.accentColor,
-                    size: 240,
+                    textAlign: TextAlign.center,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
-
-                // Description text
-                if (description != null) ...[
-                  const SizedBox(height: 32),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: Text(
-                      description!,
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                            height: 1.5,
-                          ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ],
-              ],
-            ),
+            ],
           ),
         ],
       ),
@@ -136,8 +147,12 @@ class DetailScoreGaugeSection extends StatelessWidget {
 /// Custom painter for ripple/wavelength dotted background
 class RippleDottedBackgroundPainter extends CustomPainter {
   final bool isDark;
+  final double gaugeCenterOffset; // Y offset where gauge is centered
 
-  RippleDottedBackgroundPainter({required this.isDark});
+  RippleDottedBackgroundPainter({
+    required this.isDark,
+    required this.gaugeCenterOffset,
+  });
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -147,16 +162,17 @@ class RippleDottedBackgroundPainter extends CustomPainter {
           : Colors.grey.withValues(alpha: 0.15)
       ..style = PaintingStyle.fill;
 
-    final center = Offset(size.width / 2, size.height / 2);
+    // Center the ripple on the gauge position
+    final center = Offset(size.width / 2, gaugeCenterOffset);
 
     // Create multiple concentric circles of dots (ripple effect)
-    const circleCount = 6; // Number of concentric circles
-    const dotsPerCircle = 32; // Dots per circle
-    const dotRadius = 3.0;
+    const circleCount = 5; // Number of concentric circles
+    const dotsPerCircle = 28; // Dots per circle
+    const dotRadius = 2.5;
 
     for (int circleIndex = 0; circleIndex < circleCount; circleIndex++) {
-      // Each circle gets progressively larger
-      final circleRadius = 60.0 + (circleIndex * 35.0);
+      // Each circle gets progressively larger, starting closer to gauge
+      final circleRadius = 80.0 + (circleIndex * 30.0);
       final dotsInThisCircle = dotsPerCircle + (circleIndex * 4);
 
       for (int dotIndex = 0; dotIndex < dotsInThisCircle; dotIndex++) {
@@ -174,6 +190,7 @@ class RippleDottedBackgroundPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant RippleDottedBackgroundPainter oldDelegate) {
-    return oldDelegate.isDark != isDark;
+    return oldDelegate.isDark != isDark ||
+           oldDelegate.gaugeCenterOffset != gaugeCenterOffset;
   }
 }
