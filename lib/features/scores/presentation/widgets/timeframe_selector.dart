@@ -14,33 +14,81 @@ class TimeframeSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final timeframes = [
+      Timeframe.oneDay,
+      Timeframe.sevenDays,
+      Timeframe.thirtyDays,
+      Timeframe.oneYear,
+    ];
+    final selectedIndex = timeframes.indexOf(selectedTimeframe);
+
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Row(
+      child: Stack(
         children: [
-          TimeframeTab(
-            timeframe: Timeframe.oneDay,
-            label: '1D',
-            isSelected: selectedTimeframe == Timeframe.oneDay,
-            onTap: () => onTimeframeChanged(Timeframe.oneDay),
+          // Base border for all tabs
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Container(
+              height: 2,
+              color: Theme.of(context).dividerColor,
+            ),
           ),
-          TimeframeTab(
-            timeframe: Timeframe.sevenDays,
-            label: '7D',
-            isSelected: selectedTimeframe == Timeframe.sevenDays,
-            onTap: () => onTimeframeChanged(Timeframe.sevenDays),
+          // Sliding indicator bar
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final tabWidth = constraints.maxWidth / 4;
+                return AnimatedAlign(
+                  duration: const Duration(milliseconds: 250),
+                  curve: Curves.easeInOut,
+                  alignment: Alignment(
+                    -1 + (selectedIndex * 2 / 3),
+                    0,
+                  ),
+                  child: Container(
+                    width: tabWidth,
+                    height: 2,
+                    color: Theme.of(context).textTheme.bodyLarge?.color ??
+                        Colors.black,
+                  ),
+                );
+              },
+            ),
           ),
-          TimeframeTab(
-            timeframe: Timeframe.thirtyDays,
-            label: '30D',
-            isSelected: selectedTimeframe == Timeframe.thirtyDays,
-            onTap: () => onTimeframeChanged(Timeframe.thirtyDays),
-          ),
-          TimeframeTab(
-            timeframe: Timeframe.oneYear,
-            label: '1Y',
-            isSelected: selectedTimeframe == Timeframe.oneYear,
-            onTap: () => onTimeframeChanged(Timeframe.oneYear),
+          // Tabs
+          Row(
+            children: [
+              TimeframeTab(
+                timeframe: Timeframe.oneDay,
+                label: '1D',
+                isSelected: selectedTimeframe == Timeframe.oneDay,
+                onTap: () => onTimeframeChanged(Timeframe.oneDay),
+              ),
+              TimeframeTab(
+                timeframe: Timeframe.sevenDays,
+                label: '7D',
+                isSelected: selectedTimeframe == Timeframe.sevenDays,
+                onTap: () => onTimeframeChanged(Timeframe.sevenDays),
+              ),
+              TimeframeTab(
+                timeframe: Timeframe.thirtyDays,
+                label: '30D',
+                isSelected: selectedTimeframe == Timeframe.thirtyDays,
+                onTap: () => onTimeframeChanged(Timeframe.thirtyDays),
+              ),
+              TimeframeTab(
+                timeframe: Timeframe.oneYear,
+                label: '1Y',
+                isSelected: selectedTimeframe == Timeframe.oneYear,
+                onTap: () => onTimeframeChanged(Timeframe.oneYear),
+              ),
+            ],
           ),
         ],
       ),
@@ -73,26 +121,20 @@ class TimeframeTab extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         behavior: HitTestBehavior.opaque,
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(vertical: 12),
-          decoration: BoxDecoration(
-            border: Border(
-              bottom: BorderSide(
-                color: isSelected
-                    ? Theme.of(context).textTheme.bodyLarge?.color ??
-                        Colors.black
-                    : Theme.of(context).dividerColor,
-                width: 2,
-              ),
-            ),
-          ),
-          child: Text(
-            label,
-            textAlign: TextAlign.center,
+          child: AnimatedDefaultTextStyle(
+            duration: const Duration(milliseconds: 200),
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  color: textColor,
-                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
-                ),
+                      color: textColor,
+                      fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
+                    ) ??
+                const TextStyle(),
+            child: Text(
+              label,
+              textAlign: TextAlign.center,
+            ),
           ),
         ),
       ),
