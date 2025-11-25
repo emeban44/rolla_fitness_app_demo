@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rolla_fitness_app_demo/core/di/service_locator.dart';
+import 'package:rolla_fitness_app_demo/core/di/scores_injection.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_theme.dart';
 import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/home_page.dart';
