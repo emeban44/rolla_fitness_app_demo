@@ -36,7 +36,7 @@ class RadialGauge extends StatelessWidget {
             BoxShadow(
               color: Colors.white.withValues(alpha: 0.8),
               blurRadius: 20,
-              offset: const Offset(0, -10),
+              offset: const Offset(0, 1),
             ),
           ],
         ),
@@ -123,7 +123,7 @@ class ArcPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant ArcPainter oldDelegate) {
     return oldDelegate.score != score ||
-           oldDelegate.color != color ||
-           oldDelegate.isDark != isDark;
+        oldDelegate.color != color ||
+        oldDelegate.isDark != isDark;
   }
 }

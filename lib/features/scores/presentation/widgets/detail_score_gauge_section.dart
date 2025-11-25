@@ -25,9 +25,9 @@ class DetailScoreGaugeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const gaugeSize = 180.0; // Fixed gauge size
+    const gaugeSize = 140.0; // Fixed gauge size (per Figma)
     const gaugeTopOffset =
-        130.0; // Fixed position from top (moved up for better ripple visibility)
+        128.0; // Fixed position from top (moved up for better ripple visibility)
 
     return Container(
       width: double.infinity,
@@ -155,12 +155,6 @@ class RippleDottedBackgroundPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = isDark
-          ? Colors.white.withValues(alpha: 0.08)
-          : Colors.grey.withValues(alpha: 0.15)
-      ..style = PaintingStyle.fill;
-
     // Center the ripple on the gauge position
     final center = Offset(size.width / 2, gaugeCenterOffset);
 
@@ -170,6 +164,18 @@ class RippleDottedBackgroundPainter extends CustomPainter {
     const dotRadius = 2.5;
 
     for (int circleIndex = 0; circleIndex < circleCount; circleIndex++) {
+      // Calculate alpha - each wave fades out progressively
+      final baseAlpha = isDark ? 0.12 : 0.20;
+      final alphaDecrement = isDark ? 0.025 : 0.04;
+      final alpha = (baseAlpha - (circleIndex * alphaDecrement)).clamp(0.02, 1.0);
+
+      // Create paint with progressive fade
+      final paint = Paint()
+        ..color = isDark
+            ? Colors.white.withValues(alpha: alpha)
+            : Colors.grey.withValues(alpha: alpha)
+        ..style = PaintingStyle.fill;
+
       // Each circle gets progressively larger, starting closer to gauge
       final circleRadius = 80.0 + (circleIndex * 30.0);
       final dotsInThisCircle = dotsPerCircle + (circleIndex * 4);
