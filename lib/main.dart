@@ -3,8 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/service_locator.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_theme.dart';
 import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/score_detail_page.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +29,7 @@ class RollaFitnessApp extends StatelessWidget {
             theme: AppTheme.light(),
             darkTheme: AppTheme.dark(),
             themeMode: themeMode,
-            home: const ScoreDetailPage(scoreType: ScoreType.health),
+            home: const HomePage(),
           );
         },
       ),

@@ -98,10 +98,13 @@ class AppTypography {
   }
 
   /// Score value text style (large circular gauge number)
+  /// Figma specs: 36px, weight 400, 100% line height
   static TextStyle scoreValueLarge(BuildContext context) {
     return GoogleFonts.outfit(
-      fontSize: 48,
-      fontWeight: FontWeight.w700,
+      fontSize: 36,
+      fontWeight: FontWeight.w400,
+      height: 1.0,
+      letterSpacing: 0,
       color: Theme.of(context).textTheme.bodyLarge?.color,
     );
   }

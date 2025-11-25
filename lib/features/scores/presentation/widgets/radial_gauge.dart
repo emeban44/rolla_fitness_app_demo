@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_typography.dart';
 
 /// Neumorphic circular radial gauge showing score 0-100
+/// Clean, reusable widget without background decorations
 class RadialGauge extends StatelessWidget {
   final int score;
   final Color color;
@@ -20,125 +21,109 @@ class RadialGauge extends StatelessWidget {
     return SizedBox(
       width: size,
       height: size,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          // Dotted background pattern
-          CustomPaint(
-            size: Size(size, size),
-            painter: DottedBackgroundPainter(
-              isDark: Theme.of(context).brightness == Brightness.dark,
+      child: Container(
+        width: size * 0.65,
+        height: size * 0.65,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Theme.of(context).scaffoldBackgroundColor,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.1),
+              blurRadius: 20,
+              offset: const Offset(0, 10),
+            ),
+            BoxShadow(
+              color: Colors.white.withValues(alpha: 0.8),
+              blurRadius: 20,
+              offset: const Offset(0, -10),
+            ),
+          ],
+        ),
+        child: CustomPaint(
+          painter: ArcPainter(
+            score: score,
+            color: color,
+            strokeWidth: 6,
+            isDark: Theme.of(context).brightness == Brightness.dark,
+          ),
+          child: Center(
+            child: Text(
+              score.toString(),
+              style: AppTypography.scoreValueLarge(context),
             ),
           ),
-          // Neumorphic circle with arc
-          Container(
-            width: size * 0.65,
-            height: size * 0.65,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Theme.of(context).scaffoldBackgroundColor,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.1),
-                  blurRadius: 20,
-                  offset: const Offset(0, 10),
-                ),
-                BoxShadow(
-                  color: Colors.white.withValues(alpha: 0.8),
-                  blurRadius: 20,
-                  offset: const Offset(0, -10),
-                ),
-              ],
-            ),
-            child: CustomPaint(
-              painter: ArcPainter(
-                score: score,
-                color: color,
-                strokeWidth: 8,
-              ),
-              child: Center(
-                child: Text(
-                  score.toString(),
-                  style: AppTypography.scoreValueLarge(context),
-                ),
-              ),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
 }
 
-/// Painter for the dotted background pattern
-class DottedBackgroundPainter extends CustomPainter {
-  final bool isDark;
-
-  DottedBackgroundPainter({required this.isDark});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = isDark
-          ? Colors.white.withValues(alpha: 0.1)
-          : Colors.grey.withValues(alpha: 0.2)
-      ..style = PaintingStyle.fill;
-
-    final center = Offset(size.width / 2, size.height / 2);
-    final radius = size.width / 2;
-
-    // Draw dots in circular pattern
-    const dotCount = 24;
-    const dotRadius = 3.0;
-
-    for (int i = 0; i < dotCount; i++) {
-      final angle = (i * 2 * math.pi / dotCount) - math.pi / 2;
-      final x = center.dx + radius * 0.85 * math.cos(angle);
-      final y = center.dy + radius * 0.85 * math.sin(angle);
-      canvas.drawCircle(Offset(x, y), dotRadius, paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
-}
-
-/// Painter for the colored arc showing score
+/// Painter for the colored arc showing score with background track
 class ArcPainter extends CustomPainter {
   final int score;
   final Color color;
   final double strokeWidth;
+  final bool isDark;
 
   ArcPainter({
     required this.score,
     required this.color,
     required this.strokeWidth,
+    required this.isDark,
   });
 
   @override
   void paint(Canvas canvas, Size size) {
-    final rect = Rect.fromLTWH(0, 0, size.width, size.height);
-    final paint = Paint()
+    const padding = 13.3; // Padding from container edge to progress bar
+    final rect = Rect.fromLTWH(
+      padding,
+      padding,
+      size.width - (padding * 2),
+      size.height - (padding * 2),
+    );
+
+    // Background track color (same as dots)
+    final backgroundTrackColor = isDark
+        ? Colors.white.withValues(alpha: 0.1)
+        : Colors.grey.withValues(alpha: 0.2);
+
+    // Draw full circle background track (unfinished progress)
+    final backgroundPaint = Paint()
+      ..color = backgroundTrackColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth
+      ..strokeCap = StrokeCap.round;
+
+    canvas.drawCircle(
+      Offset(size.width / 2, size.height / 2),
+      (size.width - (padding * 2)) / 2,
+      backgroundPaint,
+    );
+
+    // Draw colored arc (actual progress) on top
+    final progressPaint = Paint()
       ..color = color
       ..style = PaintingStyle.stroke
       ..strokeWidth = strokeWidth
       ..strokeCap = StrokeCap.round;
 
-    // Draw arc from top (270 degrees) clockwise
     const startAngle = -math.pi / 2; // Start at top
     final sweepAngle = 2 * math.pi * (score / 100); // Score percentage
 
     canvas.drawArc(
-      rect.deflate(strokeWidth / 2),
+      rect,
       startAngle,
       sweepAngle,
       false,
-      paint,
+      progressPaint,
     );
   }
 
   @override
   bool shouldRepaint(covariant ArcPainter oldDelegate) {
-    return oldDelegate.score != score || oldDelegate.color != color;
+    return oldDelegate.score != score ||
+           oldDelegate.color != color ||
+           oldDelegate.isDark != isDark;
   }
 }

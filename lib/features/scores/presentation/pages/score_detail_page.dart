@@ -10,8 +10,8 @@ import 'package:rolla_fitness_app_demo/features/scores/domain/entities/timeframe
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/daily_score_detail_bottom_sheet.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/detail_score_gauge_section.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metric_tile.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radial_gauge.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/timeframe_selector.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/trend_chart.dart';
 
@@ -96,52 +96,29 @@ class ScoreDetailView extends StatelessWidget {
 
                       // Score display or History chart
                       if (timeframe == Timeframe.oneDay) ...[
-                        // 1D View - Show radial gauge
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          child: Row(
-                            children: [
-                              Text(
-                                score.displayName,
-                                style:
-                                    Theme.of(context).textTheme.titleMedium,
-                              ),
-                              const SizedBox(width: 4),
-                              GestureDetector(
-                                onTap: () {
-                                  DailyScoreDetailBottomSheet.show(
-                                    context: context,
-                                    scoreTitle: score.displayName,
-                                    scoreValue: score.value,
-                                    scoreColor: scoreType.accentColor,
-                                    metrics: score.metrics,
-                                    info: null,
-                                  );
-                                },
-                                child: Icon(
-                                  Icons.help_outline,
-                                  size: 20,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodySmall
-                                      ?.color
-                                      ?.withValues(alpha: 0.6),
-                                ),
-                              ),
-                              const Spacer(),
-                              // Date navigation placeholder
-                              Text(
-                                DateFormat('d MMM').format(DateTime.now()),
-                                style: Theme.of(context).textTheme.bodyMedium,
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(height: 24),
-                        Center(
-                          child: RadialGauge(
-                            score: score.value,
-                            color: scoreType.accentColor,
+                        // 1D View - Show gauge with ripple background
+                        DetailScoreGaugeSection(
+                          scoreType: scoreType,
+                          score: score.value,
+                          subtitle: insights.isNotEmpty
+                              ? insights.first.text
+                              : null,
+                          description: insights.length > 1
+                              ? insights[1].text
+                              : null,
+                          onInfoTap: () {
+                            DailyScoreDetailBottomSheet.show(
+                              context: context,
+                              scoreTitle: score.displayName,
+                              scoreValue: score.value,
+                              scoreColor: scoreType.accentColor,
+                              metrics: score.metrics,
+                              info: null,
+                            );
+                          },
+                          topRightWidget: Text(
+                            DateFormat('d MMM').format(DateTime.now()),
+                            style: Theme.of(context).textTheme.titleMedium,
                           ),
                         ),
                       ] else ...[
