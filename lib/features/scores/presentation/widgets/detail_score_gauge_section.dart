@@ -26,8 +26,8 @@ class DetailScoreGaugeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const gaugeSize = 140.0; // Fixed gauge size (per Figma)
-    const gaugeTopOffset = 130.0; // Fixed position from top
+    const gaugeSize = 140.0;
+    const gaugeTopOffset = 130.0;
 
     return Container(
       width: double.infinity,
@@ -52,7 +52,7 @@ class DetailScoreGaugeSection extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(16, 24, 16, 0),
                 child: Row(
                   children: [
-                    // Title with info icon (Figma: 20px, weight 400)
+                    // Title with info icon
                     Text(
                       scoreType.displayName,
                       style: GoogleFonts.outfit(
@@ -89,7 +89,6 @@ class DetailScoreGaugeSection extends StatelessWidget {
               ),
 
               // Subtitle
-              // Figma: 16px, weight 400, 60% opacity
               if (subtitle != null)
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
@@ -121,7 +120,6 @@ class DetailScoreGaugeSection extends StatelessWidget {
               ),
 
               // Description text
-              // Figma: 16px, weight 400, center aligned
               const SizedBox(height: 32),
               if (description != null) ...[
                 Padding(
