@@ -88,7 +88,7 @@ class TimePeriodSelector extends StatelessWidget {
       case Timeframe.oneYear:
         // 1-year range ending on selectedDate
         final startDate = DateTime(selectedDate.year - 1, selectedDate.month, selectedDate.day);
-        return '${DateFormat('d MMM yyyy').format(startDate)} - ${DateFormat('d MMM yyyy').format(selectedDate)}';
+        return '${DateFormat('MMM yyyy').format(startDate)} - ${DateFormat('MMM yyyy').format(selectedDate)}';
     }
   }
 }
