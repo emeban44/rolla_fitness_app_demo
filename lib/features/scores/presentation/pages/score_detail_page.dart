@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/service_locator.dart';
-import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_description.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/theme_switcher.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/timeframe.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/insight.dart';
@@ -47,28 +47,14 @@ class ScoreDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         title: Text(scoreType.displayName),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
-        actions: [
-          TextButton.icon(
-            onPressed: () {
-              context.read<ThemeCubit>().toggleTheme();
-            },
-            icon: Icon(
-              isDark ? Icons.light_mode : Icons.dark_mode,
-              size: 20,
-            ),
-            label: Text(
-              isDark ? 'Light' : 'Dark',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ),
+        actions: const [
+          ThemeSwitcher(),
         ],
       ),
       body: BlocBuilder<ScoreDetailCubit, ScoreDetailState>(

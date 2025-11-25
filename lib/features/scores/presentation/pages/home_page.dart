@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/service_locator.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
-import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/theme_switcher.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/score_detail_page.dart';
@@ -30,18 +30,8 @@ class HomePageView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Rolla Fitness'),
-        actions: [
-          // Theme toggle button
-          IconButton(
-            icon: Icon(
-              Theme.of(context).brightness == Brightness.dark
-                  ? Icons.light_mode
-                  : Icons.dark_mode,
-            ),
-            onPressed: () {
-              context.read<ThemeCubit>().toggleTheme();
-            },
-          ),
+        actions: const [
+          ThemeSwitcher(),
         ],
       ),
       body: BlocBuilder<ScoresCubit, ScoresState>(
