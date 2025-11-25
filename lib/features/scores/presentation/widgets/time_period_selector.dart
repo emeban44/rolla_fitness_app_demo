@@ -31,23 +31,22 @@ class TimePeriodSelector extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         // Previous button
-        IconButton(
-          onPressed: canGoPrevious ? onPrevious : null,
-          icon: Icon(
+        GestureDetector(
+          onTap: canGoPrevious ? onPrevious : null,
+          child: Icon(
             Icons.chevron_left,
+            size: 24,
             color: canGoPrevious ? textColor : textColor?.withValues(alpha: 0.3),
           ),
-          padding: EdgeInsets.zero,
-          constraints: const BoxConstraints(),
         ),
 
-        const SizedBox(width: 12),
+        const SizedBox(width: 6),
 
         // Date/period text
         Text(
           _getDateRangeText(),
           style: GoogleFonts.outfit(
-            fontSize: 16,
+            fontSize: 14,
             fontWeight: FontWeight.w400,
             height: 1.0,
             letterSpacing: 0,
@@ -55,17 +54,16 @@ class TimePeriodSelector extends StatelessWidget {
           ),
         ),
 
-        const SizedBox(width: 12),
+        const SizedBox(width: 6),
 
         // Next button
-        IconButton(
-          onPressed: canGoNext ? onNext : null,
-          icon: Icon(
+        GestureDetector(
+          onTap: canGoNext ? onNext : null,
+          child: Icon(
             Icons.chevron_right,
+            size: 24,
             color: canGoNext ? textColor : textColor?.withValues(alpha: 0.3),
           ),
-          padding: EdgeInsets.zero,
-          constraints: const BoxConstraints(),
         ),
       ],
     );

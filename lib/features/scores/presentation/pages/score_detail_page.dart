@@ -11,7 +11,7 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/daily_score_detail_bottom_sheet.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/detail_score_gauge_section.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metric_tile.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/time_period_selector.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_header.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/timeframe_selector.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/trend_chart.dart';
 
@@ -91,6 +91,27 @@ class ScoreDetailView extends StatelessWidget {
                           );
                         },
                       ),
+                      const SizedBox(height: 16),
+
+                      // Score Header (consistent across all timeframes)
+                      ScoreHeader(
+                        scoreType: scoreType,
+                        onInfoTap: () {
+                          DailyScoreDetailBottomSheet.show(
+                            context: context,
+                            scoreTitle: score.displayName,
+                            scoreValue: score.value,
+                            scoreColor: scoreType.accentColor,
+                            metrics: score.metrics,
+                            info: null,
+                          );
+                        },
+                        selectedDate: selectedDate,
+                        timeframe: timeframe,
+                        onPrevious: () => context.read<ScoreDetailCubit>().navigatePrevious(),
+                        onNext: () => context.read<ScoreDetailCubit>().navigateNext(),
+                        canGoNext: context.read<ScoreDetailCubit>().canNavigateNext(),
+                      ),
                       const SizedBox(height: 24),
 
                       // Score display or History chart
@@ -99,56 +120,9 @@ class ScoreDetailView extends StatelessWidget {
                         DetailScoreGaugeSection(
                           scoreType: scoreType,
                           score: score.value,
-                          subtitle: insights.firstOrNull?.text,
-                          description: insights.elementAtOrNull(1)?.text,
-                          onInfoTap: () {
-                            DailyScoreDetailBottomSheet.show(
-                              context: context,
-                              scoreTitle: score.displayName,
-                              scoreValue: score.value,
-                              scoreColor: scoreType.accentColor,
-                              metrics: score.metrics,
-                              info: null,
-                            );
-                          },
-                          topRightWidget: TimePeriodSelector(
-                            selectedDate: selectedDate,
-                            timeframe: timeframe,
-                            onPrevious: () => context.read<ScoreDetailCubit>().navigatePrevious(),
-                            onNext: () => context.read<ScoreDetailCubit>().navigateNext(),
-                            canGoNext: context.read<ScoreDetailCubit>().canNavigateNext(),
-                          ),
                         ),
                       ] else ...[
                         // 7D/30D/1Y View - Show chart
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(16, 0, 4, 0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    'History',
-                                    style: Theme.of(
-                                      context,
-                                    ).textTheme.titleMedium,
-                                  ),
-                                  const Spacer(),
-                                  // Date range navigator
-                                  TimePeriodSelector(
-                                    selectedDate: selectedDate,
-                                    timeframe: timeframe,
-                                    onPrevious: () => context.read<ScoreDetailCubit>().navigatePrevious(),
-                                    onNext: () => context.read<ScoreDetailCubit>().navigateNext(),
-                                    canGoNext: context.read<ScoreDetailCubit>().canNavigateNext(),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 8),
-                            ],
-                          ),
-                        ),
                         TrendChart(
                           historyPoints: history,
                           color: scoreType.accentColor,
