@@ -28,9 +28,7 @@ class ScoreDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          getIt<ScoreDetailCubit>()
-            ..loadScoreDetail(scoreType, Timeframe.oneDay),
+      create: (context) => getIt<ScoreDetailCubit>()..loadScoreDetail(scoreType, Timeframe.oneDay),
       child: ScoreDetailView(scoreType: scoreType),
     );
   }
@@ -94,7 +92,7 @@ class ScoreDetailView extends StatelessWidget {
                           );
                         },
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 24),
 
                       // Score display or History chart
                       if (timeframe == Timeframe.oneDay) ...[
@@ -102,12 +100,8 @@ class ScoreDetailView extends StatelessWidget {
                         DetailScoreGaugeSection(
                           scoreType: scoreType,
                           score: score.value,
-                          subtitle: insights.isNotEmpty
-                              ? insights.first.text
-                              : null,
-                          description: insights.length > 1
-                              ? insights[1].text
-                              : null,
+                          subtitle: insights.isNotEmpty ? insights.first.text : null,
+                          description: insights.length > 1 ? insights[1].text : null,
                           onInfoTap: () {
                             DailyScoreDetailBottomSheet.show(
                               context: context,
@@ -181,14 +175,9 @@ class ScoreDetailView extends StatelessWidget {
                             if (timeframe != Timeframe.oneDay)
                               Text(
                                 'Daily Avg.',
-                                style: Theme.of(context).textTheme.bodySmall
-                                    ?.copyWith(
-                                      color: Theme.of(context)
-                                          .textTheme
-                                          .bodySmall
-                                          ?.color
-                                          ?.withValues(alpha: 0.6),
-                                    ),
+                                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                  color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
+                                ),
                               ),
                           ],
                         ),
@@ -201,17 +190,14 @@ class ScoreDetailView extends StatelessWidget {
                             // Make Readiness and Activity metrics tappable on Health page
                             final isNavigatable =
                                 scoreType == ScoreType.health &&
-                                (metric.title.toLowerCase() == 'readiness' ||
-                                    metric.title.toLowerCase() == 'activity');
+                                (metric.title.toLowerCase() == 'readiness' || metric.title.toLowerCase() == 'activity');
 
                             return MetricTile(
                               metric: metric,
                               showAvgLabel: timeframe != Timeframe.oneDay,
                               onTap: isNavigatable
                                   ? () {
-                                      final targetScoreType =
-                                          metric.title.toLowerCase() ==
-                                              'readiness'
+                                      final targetScoreType = metric.title.toLowerCase() == 'readiness'
                                           ? ScoreType.readiness
                                           : ScoreType.activity;
                                       Navigator.push(
@@ -258,17 +244,10 @@ class ScoreDetailView extends StatelessWidget {
                                       padding: const EdgeInsets.only(bottom: 8),
                                       child: Text(
                                         insight.text,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium
-                                            ?.copyWith(
-                                              height: 1.5,
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodySmall
-                                                  ?.color
-                                                  ?.withValues(alpha: 0.8),
-                                            ),
+                                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                          height: 1.5,
+                                          color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.8),
+                                        ),
                                       ),
                                     );
                                   }).toList(),

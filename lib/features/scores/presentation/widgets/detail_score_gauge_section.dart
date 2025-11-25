@@ -27,9 +27,9 @@ class DetailScoreGaugeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const gaugeSize = 140.0;
-    const gaugeTopOffset = 130.0;
+    const gaugeTopOffset = 110.0;
 
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Stack(
         children: [
@@ -49,7 +49,7 @@ class DetailScoreGaugeSection extends StatelessWidget {
             children: [
               // Top row: Title + Info | Timeframe/Date
               Padding(
-                padding: const EdgeInsets.fromLTRB(16, 24, 16, 0),
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
                 child: Row(
                   children: [
                     // Title with info icon
@@ -103,8 +103,6 @@ class DetailScoreGaugeSection extends StatelessWidget {
                         context,
                       ).textTheme.bodyLarge?.color?.withValues(alpha: 0.6),
                     ),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
 
@@ -165,19 +163,16 @@ class RippleDottedBackgroundPainter extends CustomPainter {
     // Center the ripple on the gauge position
     final center = Offset(size.width / 2, gaugeCenterOffset);
 
-    // Create multiple concentric circles of dots (ripple effect)
-    const circleCount = 5; // Number of concentric circles
+    // Create many concentric circles of dots (ripple effect - feels infinite)
+    const circleCount = 20; // Number of concentric circles
     const dotsPerCircle = 28; // Dots per circle
     const dotRadius = 2.5;
 
     for (int circleIndex = 0; circleIndex < circleCount; circleIndex++) {
-      // Calculate alpha - each wave fades out progressively
-      final baseAlpha = isDark ? 0.12 : 0.20;
-      final alphaDecrement = isDark ? 0.025 : 0.04;
-      final alpha = (baseAlpha - (circleIndex * alphaDecrement)).clamp(
-        0.02,
-        1.0,
-      );
+      // Calculate alpha - aggressive fade in first 6 circles, barely visible after
+      final baseAlpha = isDark ? 0.15 : 0.22;
+      final fadeProgress = (circleIndex / 6.0).clamp(0.0, 1.0);
+      final alpha = (baseAlpha * (1 - fadeProgress)).clamp(0.01, 1.0);
 
       // Create paint with progressive fade
       final paint = Paint()
