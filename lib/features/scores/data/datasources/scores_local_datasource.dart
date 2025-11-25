@@ -10,10 +10,15 @@ import 'package:rolla_fitness_app_demo/features/scores/data/models/metric_info_m
 /// Abstract datasource interface
 abstract class ScoresLocalDataSource {
   Future<List<ScoreModel>> getScores();
-  Future<ScoreModel> getScoreDetail(String scoreType, String timeframe);
+  Future<ScoreModel> getScoreDetail(
+    String scoreType,
+    String timeframe,
+    DateTime selectedDate,
+  );
   Future<List<ScoreHistoryPointModel>> getScoreHistory(
     String scoreType,
     String timeframe,
+    DateTime selectedDate,
   );
   Future<List<InsightModel>> getInsights(String scoreType);
   Future<MetricInfoModel> getMetricInfo(String metricId);
@@ -71,11 +76,42 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
   }
 
   @override
-  Future<ScoreModel> getScoreDetail(String scoreType, String timeframe) async {
-    // For now, just return the same as getScores for the specific type
-    final scores = await getScores();
-    return scores.firstWhere(
-      (score) => score.type.toLowerCase() == scoreType.toLowerCase(),
+  Future<ScoreModel> getScoreDetail(
+    String scoreType,
+    String timeframe,
+    DateTime selectedDate,
+  ) async {
+    // Get the score value for the selected date from history
+    final history = await getScoreHistory(scoreType, '1d', selectedDate);
+    final historyPoint = history.firstOrNull;
+
+    // Get metrics from the static scores data
+    final data = await _loadData();
+    final scoresData = data['scores'] as Map<String, dynamic>;
+    final scoreData = scoresData[scoreType.toLowerCase()] as Map<String, dynamic>;
+    final metricsData = scoreData['metrics'] as Map<String, dynamic>;
+
+    // Use the historical value if available, otherwise fall back to current_value
+    final scoreValue = historyPoint?.value ?? scoreData['current_value'] as int;
+
+    // Build metrics
+    final metrics = <MetricModel>[];
+    for (final metricEntry in metricsData.entries) {
+      final metricId = metricEntry.key;
+      final metricData = metricEntry.value as Map<String, dynamic>;
+
+      metrics.add(MetricModel(
+        id: metricId,
+        title: metricData['title'] as String,
+        displayValue: metricData['value'] as String,
+        score: metricData['score'] as int?,
+      ));
+    }
+
+    return ScoreModel(
+      type: scoreType,
+      value: scoreValue,
+      metrics: metrics,
     );
   }
 
@@ -83,16 +119,59 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
   Future<List<ScoreHistoryPointModel>> getScoreHistory(
     String scoreType,
     String timeframe,
+    DateTime selectedDate,
   ) async {
     final data = await _loadData();
     final historyData = data['history'] as Map<String, dynamic>;
-    final scoreHistory =
-        historyData[scoreType.toLowerCase()] as Map<String, dynamic>;
-    final timeframeHistory = scoreHistory[timeframe.toLowerCase()] as List;
+    final scoreHistory = historyData[scoreType.toLowerCase()] as List;
 
-    return timeframeHistory
+    // Parse all history points
+    final allHistory = scoreHistory
         .map((point) =>
             ScoreHistoryPointModel.fromJson(point as Map<String, dynamic>))
+        .toList();
+
+    // Calculate date range based on timeframe and selectedDate
+    final endDate = DateTime(selectedDate.year, selectedDate.month, selectedDate.day);
+    DateTime startDate;
+
+    switch (timeframe.toLowerCase()) {
+      case '1d':
+        // Single day
+        return allHistory
+            .where((point) {
+              final pointDate = DateTime.parse(point.date);
+              final normalizedPointDate = DateTime(pointDate.year, pointDate.month, pointDate.day);
+              return normalizedPointDate == endDate;
+            })
+            .toList();
+
+      case '7d':
+        // Last 7 days ending on selectedDate
+        startDate = endDate.subtract(const Duration(days: 6));
+        break;
+
+      case '30d':
+        // Last 30 days ending on selectedDate
+        startDate = endDate.subtract(const Duration(days: 29));
+        break;
+
+      case '1y':
+        // Last 365 days ending on selectedDate
+        startDate = endDate.subtract(const Duration(days: 364));
+        break;
+
+      default:
+        startDate = endDate.subtract(const Duration(days: 6));
+    }
+
+    // Filter history to date range
+    return allHistory
+        .where((point) {
+          final pointDate = DateTime.parse(point.date);
+          final normalizedPointDate = DateTime(pointDate.year, pointDate.month, pointDate.day);
+          return !normalizedPointDate.isBefore(startDate) && !normalizedPointDate.isAfter(endDate);
+        })
         .toList();
   }
 

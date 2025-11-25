@@ -16,12 +16,14 @@ abstract class ScoresRepository {
   Future<Either<Failure, Score>> getScoreDetail(
     ScoreType type,
     Timeframe timeframe,
+    DateTime selectedDate,
   );
 
   /// Get score history for charts
   Future<Either<Failure, List<ScoreHistoryPoint>>> getScoreHistory(
     ScoreType type,
     Timeframe timeframe,
+    DateTime selectedDate,
   );
 
   /// Get insights for a score type

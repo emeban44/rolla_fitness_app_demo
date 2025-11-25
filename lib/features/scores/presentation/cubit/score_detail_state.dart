@@ -18,6 +18,7 @@ class ScoreDetailState with _$ScoreDetailState {
     required List<Insight> insights,
     required Timeframe timeframe,
     required ScoreType scoreType,
+    required DateTime selectedDate,
   }) = _Loaded;
   const factory ScoreDetailState.error(Failure failure) = _Error;
 }

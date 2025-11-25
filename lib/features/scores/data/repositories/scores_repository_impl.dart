@@ -32,11 +32,13 @@ class ScoresRepositoryImpl implements ScoresRepository {
   Future<Either<Failure, Score>> getScoreDetail(
     ScoreType type,
     Timeframe timeframe,
+    DateTime selectedDate,
   ) async {
     try {
       final model = await localDataSource.getScoreDetail(
         type.name,
         timeframe.apiKey,
+        selectedDate,
       );
       return Right(model.toDomain());
     } catch (e) {
@@ -48,11 +50,13 @@ class ScoresRepositoryImpl implements ScoresRepository {
   Future<Either<Failure, List<ScoreHistoryPoint>>> getScoreHistory(
     ScoreType type,
     Timeframe timeframe,
+    DateTime selectedDate,
   ) async {
     try {
       final models = await localDataSource.getScoreHistory(
         type.name,
         timeframe.apiKey,
+        selectedDate,
       );
       final history = models.map((model) => model.toDomain()).toList();
       return Right(history);

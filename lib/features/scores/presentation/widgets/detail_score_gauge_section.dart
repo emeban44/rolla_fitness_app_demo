@@ -49,7 +49,7 @@ class DetailScoreGaugeSection extends StatelessWidget {
             children: [
               // Top row: Title + Info | Timeframe/Date
               Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                padding: const EdgeInsets.fromLTRB(16, 0, 4, 0),
                 child: Row(
                   children: [
                     // Title with info icon

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
 import 'package:rolla_fitness_app_demo/core/di/service_locator.dart';
 import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
@@ -13,6 +11,7 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/daily_score_detail_bottom_sheet.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/detail_score_gauge_section.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metric_tile.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/time_period_selector.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/timeframe_selector.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/trend_chart.dart';
 
@@ -73,7 +72,7 @@ class ScoreDetailView extends StatelessWidget {
           return state.when(
             initial: () => const Center(child: CircularProgressIndicator()),
             loading: () => const LoadingSkeletonView(),
-            loaded: (score, history, insights, timeframe, scoreType) {
+            loaded: (score, history, insights, timeframe, scoreType, selectedDate) {
               return RefreshIndicator(
                 onRefresh: () async {
                   await context.read<ScoreDetailCubit>().refresh();
@@ -100,8 +99,8 @@ class ScoreDetailView extends StatelessWidget {
                         DetailScoreGaugeSection(
                           scoreType: scoreType,
                           score: score.value,
-                          subtitle: insights.isNotEmpty ? insights.first.text : null,
-                          description: insights.length > 1 ? insights[1].text : null,
+                          subtitle: insights.firstOrNull?.text,
+                          description: insights.elementAtOrNull(1)?.text,
                           onInfoTap: () {
                             DailyScoreDetailBottomSheet.show(
                               context: context,
@@ -112,21 +111,18 @@ class ScoreDetailView extends StatelessWidget {
                               info: null,
                             );
                           },
-                          topRightWidget: Text(
-                            DateFormat('d MMM').format(DateTime.now()),
-                            style: GoogleFonts.outfit(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              height: 1.0,
-                              letterSpacing: 0,
-                              color: Theme.of(context).textTheme.bodyLarge?.color,
-                            ),
+                          topRightWidget: TimePeriodSelector(
+                            selectedDate: selectedDate,
+                            timeframe: timeframe,
+                            onPrevious: () => context.read<ScoreDetailCubit>().navigatePrevious(),
+                            onNext: () => context.read<ScoreDetailCubit>().navigateNext(),
+                            canGoNext: context.read<ScoreDetailCubit>().canNavigateNext(),
                           ),
                         ),
                       ] else ...[
                         // 7D/30D/1Y View - Show chart
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          padding: const EdgeInsets.fromLTRB(16, 0, 4, 0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -139,15 +135,14 @@ class ScoreDetailView extends StatelessWidget {
                                     ).textTheme.titleMedium,
                                   ),
                                   const Spacer(),
-                                  // Date range
-                                  if (history.isNotEmpty) ...[
-                                    Text(
-                                      '${DateFormat('d MMM').format(history.first.date)} - ${DateFormat('d MMM').format(history.last.date)}',
-                                      style: Theme.of(
-                                        context,
-                                      ).textTheme.bodyMedium,
-                                    ),
-                                  ],
+                                  // Date range navigator
+                                  TimePeriodSelector(
+                                    selectedDate: selectedDate,
+                                    timeframe: timeframe,
+                                    onPrevious: () => context.read<ScoreDetailCubit>().navigatePrevious(),
+                                    onNext: () => context.read<ScoreDetailCubit>().navigateNext(),
+                                    canGoNext: context.read<ScoreDetailCubit>().canNavigateNext(),
+                                  ),
                                 ],
                               ),
                               const SizedBox(height: 8),

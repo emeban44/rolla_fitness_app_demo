@@ -13,7 +13,11 @@ class GetScoreDetail {
 
   GetScoreDetail(this.repository);
 
-  Future<Either<Failure, Score>> call(ScoreType type, Timeframe timeframe) {
-    return repository.getScoreDetail(type, timeframe);
+  Future<Either<Failure, Score>> call(
+    ScoreType type,
+    Timeframe timeframe,
+    DateTime selectedDate,
+  ) {
+    return repository.getScoreDetail(type, timeframe, selectedDate);
   }
 }

@@ -16,7 +16,8 @@ class GetScoreHistory {
   Future<Either<Failure, List<ScoreHistoryPoint>>> call(
     ScoreType type,
     Timeframe timeframe,
+    DateTime selectedDate,
   ) {
-    return repository.getScoreHistory(type, timeframe);
+    return repository.getScoreHistory(type, timeframe, selectedDate);
   }
 }

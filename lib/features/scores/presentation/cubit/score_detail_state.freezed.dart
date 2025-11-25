@@ -27,6 +27,7 @@ mixin _$ScoreDetailState {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )
     loaded,
     required TResult Function(Failure failure) error,
@@ -41,6 +42,7 @@ mixin _$ScoreDetailState {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )?
     loaded,
     TResult? Function(Failure failure)? error,
@@ -55,6 +57,7 @@ mixin _$ScoreDetailState {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )?
     loaded,
     TResult Function(Failure failure)? error,
@@ -157,6 +160,7 @@ class _$InitialImpl implements _Initial {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )
     loaded,
     required TResult Function(Failure failure) error,
@@ -175,6 +179,7 @@ class _$InitialImpl implements _Initial {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )?
     loaded,
     TResult? Function(Failure failure)? error,
@@ -193,6 +198,7 @@ class _$InitialImpl implements _Initial {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )?
     loaded,
     TResult Function(Failure failure)? error,
@@ -297,6 +303,7 @@ class _$LoadingImpl implements _Loading {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )
     loaded,
     required TResult Function(Failure failure) error,
@@ -315,6 +322,7 @@ class _$LoadingImpl implements _Loading {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )?
     loaded,
     TResult? Function(Failure failure)? error,
@@ -333,6 +341,7 @@ class _$LoadingImpl implements _Loading {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )?
     loaded,
     TResult Function(Failure failure)? error,
@@ -399,6 +408,7 @@ abstract class _$$LoadedImplCopyWith<$Res> {
     List<Insight> insights,
     Timeframe timeframe,
     ScoreType scoreType,
+    DateTime selectedDate,
   });
 
   $ScoreCopyWith<$Res> get score;
@@ -423,6 +433,7 @@ class __$$LoadedImplCopyWithImpl<$Res>
     Object? insights = null,
     Object? timeframe = null,
     Object? scoreType = null,
+    Object? selectedDate = null,
   }) {
     return _then(
       _$LoadedImpl(
@@ -446,6 +457,10 @@ class __$$LoadedImplCopyWithImpl<$Res>
             ? _value.scoreType
             : scoreType // ignore: cast_nullable_to_non_nullable
                   as ScoreType,
+        selectedDate: null == selectedDate
+            ? _value.selectedDate
+            : selectedDate // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
       ),
     );
   }
@@ -470,6 +485,7 @@ class _$LoadedImpl implements _Loaded {
     required final List<Insight> insights,
     required this.timeframe,
     required this.scoreType,
+    required this.selectedDate,
   }) : _history = history,
        _insights = insights;
 
@@ -495,10 +511,12 @@ class _$LoadedImpl implements _Loaded {
   final Timeframe timeframe;
   @override
   final ScoreType scoreType;
+  @override
+  final DateTime selectedDate;
 
   @override
   String toString() {
-    return 'ScoreDetailState.loaded(score: $score, history: $history, insights: $insights, timeframe: $timeframe, scoreType: $scoreType)';
+    return 'ScoreDetailState.loaded(score: $score, history: $history, insights: $insights, timeframe: $timeframe, scoreType: $scoreType, selectedDate: $selectedDate)';
   }
 
   @override
@@ -512,7 +530,9 @@ class _$LoadedImpl implements _Loaded {
             (identical(other.timeframe, timeframe) ||
                 other.timeframe == timeframe) &&
             (identical(other.scoreType, scoreType) ||
-                other.scoreType == scoreType));
+                other.scoreType == scoreType) &&
+            (identical(other.selectedDate, selectedDate) ||
+                other.selectedDate == selectedDate));
   }
 
   @override
@@ -523,6 +543,7 @@ class _$LoadedImpl implements _Loaded {
     const DeepCollectionEquality().hash(_insights),
     timeframe,
     scoreType,
+    selectedDate,
   );
 
   /// Create a copy of ScoreDetailState
@@ -544,11 +565,12 @@ class _$LoadedImpl implements _Loaded {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )
     loaded,
     required TResult Function(Failure failure) error,
   }) {
-    return loaded(score, history, insights, timeframe, scoreType);
+    return loaded(score, history, insights, timeframe, scoreType, selectedDate);
   }
 
   @override
@@ -562,11 +584,19 @@ class _$LoadedImpl implements _Loaded {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )?
     loaded,
     TResult? Function(Failure failure)? error,
   }) {
-    return loaded?.call(score, history, insights, timeframe, scoreType);
+    return loaded?.call(
+      score,
+      history,
+      insights,
+      timeframe,
+      scoreType,
+      selectedDate,
+    );
   }
 
   @override
@@ -580,13 +610,21 @@ class _$LoadedImpl implements _Loaded {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )?
     loaded,
     TResult Function(Failure failure)? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(score, history, insights, timeframe, scoreType);
+      return loaded(
+        score,
+        history,
+        insights,
+        timeframe,
+        scoreType,
+        selectedDate,
+      );
     }
     return orElse();
   }
@@ -636,6 +674,7 @@ abstract class _Loaded implements ScoreDetailState {
     required final List<Insight> insights,
     required final Timeframe timeframe,
     required final ScoreType scoreType,
+    required final DateTime selectedDate,
   }) = _$LoadedImpl;
 
   Score get score;
@@ -643,6 +682,7 @@ abstract class _Loaded implements ScoreDetailState {
   List<Insight> get insights;
   Timeframe get timeframe;
   ScoreType get scoreType;
+  DateTime get selectedDate;
 
   /// Create a copy of ScoreDetailState
   /// with the given fields replaced by the non-null parameter values.
@@ -729,6 +769,7 @@ class _$ErrorImpl implements _Error {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )
     loaded,
     required TResult Function(Failure failure) error,
@@ -747,6 +788,7 @@ class _$ErrorImpl implements _Error {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )?
     loaded,
     TResult? Function(Failure failure)? error,
@@ -765,6 +807,7 @@ class _$ErrorImpl implements _Error {
       List<Insight> insights,
       Timeframe timeframe,
       ScoreType scoreType,
+      DateTime selectedDate,
     )?
     loaded,
     TResult Function(Failure failure)? error,
