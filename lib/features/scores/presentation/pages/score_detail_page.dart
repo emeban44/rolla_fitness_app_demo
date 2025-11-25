@@ -151,37 +151,45 @@ class ScoreDetailView extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Column(
-                          children: score.metrics.map((metric) {
-                            // Make Readiness and Activity metrics tappable on Health page
-                            final isNavigatable =
-                                scoreType == ScoreType.health &&
-                                (metric.title.toLowerCase() == 'readiness' || metric.title.toLowerCase() == 'activity');
+                      // Show "No data available" if metrics list is empty
+                      if (score.metrics.isEmpty)
+                        const SizedBox(
+                          height: 60,
+                          child: Center(child: Text('No data available')),
+                        )
+                      else
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Column(
+                            children: score.metrics.map((metric) {
+                              // Make Readiness and Activity metrics tappable on Health page
+                              final isNavigatable =
+                                  scoreType == ScoreType.health &&
+                                  (metric.title.toLowerCase() == 'readiness' ||
+                                      metric.title.toLowerCase() == 'activity');
 
-                            return MetricTile(
-                              metric: metric,
-                              showAvgLabel: timeframe != Timeframe.oneDay,
-                              onTap: isNavigatable
-                                  ? () {
-                                      final targetScoreType = metric.title.toLowerCase() == 'readiness'
-                                          ? ScoreType.readiness
-                                          : ScoreType.activity;
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => ScoreDetailPage(
-                                            scoreType: targetScoreType,
+                              return MetricTile(
+                                metric: metric,
+                                showAvgLabel: timeframe != Timeframe.oneDay,
+                                onTap: isNavigatable
+                                    ? () {
+                                        final targetScoreType = metric.title.toLowerCase() == 'readiness'
+                                            ? ScoreType.readiness
+                                            : ScoreType.activity;
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => ScoreDetailPage(
+                                              scoreType: targetScoreType,
+                                            ),
                                           ),
-                                        ),
-                                      );
-                                    }
-                                  : null,
-                            );
-                          }).toList(),
+                                        );
+                                      }
+                                    : null,
+                              );
+                            }).toList(),
+                          ),
                         ),
-                      ),
 
                       const SizedBox(height: 32),
 

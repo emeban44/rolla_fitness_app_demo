@@ -2290,5 +2290,9062 @@
       "title": "Move Hours",
       "description": "Hours during which you recorded significant movement. Breaking up sedentary time is important for health."
     }
+  },
+  "daily_metrics": {
+    "readiness": [
+      {
+        "date": "2025-05-30",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 36min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "56 bpm",
+            "score": 82
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-05-31",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "8h 10min",
+            "score": 97
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-06-01",
+        "score": 76,
+        "metrics": {
+          "sleep": {
+            "value": "6h 34min",
+            "score": 91
+          },
+          "resting_hr": {
+            "value": "61 bpm",
+            "score": 67
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-06-02",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 7min",
+            "score": 84
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "54 ms",
+            "score": 98
+          }
+        }
+      },
+      {
+        "date": "2025-06-03",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "7h 26min",
+            "score": 105
+          },
+          "resting_hr": {
+            "value": "60 bpm",
+            "score": 70
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-06-04",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-06-05",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 12min",
+            "score": 89
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-06-06",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 30min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "41 ms",
+            "score": 77
+          }
+        }
+      },
+      {
+        "date": "2025-06-07",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 37min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "56 bpm",
+            "score": 82
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-06-08",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 55min",
+            "score": 99
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-06-09",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "7h 40min",
+            "score": 99
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-06-10",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "6h 26min",
+            "score": 86
+          },
+          "resting_hr": {
+            "value": "56 bpm",
+            "score": 82
+          },
+          "hrv": {
+            "value": "40 ms",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-06-11",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 30min",
+            "score": 100
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-06-12",
+        "score": 85,
+        "metrics": {
+          "sleep": {
+            "value": "8h 10min",
+            "score": 95
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-06-13",
+        "score": 82,
+        "metrics": {
+          "sleep": {
+            "value": "7h 53min",
+            "score": 90
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-06-14",
+        "score": 84,
+        "metrics": {
+          "sleep": {
+            "value": "7h 26min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-06-15",
+        "score": 82,
+        "metrics": {
+          "sleep": {
+            "value": "7h 22min",
+            "score": 105
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-06-16",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "7h 36min",
+            "score": 95
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-06-17",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 23min",
+            "score": 94
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-06-18",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "8h 21min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-06-19",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-06-20",
+        "score": 86,
+        "metrics": {
+          "sleep": {
+            "value": "8h 36min",
+            "score": 83
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-06-21",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "7h 55min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "61 bpm",
+            "score": 67
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-06-22",
+        "score": 86,
+        "metrics": {
+          "sleep": {
+            "value": "7h 38min",
+            "score": 97
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-06-23",
+        "score": 76,
+        "metrics": {
+          "sleep": {
+            "value": "7h 26min",
+            "score": 100
+          },
+          "resting_hr": {
+            "value": "58 bpm",
+            "score": 76
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-06-24",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 10min",
+            "score": 97
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-06-25",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "7h 29min",
+            "score": 99
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-06-26",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 22min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-06-27",
+        "score": 82,
+        "metrics": {
+          "sleep": {
+            "value": "8h 47min",
+            "score": 85
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-06-28",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 17min",
+            "score": 101
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-06-29",
+        "score": 79,
+        "metrics": {
+          "sleep": {
+            "value": "6h 38min",
+            "score": 104
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-06-30",
+        "score": 82,
+        "metrics": {
+          "sleep": {
+            "value": "7h 44min",
+            "score": 100
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-07-01",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-07-02",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 22min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-03",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 23min",
+            "score": 88
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-07-04",
+        "score": 79,
+        "metrics": {
+          "sleep": {
+            "value": "7h 19min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "58 bpm",
+            "score": 76
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-07-05",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 57min",
+            "score": 67
+          },
+          "resting_hr": {
+            "value": "47 bpm",
+            "score": 97
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-07-06",
+        "score": 85,
+        "metrics": {
+          "sleep": {
+            "value": "8h 22min",
+            "score": 92
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-07-07",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 53min",
+            "score": 73
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "52 ms",
+            "score": 99
+          }
+        }
+      },
+      {
+        "date": "2025-07-08",
+        "score": 87,
+        "metrics": {
+          "sleep": {
+            "value": "8h 36min",
+            "score": 90
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-07-09",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-07-10",
+        "score": 79,
+        "metrics": {
+          "sleep": {
+            "value": "7h 39min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "59 bpm",
+            "score": 73
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-11",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "7h 38min",
+            "score": 100
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-07-12",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 19min",
+            "score": 93
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-07-13",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 11min",
+            "score": 93
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-07-14",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "7h 26min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "56 bpm",
+            "score": 82
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-07-15",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-07-16",
+        "score": 79,
+        "metrics": {
+          "sleep": {
+            "value": "6h 6min",
+            "score": 82
+          },
+          "resting_hr": {
+            "value": "58 bpm",
+            "score": 76
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-17",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "7h 51min",
+            "score": 93
+          },
+          "resting_hr": {
+            "value": "60 bpm",
+            "score": 70
+          },
+          "hrv": {
+            "value": "41 ms",
+            "score": 77
+          }
+        }
+      },
+      {
+        "date": "2025-07-18",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 51min",
+            "score": 76
+          },
+          "resting_hr": {
+            "value": "47 bpm",
+            "score": 97
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-07-19",
+        "score": 87,
+        "metrics": {
+          "sleep": {
+            "value": "8h 48min",
+            "score": 87
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-07-20",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 23min",
+            "score": 84
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-07-21",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 31min",
+            "score": 88
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-07-22",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 11min",
+            "score": 101
+          },
+          "resting_hr": {
+            "value": "56 bpm",
+            "score": 82
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-07-23",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "6h 46min",
+            "score": 92
+          },
+          "resting_hr": {
+            "value": "58 bpm",
+            "score": 76
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-07-24",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "7h 14min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-07-25",
+        "score": 86,
+        "metrics": {
+          "sleep": {
+            "value": "8h 15min",
+            "score": 95
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-07-26",
+        "score": 76,
+        "metrics": {
+          "sleep": {
+            "value": "6h 36min",
+            "score": 91
+          },
+          "resting_hr": {
+            "value": "56 bpm",
+            "score": 82
+          },
+          "hrv": {
+            "value": "40 ms",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-07-27",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "6h 53min",
+            "score": 104
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "41 ms",
+            "score": 77
+          }
+        }
+      },
+      {
+        "date": "2025-07-28",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 20min",
+            "score": 99
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-07-29",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 56min",
+            "score": 94
+          },
+          "resting_hr": {
+            "value": "59 bpm",
+            "score": 73
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-07-30",
+        "score": 86,
+        "metrics": {
+          "sleep": {
+            "value": "7h 28min",
+            "score": 97
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-31",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 32min",
+            "score": 99
+          },
+          "resting_hr": {
+            "value": "60 bpm",
+            "score": 70
+          },
+          "hrv": {
+            "value": "41 ms",
+            "score": 77
+          }
+        }
+      },
+      {
+        "date": "2025-08-01",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 44min",
+            "score": 101
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-08-02",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 26min",
+            "score": 97
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-08-03",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-08-04",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "6h 54min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "58 bpm",
+            "score": 76
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-08-05",
+        "score": 84,
+        "metrics": {
+          "sleep": {
+            "value": "7h 16min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-08-06",
+        "score": 76,
+        "metrics": {
+          "sleep": {
+            "value": "7h 33min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "60 bpm",
+            "score": 70
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-08-07",
+        "score": 79,
+        "metrics": {
+          "sleep": {
+            "value": "6h 35min",
+            "score": 95
+          },
+          "resting_hr": {
+            "value": "60 bpm",
+            "score": 70
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-08-08",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 16min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-08-09",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-08-10",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 48min",
+            "score": 69
+          },
+          "resting_hr": {
+            "value": "46 bpm",
+            "score": 96
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-08-11",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 0min",
+            "score": 86
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-08-12",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 12min",
+            "score": 86
+          },
+          "resting_hr": {
+            "value": "47 bpm",
+            "score": 97
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-08-13",
+        "score": 84,
+        "metrics": {
+          "sleep": {
+            "value": "7h 44min",
+            "score": 99
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-08-14",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "7h 8min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-08-15",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 15min",
+            "score": 97
+          },
+          "resting_hr": {
+            "value": "47 bpm",
+            "score": 97
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-08-16",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "6h 29min",
+            "score": 94
+          },
+          "resting_hr": {
+            "value": "58 bpm",
+            "score": 76
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-08-17",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "6h 19min",
+            "score": 78
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-08-18",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "7h 36min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "48 bpm",
+            "score": 98
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-08-19",
+        "score": 85,
+        "metrics": {
+          "sleep": {
+            "value": "7h 4min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-08-20",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "6h 47min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "61 bpm",
+            "score": 67
+          },
+          "hrv": {
+            "value": "40 ms",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-08-21",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "8h 32min",
+            "score": 94
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-08-22",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 56min",
+            "score": 89
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-08-23",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "6h 0min",
+            "score": 77
+          },
+          "resting_hr": {
+            "value": "60 bpm",
+            "score": 70
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-08-24",
+        "score": 76,
+        "metrics": {
+          "sleep": {
+            "value": "7h 50min",
+            "score": 99
+          },
+          "resting_hr": {
+            "value": "58 bpm",
+            "score": 76
+          },
+          "hrv": {
+            "value": "40 ms",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-08-25",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 42min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-08-26",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "8h 16min",
+            "score": 97
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-08-27",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 56min",
+            "score": 92
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-08-28",
+        "score": 82,
+        "metrics": {
+          "sleep": {
+            "value": "8h 2min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-08-29",
+        "score": 86,
+        "metrics": {
+          "sleep": {
+            "value": "7h 47min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-08-30",
+        "score": 85,
+        "metrics": {
+          "sleep": {
+            "value": "7h 28min",
+            "score": 97
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-08-31",
+        "score": 86,
+        "metrics": {
+          "sleep": {
+            "value": "8h 14min",
+            "score": 95
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-09-01",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "7h 34min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-09-02",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "8h 29min",
+            "score": 92
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-09-03",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "7h 22min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "52 ms",
+            "score": 99
+          }
+        }
+      },
+      {
+        "date": "2025-09-04",
+        "score": 79,
+        "metrics": {
+          "sleep": {
+            "value": "7h 1min",
+            "score": 101
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-09-05",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 55min",
+            "score": 95
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-09-06",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 59min",
+            "score": 76
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-09-07",
+        "score": 76,
+        "metrics": {
+          "sleep": {
+            "value": "6h 15min",
+            "score": 80
+          },
+          "resting_hr": {
+            "value": "61 bpm",
+            "score": 67
+          },
+          "hrv": {
+            "value": "41 ms",
+            "score": 77
+          }
+        }
+      },
+      {
+        "date": "2025-09-08",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 22min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-09-09",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "7h 11min",
+            "score": 104
+          },
+          "resting_hr": {
+            "value": "59 bpm",
+            "score": 73
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-09-10",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 59min",
+            "score": 85
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-09-11",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 31min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-09-12",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 36min",
+            "score": 85
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "52 ms",
+            "score": 99
+          }
+        }
+      },
+      {
+        "date": "2025-09-13",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 15min",
+            "score": 97
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-09-14",
+        "score": 87,
+        "metrics": {
+          "sleep": {
+            "value": "8h 56min",
+            "score": 86
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-09-15",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 38min",
+            "score": 101
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-09-16",
+        "score": 82,
+        "metrics": {
+          "sleep": {
+            "value": "7h 14min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-09-17",
+        "score": 79,
+        "metrics": {
+          "sleep": {
+            "value": "7h 51min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "59 bpm",
+            "score": 73
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-09-18",
+        "score": 79,
+        "metrics": {
+          "sleep": {
+            "value": "7h 28min",
+            "score": 99
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-09-19",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 41min",
+            "score": 85
+          },
+          "resting_hr": {
+            "value": "47 bpm",
+            "score": 97
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-09-20",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "8h 54min",
+            "score": 86
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-09-21",
+        "score": 87,
+        "metrics": {
+          "sleep": {
+            "value": "8h 19min",
+            "score": 91
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-09-22",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 57min",
+            "score": 95
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-09-23",
+        "score": 82,
+        "metrics": {
+          "sleep": {
+            "value": "7h 28min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-09-24",
+        "score": 86,
+        "metrics": {
+          "sleep": {
+            "value": "7h 28min",
+            "score": 99
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-09-25",
+        "score": 76,
+        "metrics": {
+          "sleep": {
+            "value": "7h 0min",
+            "score": 80
+          },
+          "resting_hr": {
+            "value": "59 bpm",
+            "score": 73
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-09-26",
+        "score": 87,
+        "metrics": {
+          "sleep": {
+            "value": "7h 29min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "48 bpm",
+            "score": 98
+          },
+          "hrv": {
+            "value": "52 ms",
+            "score": 99
+          }
+        }
+      },
+      {
+        "date": "2025-09-27",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "7h 13min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "60 bpm",
+            "score": 70
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-09-28",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "7h 40min",
+            "score": 100
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-29",
+        "score": 82,
+        "metrics": {
+          "sleep": {
+            "value": "8h 3min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-09-30",
+        "score": 84,
+        "metrics": {
+          "sleep": {
+            "value": "7h 14min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-10-01",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "7h 21min",
+            "score": 99
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-10-02",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "7h 11min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-10-03",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 50min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-10-04",
+        "score": 82,
+        "metrics": {
+          "sleep": {
+            "value": "7h 15min",
+            "score": 101
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-10-05",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 35min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "61 bpm",
+            "score": 67
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-10-06",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 55min",
+            "score": 69
+          },
+          "resting_hr": {
+            "value": "48 bpm",
+            "score": 98
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-10-07",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 6min",
+            "score": 91
+          },
+          "resting_hr": {
+            "value": "48 bpm",
+            "score": 98
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-10-08",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 32min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-10-09",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 6min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "54 ms",
+            "score": 98
+          }
+        }
+      },
+      {
+        "date": "2025-10-10",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 31min",
+            "score": 82
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-10-11",
+        "score": 87,
+        "metrics": {
+          "sleep": {
+            "value": "7h 15min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "52 ms",
+            "score": 99
+          }
+        }
+      },
+      {
+        "date": "2025-10-12",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 34min",
+            "score": 89
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-10-13",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 49min",
+            "score": 93
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-10-14",
+        "score": 80,
+        "metrics": {
+          "sleep": {
+            "value": "7h 25min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "58 bpm",
+            "score": 76
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-10-15",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "6h 2min",
+            "score": 77
+          },
+          "resting_hr": {
+            "value": "60 bpm",
+            "score": 70
+          },
+          "hrv": {
+            "value": "39 ms",
+            "score": 73
+          }
+        }
+      },
+      {
+        "date": "2025-10-16",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "8h 26min",
+            "score": 89
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-10-17",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "7h 15min",
+            "score": 94
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "40 ms",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-10-18",
+        "score": 85,
+        "metrics": {
+          "sleep": {
+            "value": "7h 24min",
+            "score": 97
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-10-19",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "6h 50min",
+            "score": 102
+          },
+          "resting_hr": {
+            "value": "58 bpm",
+            "score": 76
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-10-20",
+        "score": 86,
+        "metrics": {
+          "sleep": {
+            "value": "8h 57min",
+            "score": 75
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-10-21",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 59min",
+            "score": 77
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-10-22",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 33min",
+            "score": 81
+          },
+          "resting_hr": {
+            "value": "46 bpm",
+            "score": 96
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-10-23",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 11min",
+            "score": 94
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-10-24",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 4min",
+            "score": 87
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-10-25",
+        "score": 87,
+        "metrics": {
+          "sleep": {
+            "value": "8h 54min",
+            "score": 80
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-10-26",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "6h 12min",
+            "score": 76
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-10-27",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "6h 35min",
+            "score": 91
+          },
+          "resting_hr": {
+            "value": "59 bpm",
+            "score": 73
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-10-28",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 41min",
+            "score": 80
+          },
+          "resting_hr": {
+            "value": "47 bpm",
+            "score": 97
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-10-29",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "7h 33min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "62 bpm",
+            "score": 64
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-10-30",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 5min",
+            "score": 91
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "53 ms",
+            "score": 99
+          }
+        }
+      },
+      {
+        "date": "2025-10-31",
+        "score": 79,
+        "metrics": {
+          "sleep": {
+            "value": "7h 55min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "55 bpm",
+            "score": 85
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-11-01",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "7h 12min",
+            "score": 91
+          },
+          "resting_hr": {
+            "value": "59 bpm",
+            "score": 73
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-11-02",
+        "score": 87,
+        "metrics": {
+          "sleep": {
+            "value": "8h 31min",
+            "score": 86
+          },
+          "resting_hr": {
+            "value": "49 bpm",
+            "score": 99
+          },
+          "hrv": {
+            "value": "52 ms",
+            "score": 99
+          }
+        }
+      },
+      {
+        "date": "2025-11-03",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "8h 5min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-11-04",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "7h 28min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "58 bpm",
+            "score": 76
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-11-05",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 1min",
+            "score": 92
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "48 ms",
+            "score": 91
+          }
+        }
+      },
+      {
+        "date": "2025-11-06",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 46min",
+            "score": 84
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-11-07",
+        "score": 76,
+        "metrics": {
+          "sleep": {
+            "value": "7h 23min",
+            "score": 105
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "42 ms",
+            "score": 79
+          }
+        }
+      },
+      {
+        "date": "2025-11-08",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "7h 32min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "57 bpm",
+            "score": 79
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-11-09",
+        "score": 88,
+        "metrics": {
+          "sleep": {
+            "value": "8h 32min",
+            "score": 79
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-11-10",
+        "score": 77,
+        "metrics": {
+          "sleep": {
+            "value": "7h 1min",
+            "score": 104
+          },
+          "resting_hr": {
+            "value": "59 bpm",
+            "score": 73
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-11-11",
+        "score": 87,
+        "metrics": {
+          "sleep": {
+            "value": "7h 30min",
+            "score": 98
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "52 ms",
+            "score": 99
+          }
+        }
+      },
+      {
+        "date": "2025-11-12",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 1min",
+            "score": 92
+          },
+          "resting_hr": {
+            "value": "56 bpm",
+            "score": 82
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-11-13",
+        "score": 89,
+        "metrics": {
+          "sleep": {
+            "value": "8h 9min",
+            "score": 94
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-11-14",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "7h 58min",
+            "score": 94
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-11-15",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 30min",
+            "score": 78
+          },
+          "resting_hr": {
+            "value": "48 bpm",
+            "score": 98
+          },
+          "hrv": {
+            "value": "51 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-11-16",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "7h 28min",
+            "score": 96
+          },
+          "resting_hr": {
+            "value": "52 bpm",
+            "score": 91
+          },
+          "hrv": {
+            "value": "50 ms",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-11-17",
+        "score": 79,
+        "metrics": {
+          "sleep": {
+            "value": "6h 2min",
+            "score": 78
+          },
+          "resting_hr": {
+            "value": "53 bpm",
+            "score": 89
+          },
+          "hrv": {
+            "value": "41 ms",
+            "score": 77
+          }
+        }
+      },
+      {
+        "date": "2025-11-18",
+        "score": 75,
+        "metrics": {
+          "sleep": {
+            "value": "7h 17min",
+            "score": 90
+          },
+          "resting_hr": {
+            "value": "59 bpm",
+            "score": 73
+          },
+          "hrv": {
+            "value": "43 ms",
+            "score": 81
+          }
+        }
+      },
+      {
+        "date": "2025-11-19",
+        "score": 78,
+        "metrics": {
+          "sleep": {
+            "value": "7h 31min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "59 bpm",
+            "score": 73
+          },
+          "hrv": {
+            "value": "46 ms",
+            "score": 87
+          }
+        }
+      },
+      {
+        "date": "2025-11-20",
+        "score": 90,
+        "metrics": {
+          "sleep": {
+            "value": "8h 21min",
+            "score": 82
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "47 ms",
+            "score": 89
+          }
+        }
+      },
+      {
+        "date": "2025-11-21",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-11-22",
+        "score": 83,
+        "metrics": {
+          "sleep": {
+            "value": "8h 18min",
+            "score": 92
+          },
+          "resting_hr": {
+            "value": "51 bpm",
+            "score": 93
+          },
+          "hrv": {
+            "value": "44 ms",
+            "score": 83
+          }
+        }
+      },
+      {
+        "date": "2025-11-23",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 58min",
+            "score": 90
+          },
+          "resting_hr": {
+            "value": "54 bpm",
+            "score": 87
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-11-24",
+        "score": 86,
+        "metrics": {
+          "sleep": {
+            "value": "8h 41min",
+            "score": 80
+          },
+          "resting_hr": {
+            "value": "50 bpm",
+            "score": 100
+          },
+          "hrv": {
+            "value": "49 ms",
+            "score": 93
+          }
+        }
+      },
+      {
+        "date": "2025-11-25",
+        "score": 81,
+        "metrics": {
+          "sleep": {
+            "value": "7h 28min",
+            "score": 103
+          },
+          "resting_hr": {
+            "value": "56 bpm",
+            "score": 82
+          },
+          "hrv": {
+            "value": "45 ms",
+            "score": 85
+          }
+        }
+      }
+    ],
+    "activity": [
+      {
+        "date": "2025-05-30",
+        "score": 61,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "7929",
+            "score": 78
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-05-31",
+        "score": 49,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "6957",
+            "score": 70
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-06-01",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-06-02",
+        "score": 63,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "7997",
+            "score": 78
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-06-03",
+        "score": 52,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "6915",
+            "score": 69
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-06-04",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "30 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9485",
+            "score": 91
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-06-05",
+        "score": 53,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "7504",
+            "score": 74
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-06-06",
+        "score": 74,
+        "metrics": {
+          "active_points": {
+            "value": "33 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9147",
+            "score": 88
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-06-07",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "6348",
+            "score": 63
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-06-08",
+        "score": 64,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "8746",
+            "score": 85
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-06-09",
+        "score": 60,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "7926",
+            "score": 78
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-06-10",
+        "score": 74,
+        "metrics": {
+          "active_points": {
+            "value": "33 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9896",
+            "score": 94
+          },
+          "move_hours": {
+            "value": "11 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-06-11",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "10003",
+            "score": 100
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-06-12",
+        "score": 64,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "8563",
+            "score": 83
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-06-13",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "19 pts",
+            "score": 67
+          },
+          "steps": {
+            "value": "7404",
+            "score": 73
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-06-14",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-06-15",
+        "score": 63,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "8312",
+            "score": 81
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-06-16",
+        "score": 64,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "9328",
+            "score": 89
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-06-17",
+        "score": 50,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6114",
+            "score": 61
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-06-18",
+        "score": 61,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "8056",
+            "score": 79
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-06-19",
+        "score": 48,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6523",
+            "score": 65
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-06-20",
+        "score": 61,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "8774",
+            "score": 85
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-06-21",
+        "score": 59,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "7595",
+            "score": 75
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-06-22",
+        "score": 60,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "8175",
+            "score": 80
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-06-23",
+        "score": 57,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "7598",
+            "score": 75
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-06-24",
+        "score": 59,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "8444",
+            "score": 82
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-06-25",
+        "score": 53,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "7532",
+            "score": 74
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-06-26",
+        "score": 45,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6204",
+            "score": 62
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-06-27",
+        "score": 69,
+        "metrics": {
+          "active_points": {
+            "value": "31 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9704",
+            "score": 93
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-06-28",
+        "score": 65,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "9132",
+            "score": 88
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-06-29",
+        "score": 55,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "7584",
+            "score": 75
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-06-30",
+        "score": 72,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "9983",
+            "score": 95
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-01",
+        "score": 48,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6704",
+            "score": 67
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-02",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "30 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "10199",
+            "score": 100
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-07-03",
+        "score": 47,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "6803",
+            "score": 68
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-07-04",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "7357",
+            "score": 73
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-05",
+        "score": 62,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "7793",
+            "score": 77
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-06",
+        "score": 61,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "8174",
+            "score": 80
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-07-07",
+        "score": 45,
+        "metrics": {
+          "active_points": {
+            "value": "18 pts",
+            "score": 64
+          },
+          "steps": {
+            "value": "5531",
+            "score": 55
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-07-08",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-07-09",
+        "score": 68,
+        "metrics": {
+          "active_points": {
+            "value": "30 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9257",
+            "score": 89
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-10",
+        "score": 67,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "9532",
+            "score": 91
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-07-11",
+        "score": 63,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "7571",
+            "score": 75
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-12",
+        "score": 57,
+        "metrics": {
+          "active_points": {
+            "value": "23 pts",
+            "score": 78
+          },
+          "steps": {
+            "value": "7313",
+            "score": 73
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-07-13",
+        "score": 46,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "6519",
+            "score": 65
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-07-14",
+        "score": 54,
+        "metrics": {
+          "active_points": {
+            "value": "23 pts",
+            "score": 78
+          },
+          "steps": {
+            "value": "7099",
+            "score": 71
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-07-15",
+        "score": 61,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "8308",
+            "score": 81
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-16",
+        "score": 47,
+        "metrics": {
+          "active_points": {
+            "value": "18 pts",
+            "score": 64
+          },
+          "steps": {
+            "value": "6271",
+            "score": 63
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-07-17",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6664",
+            "score": 67
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-07-18",
+        "score": 58,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "7716",
+            "score": 76
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-19",
+        "score": 57,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "7079",
+            "score": 71
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-07-20",
+        "score": 52,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "6855",
+            "score": 69
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-07-21",
+        "score": 65,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "8339",
+            "score": 81
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-22",
+        "score": 57,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "7610",
+            "score": 75
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-23",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6490",
+            "score": 65
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-24",
+        "score": 73,
+        "metrics": {
+          "active_points": {
+            "value": "29 pts",
+            "score": 93
+          },
+          "steps": {
+            "value": "10083",
+            "score": 100
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-07-25",
+        "score": 55,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "7993",
+            "score": 78
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-07-26",
+        "score": 47,
+        "metrics": {
+          "active_points": {
+            "value": "19 pts",
+            "score": 67
+          },
+          "steps": {
+            "value": "6145",
+            "score": 61
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-07-27",
+        "score": 60,
+        "metrics": {
+          "active_points": {
+            "value": "23 pts",
+            "score": 78
+          },
+          "steps": {
+            "value": "7467",
+            "score": 74
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-07-28",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "19 pts",
+            "score": 67
+          },
+          "steps": {
+            "value": "6192",
+            "score": 62
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-29",
+        "score": 72,
+        "metrics": {
+          "active_points": {
+            "value": "29 pts",
+            "score": 93
+          },
+          "steps": {
+            "value": "8868",
+            "score": 86
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-07-30",
+        "score": 58,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "8073",
+            "score": 79
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-31",
+        "score": 75,
+        "metrics": {
+          "active_points": {
+            "value": "32 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "10957",
+            "score": 99
+          },
+          "move_hours": {
+            "value": "11 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-08-01",
+        "score": 46,
+        "metrics": {
+          "active_points": {
+            "value": "18 pts",
+            "score": 64
+          },
+          "steps": {
+            "value": "5978",
+            "score": 60
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-08-02",
+        "score": 73,
+        "metrics": {
+          "active_points": {
+            "value": "31 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "10406",
+            "score": 100
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-08-03",
+        "score": 45,
+        "metrics": {
+          "active_points": {
+            "value": "17 pts",
+            "score": 61
+          },
+          "steps": {
+            "value": "6101",
+            "score": 61
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-08-04",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "32 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9610",
+            "score": 92
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-08-05",
+        "score": 62,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "8447",
+            "score": 82
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-08-06",
+        "score": 66,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "9498",
+            "score": 91
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-08-07",
+        "score": 72,
+        "metrics": {
+          "active_points": {
+            "value": "32 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9540",
+            "score": 91
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-08-08",
+        "score": 46,
+        "metrics": {
+          "active_points": {
+            "value": "17 pts",
+            "score": 61
+          },
+          "steps": {
+            "value": "6227",
+            "score": 62
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-08-09",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-08-10",
+        "score": 57,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "7748",
+            "score": 76
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-08-11",
+        "score": 68,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "9050",
+            "score": 87
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-08-12",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "32 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "8673",
+            "score": 84
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-08-13",
+        "score": 47,
+        "metrics": {
+          "active_points": {
+            "value": "18 pts",
+            "score": 64
+          },
+          "steps": {
+            "value": "6828",
+            "score": 68
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-08-14",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "29 pts",
+            "score": 93
+          },
+          "steps": {
+            "value": "10389",
+            "score": 100
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-08-15",
+        "score": 54,
+        "metrics": {
+          "active_points": {
+            "value": "23 pts",
+            "score": 78
+          },
+          "steps": {
+            "value": "7063",
+            "score": 71
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-08-16",
+        "score": 62,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "8572",
+            "score": 83
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-08-17",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-08-18",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "7464",
+            "score": 74
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-08-19",
+        "score": 46,
+        "metrics": {
+          "active_points": {
+            "value": "18 pts",
+            "score": 64
+          },
+          "steps": {
+            "value": "5763",
+            "score": 58
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-08-20",
+        "score": 48,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "5886",
+            "score": 59
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-08-21",
+        "score": 50,
+        "metrics": {
+          "active_points": {
+            "value": "19 pts",
+            "score": 67
+          },
+          "steps": {
+            "value": "6437",
+            "score": 64
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-08-22",
+        "score": 55,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "7850",
+            "score": 77
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-08-23",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-08-24",
+        "score": 50,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6899",
+            "score": 69
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-08-25",
+        "score": 61,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "8873",
+            "score": 86
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-08-26",
+        "score": 66,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "8364",
+            "score": 81
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-08-27",
+        "score": 46,
+        "metrics": {
+          "active_points": {
+            "value": "19 pts",
+            "score": 67
+          },
+          "steps": {
+            "value": "5638",
+            "score": 56
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-08-28",
+        "score": 67,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "8975",
+            "score": 86
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-08-29",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "6990",
+            "score": 70
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-08-30",
+        "score": 59,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "7124",
+            "score": 71
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-08-31",
+        "score": 56,
+        "metrics": {
+          "active_points": {
+            "value": "23 pts",
+            "score": 78
+          },
+          "steps": {
+            "value": "7501",
+            "score": 74
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-09-01",
+        "score": 65,
+        "metrics": {
+          "active_points": {
+            "value": "29 pts",
+            "score": 93
+          },
+          "steps": {
+            "value": "8406",
+            "score": 82
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-02",
+        "score": 57,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "7727",
+            "score": 76
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-09-03",
+        "score": 61,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "7742",
+            "score": 76
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-04",
+        "score": 59,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "7461",
+            "score": 74
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-09-05",
+        "score": 73,
+        "metrics": {
+          "active_points": {
+            "value": "30 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9520",
+            "score": 91
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-06",
+        "score": 58,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "8185",
+            "score": 80
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-09-07",
+        "score": 49,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "7137",
+            "score": 71
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-09-08",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6548",
+            "score": 65
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-09-09",
+        "score": 56,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "7839",
+            "score": 77
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-09-10",
+        "score": 63,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "8714",
+            "score": 84
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-11",
+        "score": 64,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "8010",
+            "score": 78
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-09-12",
+        "score": 52,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "7525",
+            "score": 74
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-09-13",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "19 pts",
+            "score": 67
+          },
+          "steps": {
+            "value": "7453",
+            "score": 74
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-09-14",
+        "score": 63,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "7641",
+            "score": 75
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-09-15",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "10408",
+            "score": 100
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-16",
+        "score": 47,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "6544",
+            "score": 65
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-09-17",
+        "score": 50,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6329",
+            "score": 63
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-09-18",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "9499",
+            "score": 91
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-09-19",
+        "score": 47,
+        "metrics": {
+          "active_points": {
+            "value": "18 pts",
+            "score": 64
+          },
+          "steps": {
+            "value": "5700",
+            "score": 57
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-09-20",
+        "score": 62,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "8849",
+            "score": 85
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-21",
+        "score": 73,
+        "metrics": {
+          "active_points": {
+            "value": "32 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9828",
+            "score": 94
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-22",
+        "score": 55,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "6676",
+            "score": 67
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-09-23",
+        "score": 52,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "7397",
+            "score": 73
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-09-24",
+        "score": 62,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "7936",
+            "score": 78
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-09-25",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "7270",
+            "score": 72
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-09-26",
+        "score": 68,
+        "metrics": {
+          "active_points": {
+            "value": "30 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "8818",
+            "score": 85
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-27",
+        "score": 66,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "8466",
+            "score": 82
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-28",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "30 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9090",
+            "score": 87
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-09-29",
+        "score": 67,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "9392",
+            "score": 90
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-09-30",
+        "score": 65,
+        "metrics": {
+          "active_points": {
+            "value": "29 pts",
+            "score": 93
+          },
+          "steps": {
+            "value": "9201",
+            "score": 88
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-10-01",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "32 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "10195",
+            "score": 100
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-10-02",
+        "score": 52,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "6872",
+            "score": 69
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-10-03",
+        "score": 59,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "8217",
+            "score": 80
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-10-04",
+        "score": 69,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "9252",
+            "score": 89
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-10-05",
+        "score": 54,
+        "metrics": {
+          "active_points": {
+            "value": "22 pts",
+            "score": 75
+          },
+          "steps": {
+            "value": "7834",
+            "score": 77
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-10-06",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "6895",
+            "score": 69
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-10-07",
+        "score": 69,
+        "metrics": {
+          "active_points": {
+            "value": "31 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "10108",
+            "score": 100
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-10-08",
+        "score": 51,
+        "metrics": {
+          "active_points": {
+            "value": "23 pts",
+            "score": 78
+          },
+          "steps": {
+            "value": "7456",
+            "score": 74
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-10-09",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-10-10",
+        "score": 62,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "8255",
+            "score": 80
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-10-11",
+        "score": 63,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "9128",
+            "score": 88
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-10-12",
+        "score": 56,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "6793",
+            "score": 68
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-10-13",
+        "score": 48,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6464",
+            "score": 65
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-10-14",
+        "score": 58,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "7796",
+            "score": 77
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-10-15",
+        "score": 63,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "7816",
+            "score": 77
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-10-16",
+        "score": 64,
+        "metrics": {
+          "active_points": {
+            "value": "29 pts",
+            "score": 93
+          },
+          "steps": {
+            "value": "8233",
+            "score": 80
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-10-17",
+        "score": 65,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "8133",
+            "score": 79
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-10-18",
+        "score": 72,
+        "metrics": {
+          "active_points": {
+            "value": "30 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9524",
+            "score": 91
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-10-19",
+        "score": 59,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "8110",
+            "score": 79
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-10-20",
+        "score": 56,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "7238",
+            "score": 72
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-10-21",
+        "score": 67,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "9070",
+            "score": 87
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-10-22",
+        "score": 49,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6308",
+            "score": 63
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-10-23",
+        "score": 73,
+        "metrics": {
+          "active_points": {
+            "value": "32 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9751",
+            "score": 93
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-10-24",
+        "score": 45,
+        "metrics": {
+          "active_points": {
+            "value": "18 pts",
+            "score": 64
+          },
+          "steps": {
+            "value": "6439",
+            "score": 64
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-10-25",
+        "score": 66,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "9203",
+            "score": 88
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-10-26",
+        "score": 63,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "7726",
+            "score": 76
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-10-27",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-10-28",
+        "score": 45,
+        "metrics": {
+          "active_points": {
+            "value": "20 pts",
+            "score": 70
+          },
+          "steps": {
+            "value": "6211",
+            "score": 62
+          },
+          "move_hours": {
+            "value": "5 h",
+            "score": 40
+          }
+        }
+      },
+      {
+        "date": "2025-10-29",
+        "score": 66,
+        "metrics": {
+          "active_points": {
+            "value": "29 pts",
+            "score": 93
+          },
+          "steps": {
+            "value": "9402",
+            "score": 90
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-10-30",
+        "score": 67,
+        "metrics": {
+          "active_points": {
+            "value": "30 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9765",
+            "score": 93
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-10-31",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-11-01",
+        "score": 68,
+        "metrics": {
+          "active_points": {
+            "value": "29 pts",
+            "score": 93
+          },
+          "steps": {
+            "value": "9267",
+            "score": 89
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-11-02",
+        "score": 65,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "8337",
+            "score": 81
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-11-03",
+        "score": 69,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "9716",
+            "score": 93
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-11-04",
+        "score": 66,
+        "metrics": {
+          "active_points": {
+            "value": "29 pts",
+            "score": 93
+          },
+          "steps": {
+            "value": "8549",
+            "score": 83
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-11-05",
+        "score": 72,
+        "metrics": {
+          "active_points": {
+            "value": "31 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9012",
+            "score": 87
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-11-06",
+        "score": 53,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "7357",
+            "score": 73
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-11-07",
+        "score": 48,
+        "metrics": {
+          "active_points": {
+            "value": "19 pts",
+            "score": 67
+          },
+          "steps": {
+            "value": "6092",
+            "score": 61
+          },
+          "move_hours": {
+            "value": "6 h",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-11-08",
+        "score": 50,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "6081",
+            "score": 61
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-11-09",
+        "score": 61,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "8488",
+            "score": 82
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-11-10",
+        "score": 73,
+        "metrics": {
+          "active_points": {
+            "value": "31 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "10682",
+            "score": 99
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-11-11",
+        "score": 66,
+        "metrics": {
+          "active_points": {
+            "value": "28 pts",
+            "score": 90
+          },
+          "steps": {
+            "value": "9612",
+            "score": 92
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-11-12",
+        "score": 47,
+        "metrics": {
+          "active_points": {
+            "value": "18 pts",
+            "score": 64
+          },
+          "steps": {
+            "value": "6360",
+            "score": 64
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-11-13",
+        "score": 59,
+        "metrics": {
+          "active_points": {
+            "value": "25 pts",
+            "score": 83
+          },
+          "steps": {
+            "value": "8036",
+            "score": 79
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-11-14",
+        "score": 59,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "8518",
+            "score": 83
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-11-15",
+        "score": 75,
+        "metrics": {
+          "active_points": {
+            "value": "32 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "10980",
+            "score": 99
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-11-16",
+        "score": 68,
+        "metrics": {
+          "active_points": {
+            "value": "27 pts",
+            "score": 88
+          },
+          "steps": {
+            "value": "9084",
+            "score": 87
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-11-17",
+        "score": 69,
+        "metrics": {
+          "active_points": {
+            "value": "32 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9109",
+            "score": 88
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-11-18",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-11-19",
+        "score": 68,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "9054",
+            "score": 87
+          },
+          "move_hours": {
+            "value": "9 h",
+            "score": 85
+          }
+        }
+      },
+      {
+        "date": "2025-11-20",
+        "score": 57,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "8054",
+            "score": 79
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-11-21",
+        "score": 62,
+        "metrics": {
+          "active_points": {
+            "value": "26 pts",
+            "score": 85
+          },
+          "steps": {
+            "value": "8249",
+            "score": 80
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-11-22",
+        "score": 55,
+        "metrics": {
+          "active_points": {
+            "value": "24 pts",
+            "score": 80
+          },
+          "steps": {
+            "value": "7389",
+            "score": 73
+          },
+          "move_hours": {
+            "value": "8 h",
+            "score": 75
+          }
+        }
+      },
+      {
+        "date": "2025-11-23",
+        "score": 54,
+        "metrics": {
+          "active_points": {
+            "value": "21 pts",
+            "score": 73
+          },
+          "steps": {
+            "value": "6861",
+            "score": 69
+          },
+          "move_hours": {
+            "value": "7 h",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-11-24",
+        "score": 73,
+        "metrics": {
+          "active_points": {
+            "value": "32 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9599",
+            "score": 92
+          },
+          "move_hours": {
+            "value": "11 h",
+            "score": 100
+          }
+        }
+      },
+      {
+        "date": "2025-11-25",
+        "score": 71,
+        "metrics": {
+          "active_points": {
+            "value": "31 pts",
+            "score": 100
+          },
+          "steps": {
+            "value": "9952",
+            "score": 95
+          },
+          "move_hours": {
+            "value": "10 h",
+            "score": 100
+          }
+        }
+      }
+    ],
+    "health": [
+      {
+        "date": "2025-05-30",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "46",
+            "score": 46
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "62",
+            "score": 62
+          }
+        }
+      },
+      {
+        "date": "2025-05-31",
+        "score": 58,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "55",
+            "score": 55
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "61",
+            "score": 61
+          }
+        }
+      },
+      {
+        "date": "2025-06-01",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "56",
+            "score": 56
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "44",
+            "score": 44
+          }
+        }
+      },
+      {
+        "date": "2025-06-02",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "45",
+            "score": 45
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-06-03",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "59",
+            "score": 59
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "67",
+            "score": 67
+          }
+        }
+      },
+      {
+        "date": "2025-06-04",
+        "score": 59,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "67",
+            "score": 67
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-06-05",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "50",
+            "score": 50
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "58",
+            "score": 58
+          }
+        }
+      },
+      {
+        "date": "2025-06-06",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "57",
+            "score": 57
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "43",
+            "score": 43
+          }
+        }
+      },
+      {
+        "date": "2025-06-07",
+        "score": 64,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "69",
+            "score": 69
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "59",
+            "score": 59
+          }
+        }
+      },
+      {
+        "date": "2025-06-08",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "57",
+            "score": 57
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-06-09",
+        "score": 65,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "74",
+            "score": 74
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "56",
+            "score": 56
+          }
+        }
+      },
+      {
+        "date": "2025-06-10",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "47",
+            "score": 47
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-06-11",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "41",
+            "score": 41
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "59",
+            "score": 59
+          }
+        }
+      },
+      {
+        "date": "2025-06-12",
+        "score": 64,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "70",
+            "score": 70
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "58",
+            "score": 58
+          }
+        }
+      },
+      {
+        "date": "2025-06-13",
+        "score": 59,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "65",
+            "score": 65
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-06-14",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "60",
+            "score": 60
+          }
+        }
+      },
+      {
+        "date": "2025-06-15",
+        "score": 62,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "55",
+            "score": 55
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "69",
+            "score": 69
+          }
+        }
+      },
+      {
+        "date": "2025-06-16",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "54",
+            "score": 54
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "68",
+            "score": 68
+          }
+        }
+      },
+      {
+        "date": "2025-06-17",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "54",
+            "score": 54
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-06-18",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "52",
+            "score": 52
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "68",
+            "score": 68
+          }
+        }
+      },
+      {
+        "date": "2025-06-19",
+        "score": 59,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "63",
+            "score": 63
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "55",
+            "score": 55
+          }
+        }
+      },
+      {
+        "date": "2025-06-20",
+        "score": 56,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "53",
+            "score": 53
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "59",
+            "score": 59
+          }
+        }
+      },
+      {
+        "date": "2025-06-21",
+        "score": 56,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "62",
+            "score": 62
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "50",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-06-22",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "70",
+            "score": 70
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-06-23",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "69",
+            "score": 69
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "57",
+            "score": 57
+          }
+        }
+      },
+      {
+        "date": "2025-06-24",
+        "score": 65,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "69",
+            "score": 69
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "61",
+            "score": 61
+          }
+        }
+      },
+      {
+        "date": "2025-06-25",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "48",
+            "score": 48
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-06-26",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "45",
+            "score": 45
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "61",
+            "score": 61
+          }
+        }
+      },
+      {
+        "date": "2025-06-27",
+        "score": 56,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-06-28",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "54",
+            "score": 54
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "46",
+            "score": 46
+          }
+        }
+      },
+      {
+        "date": "2025-06-29",
+        "score": 65,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "57",
+            "score": 57
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "73",
+            "score": 73
+          }
+        }
+      },
+      {
+        "date": "2025-06-30",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "56",
+            "score": 56
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "44",
+            "score": 44
+          }
+        }
+      },
+      {
+        "date": "2025-07-01",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "58",
+            "score": 58
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "68",
+            "score": 68
+          }
+        }
+      },
+      {
+        "date": "2025-07-02",
+        "score": 64,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "65",
+            "score": 65
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-03",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-07-04",
+        "score": 62,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "64",
+            "score": 64
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "60",
+            "score": 60
+          }
+        }
+      },
+      {
+        "date": "2025-07-05",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "46",
+            "score": 46
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "62",
+            "score": 62
+          }
+        }
+      },
+      {
+        "date": "2025-07-06",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "56",
+            "score": 56
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "54",
+            "score": 54
+          }
+        }
+      },
+      {
+        "date": "2025-07-07",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "47",
+            "score": 47
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "61",
+            "score": 61
+          }
+        }
+      },
+      {
+        "date": "2025-07-08",
+        "score": 56,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "49",
+            "score": 49
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-09",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "48",
+            "score": 48
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-07-10",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "59",
+            "score": 59
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "67",
+            "score": 67
+          }
+        }
+      },
+      {
+        "date": "2025-07-11",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "59",
+            "score": 59
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-12",
+        "score": 65,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "68",
+            "score": 68
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "62",
+            "score": 62
+          }
+        }
+      },
+      {
+        "date": "2025-07-13",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "47",
+            "score": 47
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "59",
+            "score": 59
+          }
+        }
+      },
+      {
+        "date": "2025-07-14",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "45",
+            "score": 45
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-15",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "49",
+            "score": 49
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-07-16",
+        "score": 65,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "64",
+            "score": 64
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "66",
+            "score": 66
+          }
+        }
+      },
+      {
+        "date": "2025-07-17",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "62",
+            "score": 62
+          }
+        }
+      },
+      {
+        "date": "2025-07-18",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "54",
+            "score": 54
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "72",
+            "score": 72
+          }
+        }
+      },
+      {
+        "date": "2025-07-19",
+        "score": 57,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "57",
+            "score": 57
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "57",
+            "score": 57
+          }
+        }
+      },
+      {
+        "date": "2025-07-20",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "44",
+            "score": 44
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "64",
+            "score": 64
+          }
+        }
+      },
+      {
+        "date": "2025-07-21",
+        "score": 58,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "50",
+            "score": 50
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "66",
+            "score": 66
+          }
+        }
+      },
+      {
+        "date": "2025-07-22",
+        "score": 65,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "56",
+            "score": 56
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "74",
+            "score": 74
+          }
+        }
+      },
+      {
+        "date": "2025-07-23",
+        "score": 58,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "59",
+            "score": 59
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "57",
+            "score": 57
+          }
+        }
+      },
+      {
+        "date": "2025-07-24",
+        "score": 62,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "57",
+            "score": 57
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "67",
+            "score": 67
+          }
+        }
+      },
+      {
+        "date": "2025-07-25",
+        "score": 56,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "49",
+            "score": 49
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-07-26",
+        "score": 59,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "58",
+            "score": 58
+          }
+        }
+      },
+      {
+        "date": "2025-07-27",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-07-28",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "70",
+            "score": 70
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "56",
+            "score": 56
+          }
+        }
+      },
+      {
+        "date": "2025-07-29",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "55",
+            "score": 55
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "47",
+            "score": 47
+          }
+        }
+      },
+      {
+        "date": "2025-07-30",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "58",
+            "score": 58
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "50",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-07-31",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "61",
+            "score": 61
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "47",
+            "score": 47
+          }
+        }
+      },
+      {
+        "date": "2025-08-01",
+        "score": 52,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "51",
+            "score": 51
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-08-02",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "54",
+            "score": 54
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "68",
+            "score": 68
+          }
+        }
+      },
+      {
+        "date": "2025-08-03",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "64",
+            "score": 64
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "58",
+            "score": 58
+          }
+        }
+      },
+      {
+        "date": "2025-08-04",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "53",
+            "score": 53
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "73",
+            "score": 73
+          }
+        }
+      },
+      {
+        "date": "2025-08-05",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "48",
+            "score": 48
+          }
+        }
+      },
+      {
+        "date": "2025-08-06",
+        "score": 64,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "64",
+            "score": 64
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "64",
+            "score": 64
+          }
+        }
+      },
+      {
+        "date": "2025-08-07",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-08-08",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "56",
+            "score": 56
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "54",
+            "score": 54
+          }
+        }
+      },
+      {
+        "date": "2025-08-09",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "68",
+            "score": 68
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-08-10",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "42",
+            "score": 42
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "60",
+            "score": 60
+          }
+        }
+      },
+      {
+        "date": "2025-08-11",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "46",
+            "score": 46
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "60",
+            "score": 60
+          }
+        }
+      },
+      {
+        "date": "2025-08-12",
+        "score": 64,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "68",
+            "score": 68
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "60",
+            "score": 60
+          }
+        }
+      },
+      {
+        "date": "2025-08-13",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "52",
+            "score": 52
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "50",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-08-14",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "56",
+            "score": 56
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-08-15",
+        "score": 57,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "51",
+            "score": 51
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-08-16",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "46",
+            "score": 46
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "56",
+            "score": 56
+          }
+        }
+      },
+      {
+        "date": "2025-08-17",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "45",
+            "score": 45
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "61",
+            "score": 61
+          }
+        }
+      },
+      {
+        "date": "2025-08-18",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "55",
+            "score": 55
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-08-19",
+        "score": 59,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "62",
+            "score": 62
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "56",
+            "score": 56
+          }
+        }
+      },
+      {
+        "date": "2025-08-20",
+        "score": 57,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "66",
+            "score": 66
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "48",
+            "score": 48
+          }
+        }
+      },
+      {
+        "date": "2025-08-21",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "53",
+            "score": 53
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-08-22",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "57",
+            "score": 57
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-08-23",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "48",
+            "score": 48
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-08-24",
+        "score": 58,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "64",
+            "score": 64
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-08-25",
+        "score": 64,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "61",
+            "score": 61
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "67",
+            "score": 67
+          }
+        }
+      },
+      {
+        "date": "2025-08-26",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "57",
+            "score": 57
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-08-27",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "48",
+            "score": 48
+          }
+        }
+      },
+      {
+        "date": "2025-08-28",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "46",
+            "score": 46
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "56",
+            "score": 56
+          }
+        }
+      },
+      {
+        "date": "2025-08-29",
+        "score": 58,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "58",
+            "score": 58
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "58",
+            "score": 58
+          }
+        }
+      },
+      {
+        "date": "2025-08-30",
+        "score": 52,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "54",
+            "score": 54
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "50",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-08-31",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "51",
+            "score": 51
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "49",
+            "score": 49
+          }
+        }
+      },
+      {
+        "date": "2025-09-01",
+        "score": 57,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "63",
+            "score": 63
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-09-02",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "50",
+            "score": 50
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "50",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-09-03",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "54",
+            "score": 54
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "46",
+            "score": 46
+          }
+        }
+      },
+      {
+        "date": "2025-09-04",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "46",
+            "score": 46
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "64",
+            "score": 64
+          }
+        }
+      },
+      {
+        "date": "2025-09-05",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "47",
+            "score": 47
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-09-06",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "52",
+            "score": 52
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "58",
+            "score": 58
+          }
+        }
+      },
+      {
+        "date": "2025-09-07",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "62",
+            "score": 62
+          }
+        }
+      },
+      {
+        "date": "2025-09-08",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "54",
+            "score": 54
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "56",
+            "score": 56
+          }
+        }
+      },
+      {
+        "date": "2025-09-09",
+        "score": 64,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "71",
+            "score": 71
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "57",
+            "score": 57
+          }
+        }
+      },
+      {
+        "date": "2025-09-10",
+        "score": 65,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "62",
+            "score": 62
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "68",
+            "score": 68
+          }
+        }
+      },
+      {
+        "date": "2025-09-11",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "42",
+            "score": 42
+          }
+        }
+      },
+      {
+        "date": "2025-09-12",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "56",
+            "score": 56
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "46",
+            "score": 46
+          }
+        }
+      },
+      {
+        "date": "2025-09-13",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "55",
+            "score": 55
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "65",
+            "score": 65
+          }
+        }
+      },
+      {
+        "date": "2025-09-14",
+        "score": 64,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "73",
+            "score": 73
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "55",
+            "score": 55
+          }
+        }
+      },
+      {
+        "date": "2025-09-15",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "61",
+            "score": 61
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "49",
+            "score": 49
+          }
+        }
+      },
+      {
+        "date": "2025-09-16",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "59",
+            "score": 59
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-09-17",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "49",
+            "score": 49
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "61",
+            "score": 61
+          }
+        }
+      },
+      {
+        "date": "2025-09-18",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "53",
+            "score": 53
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "67",
+            "score": 67
+          }
+        }
+      },
+      {
+        "date": "2025-09-19",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "57",
+            "score": 57
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-09-20",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "51",
+            "score": 51
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "69",
+            "score": 69
+          }
+        }
+      },
+      {
+        "date": "2025-09-21",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "53",
+            "score": 53
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "55",
+            "score": 55
+          }
+        }
+      },
+      {
+        "date": "2025-09-22",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "52",
+            "score": 52
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "54",
+            "score": 54
+          }
+        }
+      },
+      {
+        "date": "2025-09-23",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "53",
+            "score": 53
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "67",
+            "score": 67
+          }
+        }
+      },
+      {
+        "date": "2025-09-24",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "51",
+            "score": 51
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "57",
+            "score": 57
+          }
+        }
+      },
+      {
+        "date": "2025-09-25",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "69",
+            "score": 69
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-09-26",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "62",
+            "score": 62
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "48",
+            "score": 48
+          }
+        }
+      },
+      {
+        "date": "2025-09-27",
+        "score": 58,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "64",
+            "score": 64
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-09-28",
+        "score": 64,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "65",
+            "score": 65
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-09-29",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "61",
+            "score": 61
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "45",
+            "score": 45
+          }
+        }
+      },
+      {
+        "date": "2025-09-30",
+        "score": 58,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "67",
+            "score": 67
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "49",
+            "score": 49
+          }
+        }
+      },
+      {
+        "date": "2025-10-01",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-10-02",
+        "score": 59,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "68",
+            "score": 68
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "50",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-10-03",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "65",
+            "score": 65
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "61",
+            "score": 61
+          }
+        }
+      },
+      {
+        "date": "2025-10-04",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "70",
+            "score": 70
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "52",
+            "score": 52
+          }
+        }
+      },
+      {
+        "date": "2025-10-05",
+        "score": 62,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "62",
+            "score": 62
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "62",
+            "score": 62
+          }
+        }
+      },
+      {
+        "date": "2025-10-06",
+        "score": 65,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "57",
+            "score": 57
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "73",
+            "score": 73
+          }
+        }
+      },
+      {
+        "date": "2025-10-07",
+        "score": 64,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "69",
+            "score": 69
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "59",
+            "score": 59
+          }
+        }
+      },
+      {
+        "date": "2025-10-08",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "65",
+            "score": 65
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "61",
+            "score": 61
+          }
+        }
+      },
+      {
+        "date": "2025-10-09",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "50",
+            "score": 50
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "50",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-10-10",
+        "score": 57,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "57",
+            "score": 57
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "57",
+            "score": 57
+          }
+        }
+      },
+      {
+        "date": "2025-10-11",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "46",
+            "score": 46
+          }
+        }
+      },
+      {
+        "date": "2025-10-12",
+        "score": 52,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "55",
+            "score": 55
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "49",
+            "score": 49
+          }
+        }
+      },
+      {
+        "date": "2025-10-13",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "59",
+            "score": 59
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "43",
+            "score": 43
+          }
+        }
+      },
+      {
+        "date": "2025-10-14",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "55",
+            "score": 55
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "65",
+            "score": 65
+          }
+        }
+      },
+      {
+        "date": "2025-10-15",
+        "score": 52,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "61",
+            "score": 61
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "43",
+            "score": 43
+          }
+        }
+      },
+      {
+        "date": "2025-10-16",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "53",
+            "score": 53
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "49",
+            "score": 49
+          }
+        }
+      },
+      {
+        "date": "2025-10-17",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "45",
+            "score": 45
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "65",
+            "score": 65
+          }
+        }
+      },
+      {
+        "date": "2025-10-18",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "69",
+            "score": 69
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-10-19",
+        "score": 57,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "49",
+            "score": 49
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "65",
+            "score": 65
+          }
+        }
+      },
+      {
+        "date": "2025-10-20",
+        "score": 53,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "49",
+            "score": 49
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "57",
+            "score": 57
+          }
+        }
+      },
+      {
+        "date": "2025-10-21",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-10-22",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "55",
+            "score": 55
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "65",
+            "score": 65
+          }
+        }
+      },
+      {
+        "date": "2025-10-23",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "44",
+            "score": 44
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "58",
+            "score": 58
+          }
+        }
+      },
+      {
+        "date": "2025-10-24",
+        "score": 65,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "70",
+            "score": 70
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "60",
+            "score": 60
+          }
+        }
+      },
+      {
+        "date": "2025-10-25",
+        "score": 62,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "71",
+            "score": 71
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-10-26",
+        "score": 56,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "49",
+            "score": 49
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-10-27",
+        "score": 58,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "65",
+            "score": 65
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-10-28",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "55",
+            "score": 55
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "45",
+            "score": 45
+          }
+        }
+      },
+      {
+        "date": "2025-10-29",
+        "score": 58,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "65",
+            "score": 65
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-10-30",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "56",
+            "score": 56
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "44",
+            "score": 44
+          }
+        }
+      },
+      {
+        "date": "2025-10-31",
+        "score": 57,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "63",
+            "score": 63
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-11-01",
+        "score": 59,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "55",
+            "score": 55
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "63",
+            "score": 63
+          }
+        }
+      },
+      {
+        "date": "2025-11-02",
+        "score": 56,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "63",
+            "score": 63
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "49",
+            "score": 49
+          }
+        }
+      },
+      {
+        "date": "2025-11-03",
+        "score": 56,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "46",
+            "score": 46
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "66",
+            "score": 66
+          }
+        }
+      },
+      {
+        "date": "2025-11-04",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "51",
+            "score": 51
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-11-05",
+        "score": 55,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "49",
+            "score": 49
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "61",
+            "score": 61
+          }
+        }
+      },
+      {
+        "date": "2025-11-06",
+        "score": 52,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "61",
+            "score": 61
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "43",
+            "score": 43
+          }
+        }
+      },
+      {
+        "date": "2025-11-07",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-11-08",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "59",
+            "score": 59
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "67",
+            "score": 67
+          }
+        }
+      },
+      {
+        "date": "2025-11-09",
+        "score": 56,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "61",
+            "score": 61
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-11-10",
+        "score": 59,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "61",
+            "score": 61
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "57",
+            "score": 57
+          }
+        }
+      },
+      {
+        "date": "2025-11-11",
+        "score": 50,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "59",
+            "score": 59
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "41",
+            "score": 41
+          }
+        }
+      },
+      {
+        "date": "2025-11-12",
+        "score": 54,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "61",
+            "score": 61
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "47",
+            "score": 47
+          }
+        }
+      },
+      {
+        "date": "2025-11-13",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "51",
+            "score": 51
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-11-14",
+        "score": 59,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "67",
+            "score": 67
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "51",
+            "score": 51
+          }
+        }
+      },
+      {
+        "date": "2025-11-15",
+        "score": 52,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "54",
+            "score": 54
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "50",
+            "score": 50
+          }
+        }
+      },
+      {
+        "date": "2025-11-16",
+        "score": null,
+        "metrics": null
+      },
+      {
+        "date": "2025-11-17",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "69",
+            "score": 69
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-11-18",
+        "score": 51,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "49",
+            "score": 49
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "53",
+            "score": 53
+          }
+        }
+      },
+      {
+        "date": "2025-11-19",
+        "score": 61,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "64",
+            "score": 64
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "58",
+            "score": 58
+          }
+        }
+      },
+      {
+        "date": "2025-11-20",
+        "score": 63,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "67",
+            "score": 67
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "59",
+            "score": 59
+          }
+        }
+      },
+      {
+        "date": "2025-11-21",
+        "score": 59,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "58",
+            "score": 58
+          }
+        }
+      },
+      {
+        "date": "2025-11-22",
+        "score": 60,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "63",
+            "score": 63
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "57",
+            "score": 57
+          }
+        }
+      },
+      {
+        "date": "2025-11-23",
+        "score": 65,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "71",
+            "score": 71
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "59",
+            "score": 59
+          }
+        }
+      },
+      {
+        "date": "2025-11-24",
+        "score": 57,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "60",
+            "score": 60
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "54",
+            "score": 54
+          }
+        }
+      },
+      {
+        "date": "2025-11-25",
+        "score": 76,
+        "metrics": {
+          "readiness": {
+            "title": "Readiness",
+            "value": "82",
+            "score": 82
+          },
+          "activity": {
+            "title": "Activity",
+            "value": "70",
+            "score": 70
+          }
+        }
+      }
+    ]
   }
 }

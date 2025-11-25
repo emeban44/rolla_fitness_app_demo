@@ -28,14 +28,20 @@ class ScoreHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Show "History" without info icon for chart views (7D, 30D, 1Y)
+    // Show score type name with info icon for gauge view (1D)
+    final isChartView = timeframe != Timeframe.oneDay;
+    final title = isChartView ? 'History' : scoreType.displayName;
+    final showInfoIcon = !isChartView;
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 0, 4, 0),
       child: Row(
         children: [
-          // Title with info icon
+          // Title with optional info icon
           SectionTitle(
-            title: scoreType.displayName,
-            onInfoTap: onInfoTap,
+            title: title,
+            onInfoTap: showInfoIcon ? onInfoTap : null,
           ),
           const Spacer(),
           // Time period selector

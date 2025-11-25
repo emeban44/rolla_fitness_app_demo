@@ -81,31 +81,44 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
     String timeframe,
     DateTime selectedDate,
   ) async {
-    // Get the score value for the selected date from history
-    final history = await getScoreHistory(scoreType, '1d', selectedDate);
-    final historyPoint = history.firstOrNull;
-
-    // Get metrics from the static scores data
     final data = await _loadData();
-    final scoresData = data['scores'] as Map<String, dynamic>;
-    final scoreData = scoresData[scoreType.toLowerCase()] as Map<String, dynamic>;
-    final metricsData = scoreData['metrics'] as Map<String, dynamic>;
+    final dailyMetrics = data['daily_metrics'] as Map<String, dynamic>;
+    final scoreTypeData = dailyMetrics[scoreType.toLowerCase()] as List;
 
-    // Use the historical value - preserve null to indicate missing data
-    final scoreValue = historyPoint?.value;
+    // Get score history for the period
+    final history = await getScoreHistory(scoreType, timeframe, selectedDate);
 
-    // Build metrics
-    final metrics = <MetricModel>[];
-    for (final metricEntry in metricsData.entries) {
-      final metricId = metricEntry.key;
-      final metricData = metricEntry.value as Map<String, dynamic>;
+    int? scoreValue;
+    List<MetricModel> metrics = [];
 
-      metrics.add(MetricModel(
-        id: metricId,
-        title: metricData['title'] as String,
-        displayValue: metricData['value'] as String,
-        score: metricData['score'] as int?,
-      ));
+    if (timeframe == '1d') {
+      // For 1D: Get metrics for the specific selected date
+      final dateStr = _formatDate(selectedDate);
+      final dayData = scoreTypeData.firstWhere(
+        (entry) => entry['date'] == dateStr,
+        orElse: () => {'date': dateStr, 'score': null, 'metrics': null},
+      );
+
+      scoreValue = dayData['score'] as int?;
+      final metricsData = dayData['metrics'] as Map<String, dynamic>?;
+
+      if (metricsData != null) {
+        metrics = _buildMetricsFromData(metricsData, scoreType);
+      }
+    } else {
+      // For 7D/30D/1Y: Calculate average metrics over the period
+      final validScores = history
+          .where((point) => point.value != null)
+          .map((point) => point.value!)
+          .toList();
+
+      if (validScores.isNotEmpty) {
+        final averageScore = validScores.reduce((a, b) => a + b) / validScores.length;
+        scoreValue = averageScore.round();
+
+        // Calculate average metrics
+        metrics = _calculateAverageMetrics(scoreTypeData, history, scoreType);
+      }
     }
 
     return ScoreModel(
@@ -113,6 +126,115 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
       value: scoreValue,
       metrics: metrics,
     );
+  }
+
+  /// Build metrics list from daily metrics data
+  List<MetricModel> _buildMetricsFromData(Map<String, dynamic> metricsData, String scoreType) {
+    final metrics = <MetricModel>[];
+
+    for (final entry in metricsData.entries) {
+      final metricId = entry.key;
+      final metricData = entry.value as Map<String, dynamic>;
+
+      // Get title from metric_info
+      String title = metricId;
+      try {
+        final data = _cachedData!;
+        final metricInfo = data['metric_info'] as Map<String, dynamic>;
+        if (metricInfo.containsKey(metricId)) {
+          title = (metricInfo[metricId] as Map<String, dynamic>)['title'] as String;
+        }
+      } catch (_) {
+        // Use default title if not found
+        title = _formatMetricTitle(metricId);
+      }
+
+      metrics.add(MetricModel(
+        id: metricId,
+        title: title,
+        displayValue: metricData['value'] as String,
+        score: metricData['score'] as int?,
+      ));
+    }
+
+    return metrics;
+  }
+
+  /// Calculate average metrics over a period
+  List<MetricModel> _calculateAverageMetrics(
+    List<dynamic> scoreTypeData,
+    List<ScoreHistoryPointModel> history,
+    String scoreType,
+  ) {
+    final metricAverages = <String, Map<String, dynamic>>{};
+
+    // Collect all metrics from the period
+    for (final historyPoint in history) {
+      if (historyPoint.value == null) continue;
+
+      final dateStr = historyPoint.date;
+      final dayData = scoreTypeData.firstWhere(
+        (entry) => entry['date'] == dateStr,
+        orElse: () => null,
+      );
+
+      if (dayData == null) continue;
+      final metricsData = dayData['metrics'] as Map<String, dynamic>?;
+      if (metricsData == null) continue;
+
+      for (final entry in metricsData.entries) {
+        final metricId = entry.key;
+        final metricData = entry.value as Map<String, dynamic>;
+        final score = metricData['score'] as int?;
+
+        if (score != null) {
+          if (!metricAverages.containsKey(metricId)) {
+            metricAverages[metricId] = {
+              'scores': <int>[],
+              'title': metricData['title'] ?? _formatMetricTitle(metricId),
+              'sampleValue': metricData['value'],
+            };
+          }
+          (metricAverages[metricId]!['scores'] as List<int>).add(score);
+        }
+      }
+    }
+
+    // Calculate averages and build metrics
+    final metrics = <MetricModel>[];
+    for (final entry in metricAverages.entries) {
+      final metricId = entry.key;
+      final data = entry.value;
+      final scores = data['scores'] as List<int>;
+
+      if (scores.isEmpty) continue;
+
+      final avgScore = (scores.reduce((a, b) => a + b) / scores.length).round();
+
+      metrics.add(MetricModel(
+        id: metricId,
+        title: data['title'] as String,
+        displayValue: data['sampleValue'] as String, // Use sample value for display
+        score: avgScore,
+      ));
+    }
+
+    return metrics;
+  }
+
+  /// Format date to YYYY-MM-DD
+  String _formatDate(DateTime date) {
+    return '${date.year.toString().padLeft(4, '0')}-'
+        '${date.month.toString().padLeft(2, '0')}-'
+        '${date.day.toString().padLeft(2, '0')}';
+  }
+
+  /// Format metric ID to title (e.g., "resting_hr" -> "Resting HR")
+  String _formatMetricTitle(String metricId) {
+    return metricId
+        .split('_')
+        .map((word) => word[0].toUpperCase() + word.substring(1))
+        .join(' ');
   }
 
   @override

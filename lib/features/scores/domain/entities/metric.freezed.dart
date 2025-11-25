@@ -20,8 +20,7 @@ mixin _$Metric {
   String get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get displayValue => throw _privateConstructorUsedError;
-  int? get score => throw _privateConstructorUsedError; // null for "No data"
-  String? get icon => throw _privateConstructorUsedError;
+  int? get score => throw _privateConstructorUsedError;
 
   /// Create a copy of Metric
   /// with the given fields replaced by the non-null parameter values.
@@ -34,13 +33,7 @@ abstract class $MetricCopyWith<$Res> {
   factory $MetricCopyWith(Metric value, $Res Function(Metric) then) =
       _$MetricCopyWithImpl<$Res, Metric>;
   @useResult
-  $Res call({
-    String id,
-    String title,
-    String displayValue,
-    int? score,
-    String? icon,
-  });
+  $Res call({String id, String title, String displayValue, int? score});
 }
 
 /// @nodoc
@@ -62,7 +55,6 @@ class _$MetricCopyWithImpl<$Res, $Val extends Metric>
     Object? title = null,
     Object? displayValue = null,
     Object? score = freezed,
-    Object? icon = freezed,
   }) {
     return _then(
       _value.copyWith(
@@ -82,10 +74,6 @@ class _$MetricCopyWithImpl<$Res, $Val extends Metric>
                 ? _value.score
                 : score // ignore: cast_nullable_to_non_nullable
                       as int?,
-            icon: freezed == icon
-                ? _value.icon
-                : icon // ignore: cast_nullable_to_non_nullable
-                      as String?,
           )
           as $Val,
     );
@@ -100,13 +88,7 @@ abstract class _$$MetricImplCopyWith<$Res> implements $MetricCopyWith<$Res> {
   ) = __$$MetricImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    String id,
-    String title,
-    String displayValue,
-    int? score,
-    String? icon,
-  });
+  $Res call({String id, String title, String displayValue, int? score});
 }
 
 /// @nodoc
@@ -127,7 +109,6 @@ class __$$MetricImplCopyWithImpl<$Res>
     Object? title = null,
     Object? displayValue = null,
     Object? score = freezed,
-    Object? icon = freezed,
   }) {
     return _then(
       _$MetricImpl(
@@ -147,10 +128,6 @@ class __$$MetricImplCopyWithImpl<$Res>
             ? _value.score
             : score // ignore: cast_nullable_to_non_nullable
                   as int?,
-        icon: freezed == icon
-            ? _value.icon
-            : icon // ignore: cast_nullable_to_non_nullable
-                  as String?,
       ),
     );
   }
@@ -164,7 +141,6 @@ class _$MetricImpl extends _Metric {
     required this.title,
     required this.displayValue,
     required this.score,
-    this.icon,
   }) : super._();
 
   @override
@@ -175,13 +151,10 @@ class _$MetricImpl extends _Metric {
   final String displayValue;
   @override
   final int? score;
-  // null for "No data"
-  @override
-  final String? icon;
 
   @override
   String toString() {
-    return 'Metric(id: $id, title: $title, displayValue: $displayValue, score: $score, icon: $icon)';
+    return 'Metric(id: $id, title: $title, displayValue: $displayValue, score: $score)';
   }
 
   @override
@@ -193,13 +166,11 @@ class _$MetricImpl extends _Metric {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.displayValue, displayValue) ||
                 other.displayValue == displayValue) &&
-            (identical(other.score, score) || other.score == score) &&
-            (identical(other.icon, icon) || other.icon == icon));
+            (identical(other.score, score) || other.score == score));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, title, displayValue, score, icon);
+  int get hashCode => Object.hash(runtimeType, id, title, displayValue, score);
 
   /// Create a copy of Metric
   /// with the given fields replaced by the non-null parameter values.
@@ -216,7 +187,6 @@ abstract class _Metric extends Metric {
     required final String title,
     required final String displayValue,
     required final int? score,
-    final String? icon,
   }) = _$MetricImpl;
   const _Metric._() : super._();
 
@@ -227,9 +197,7 @@ abstract class _Metric extends Metric {
   @override
   String get displayValue;
   @override
-  int? get score; // null for "No data"
-  @override
-  String? get icon;
+  int? get score;
 
   /// Create a copy of Metric
   /// with the given fields replaced by the non-null parameter values.

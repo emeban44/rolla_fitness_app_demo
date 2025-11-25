@@ -11,13 +11,11 @@ class MetricModel with _$MetricModel {
     required String title,
     required String displayValue,
     required int? score,
-    String? icon,
   }) = _MetricModel;
 
   const MetricModel._();
 
-  factory MetricModel.fromJson(Map<String, dynamic> json) =>
-      _$MetricModelFromJson(json);
+  factory MetricModel.fromJson(Map<String, dynamic> json) => _$MetricModelFromJson(json);
 
   /// Convert to domain entity
   Metric toDomain() {
@@ -26,7 +24,6 @@ class MetricModel with _$MetricModel {
       title: title,
       displayValue: displayValue,
       score: score,
-      icon: icon,
     );
   }
 
@@ -37,7 +34,6 @@ class MetricModel with _$MetricModel {
       title: metric.title,
       displayValue: metric.displayValue,
       score: metric.score,
-      icon: metric.icon,
     );
   }
 }

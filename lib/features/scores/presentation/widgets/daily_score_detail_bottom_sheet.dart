@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/utils/helpers/metric_helper.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_description.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric.dart';
@@ -130,14 +131,16 @@ class MetricInfoRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final icon = MetricHelper.getIconForMetric(metric.id);
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
         children: [
           // Icon
-          if (metric.icon != null) ...[
+          if (icon != null) ...[
             Text(
-              metric.icon!,
+              icon,
               style: const TextStyle(fontSize: 20),
             ),
             const SizedBox(width: 12),

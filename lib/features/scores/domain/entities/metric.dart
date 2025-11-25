@@ -10,7 +10,6 @@ class Metric with _$Metric {
     required String title,
     required String displayValue,
     required int? score, // null for "No data"
-    String? icon,
   }) = _Metric;
 
   const Metric._();

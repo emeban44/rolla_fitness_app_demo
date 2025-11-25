@@ -12,7 +12,6 @@ _$MetricModelImpl _$$MetricModelImplFromJson(Map<String, dynamic> json) =>
       title: json['title'] as String,
       displayValue: json['displayValue'] as String,
       score: (json['score'] as num?)?.toInt(),
-      icon: json['icon'] as String?,
     );
 
 Map<String, dynamic> _$$MetricModelImplToJson(_$MetricModelImpl instance) =>
@@ -21,5 +20,4 @@ Map<String, dynamic> _$$MetricModelImplToJson(_$MetricModelImpl instance) =>
       'title': instance.title,
       'displayValue': instance.displayValue,
       'score': instance.score,
-      'icon': instance.icon,
     };

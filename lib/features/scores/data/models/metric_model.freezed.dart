@@ -25,7 +25,6 @@ mixin _$MetricModel {
   String get title => throw _privateConstructorUsedError;
   String get displayValue => throw _privateConstructorUsedError;
   int? get score => throw _privateConstructorUsedError;
-  String? get icon => throw _privateConstructorUsedError;
 
   /// Serializes this MetricModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -44,13 +43,7 @@ abstract class $MetricModelCopyWith<$Res> {
     $Res Function(MetricModel) then,
   ) = _$MetricModelCopyWithImpl<$Res, MetricModel>;
   @useResult
-  $Res call({
-    String id,
-    String title,
-    String displayValue,
-    int? score,
-    String? icon,
-  });
+  $Res call({String id, String title, String displayValue, int? score});
 }
 
 /// @nodoc
@@ -72,7 +65,6 @@ class _$MetricModelCopyWithImpl<$Res, $Val extends MetricModel>
     Object? title = null,
     Object? displayValue = null,
     Object? score = freezed,
-    Object? icon = freezed,
   }) {
     return _then(
       _value.copyWith(
@@ -92,10 +84,6 @@ class _$MetricModelCopyWithImpl<$Res, $Val extends MetricModel>
                 ? _value.score
                 : score // ignore: cast_nullable_to_non_nullable
                       as int?,
-            icon: freezed == icon
-                ? _value.icon
-                : icon // ignore: cast_nullable_to_non_nullable
-                      as String?,
           )
           as $Val,
     );
@@ -111,13 +99,7 @@ abstract class _$$MetricModelImplCopyWith<$Res>
   ) = __$$MetricModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    String id,
-    String title,
-    String displayValue,
-    int? score,
-    String? icon,
-  });
+  $Res call({String id, String title, String displayValue, int? score});
 }
 
 /// @nodoc
@@ -138,7 +120,6 @@ class __$$MetricModelImplCopyWithImpl<$Res>
     Object? title = null,
     Object? displayValue = null,
     Object? score = freezed,
-    Object? icon = freezed,
   }) {
     return _then(
       _$MetricModelImpl(
@@ -158,10 +139,6 @@ class __$$MetricModelImplCopyWithImpl<$Res>
             ? _value.score
             : score // ignore: cast_nullable_to_non_nullable
                   as int?,
-        icon: freezed == icon
-            ? _value.icon
-            : icon // ignore: cast_nullable_to_non_nullable
-                  as String?,
       ),
     );
   }
@@ -175,7 +152,6 @@ class _$MetricModelImpl extends _MetricModel {
     required this.title,
     required this.displayValue,
     required this.score,
-    this.icon,
   }) : super._();
 
   factory _$MetricModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -189,12 +165,10 @@ class _$MetricModelImpl extends _MetricModel {
   final String displayValue;
   @override
   final int? score;
-  @override
-  final String? icon;
 
   @override
   String toString() {
-    return 'MetricModel(id: $id, title: $title, displayValue: $displayValue, score: $score, icon: $icon)';
+    return 'MetricModel(id: $id, title: $title, displayValue: $displayValue, score: $score)';
   }
 
   @override
@@ -206,14 +180,12 @@ class _$MetricModelImpl extends _MetricModel {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.displayValue, displayValue) ||
                 other.displayValue == displayValue) &&
-            (identical(other.score, score) || other.score == score) &&
-            (identical(other.icon, icon) || other.icon == icon));
+            (identical(other.score, score) || other.score == score));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, title, displayValue, score, icon);
+  int get hashCode => Object.hash(runtimeType, id, title, displayValue, score);
 
   /// Create a copy of MetricModel
   /// with the given fields replaced by the non-null parameter values.
@@ -235,7 +207,6 @@ abstract class _MetricModel extends MetricModel {
     required final String title,
     required final String displayValue,
     required final int? score,
-    final String? icon,
   }) = _$MetricModelImpl;
   const _MetricModel._() : super._();
 
@@ -250,8 +221,6 @@ abstract class _MetricModel extends MetricModel {
   String get displayValue;
   @override
   int? get score;
-  @override
-  String? get icon;
 
   /// Create a copy of MetricModel
   /// with the given fields replaced by the non-null parameter values.
