@@ -12,7 +12,7 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/daily_score_detail_bottom_sheet.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_gauge_decorated_section.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metric_tile.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metrics_progressive_list.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_header.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/timeframe_selector.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/trend_chart.dart';
@@ -160,34 +160,10 @@ class ScoreDetailView extends StatelessWidget {
                       else
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
-                          child: Column(
-                            children: score.metrics.map((metric) {
-                              // Make Readiness and Activity metrics tappable on Health page
-                              final isNavigatable =
-                                  scoreType == ScoreType.health &&
-                                  (metric.title.toLowerCase() == 'readiness' ||
-                                      metric.title.toLowerCase() == 'activity');
-
-                              return MetricTile(
-                                metric: metric,
-                                showAvgLabel: timeframe != Timeframe.oneDay,
-                                onTap: isNavigatable
-                                    ? () {
-                                        final targetScoreType = metric.title.toLowerCase() == 'readiness'
-                                            ? ScoreType.readiness
-                                            : ScoreType.activity;
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => ScoreDetailPage(
-                                              scoreType: targetScoreType,
-                                            ),
-                                          ),
-                                        );
-                                      }
-                                    : null,
-                              );
-                            }).toList(),
+                          child: MetricsProgressiveList(
+                            metrics: score.metrics,
+                            timeframe: timeframe,
+                            scoreType: scoreType,
                           ),
                         ),
 

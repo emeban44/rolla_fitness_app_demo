@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:rolla_fitness_app_demo/core/utils/helpers/metric_helper.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_description.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric_info.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_gauge_decorated_section.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metrics_details_list.dart';
 
 /// Bottom sheet showing daily score details with metrics and info
 class DailyScoreDetailBottomSheet extends StatelessWidget {
@@ -97,8 +97,8 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
 
                   // Metrics section
                   const SectionTitle(title: 'Metrics'),
-                  const SizedBox(height: 12),
-                  ...metrics.map((metric) => MetricInfoRow(metric: metric)),
+                  const SizedBox(height: 16),
+                  MetricsDetailsList(metrics: metrics),
                   const SizedBox(height: 24),
 
                   // How It Works section
@@ -112,62 +112,6 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
                   const SizedBox(height: 24),
                 ],
               ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-/// Individual metric info row in the bottom sheet
-class MetricInfoRow extends StatelessWidget {
-  final Metric metric;
-
-  const MetricInfoRow({
-    super.key,
-    required this.metric,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final icon = MetricHelper.getIconForMetric(metric.id);
-
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: Row(
-        children: [
-          // Icon
-          if (icon != null) ...[
-            Text(
-              icon,
-              style: const TextStyle(fontSize: 20),
-            ),
-            const SizedBox(width: 12),
-          ],
-          // Metric name
-          Expanded(
-            child: Text(
-              metric.title,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ),
-          // Value
-          Text(
-            metric.displayValue,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
-            ),
-          ),
-          const SizedBox(width: 8),
-          // Star icon
-          const Icon(Icons.star, size: 16),
-          const SizedBox(width: 4),
-          // Score
-          Text(
-            metric.score?.toString() ?? '-',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              fontWeight: FontWeight.w600,
             ),
           ),
         ],
