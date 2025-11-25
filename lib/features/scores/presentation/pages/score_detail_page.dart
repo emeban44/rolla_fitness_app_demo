@@ -175,7 +175,7 @@ class ScoreDetailView extends StatelessWidget {
                               ),
                             ),
 
-                          const SizedBox(height: 32),
+                          const SizedBox(height: 16),
 
                           // About section
                           Padding(
