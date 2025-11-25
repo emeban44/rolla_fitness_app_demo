@@ -186,25 +186,18 @@ class ScoreDetailView extends StatelessWidget {
                       const SizedBox(height: 32),
 
                       // About section
-                      if (insights.isNotEmpty) ...[
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const SectionTitle(title: 'About'),
-                              const SizedBox(height: 12),
-                              ...insights.map((insight) {
-                                return Padding(
-                                  padding: const EdgeInsets.only(bottom: 12),
-                                  child: SectionDescription(text: insight.text),
-                                );
-                              }).toList(),
-                            ],
-                          ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const SectionTitle(title: 'About'),
+                            const SizedBox(height: 12),
+                            SectionDescription(text: scoreType.getInfo().description),
+                          ],
                         ),
-                        const SizedBox(height: 24),
-                      ],
+                      ),
+                      const SizedBox(height: 50),
                     ],
                   ),
                 ),
