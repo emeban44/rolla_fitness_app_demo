@@ -8,6 +8,7 @@ import 'package:rolla_fitness_app_demo/core/widgets/section_description.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/timeframe.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/insight.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/daily_score_detail_bottom_sheet.dart';
@@ -16,6 +17,7 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metr
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_header.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/timeframe_selector.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/trend_chart.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/daily_insight_note.dart';
 
 /// Score detail page - reusable for Health, Readiness, and Activity scores
 class ScoreDetailPage extends StatelessWidget {
@@ -124,6 +126,11 @@ class ScoreDetailView extends StatelessWidget {
                               scoreType: scoreType,
                               score: score.value,
                             ),
+                            // Show insight for selected date if available
+                            if (_getInsightForDate(insights, selectedDate) != null) ...[
+                              const SizedBox(height: 16),
+                              DailyInsightNote(text: _getInsightForDate(insights, selectedDate)!.text),
+                            ],
                           ] else ...[
                             // 7D/30D/1Y View - Show chart
                             TrendChart(
@@ -201,6 +208,19 @@ class ScoreDetailView extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Helper function to get insight for a specific date
+Insight? _getInsightForDate(List<Insight> insights, DateTime date) {
+  final dateStr = _formatDate(date);
+  return insights.where((i) => i.id.endsWith(dateStr)).firstOrNull;
+}
+
+/// Helper function to format date as YYYY-MM-DD
+String _formatDate(DateTime date) {
+  return '${date.year.toString().padLeft(4, '0')}-'
+      '${date.month.toString().padLeft(2, '0')}-'
+      '${date.day.toString().padLeft(2, '0')}';
 }
 
 /// Loading skeleton for the detail page

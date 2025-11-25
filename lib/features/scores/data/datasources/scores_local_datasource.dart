@@ -298,9 +298,10 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
   Future<List<InsightModel>> getInsights(String scoreType) async {
     final data = await _loadData();
     final insightsData = data['insights'] as Map<String, dynamic>;
-    final scoreInsights = insightsData[scoreType.toLowerCase()] as List? ?? [];
+    final scoreInsights = insightsData[scoreType.toLowerCase()] as Map<String, dynamic>? ?? {};
 
-    return scoreInsights.map((insight) => InsightModel.fromJson(insight as Map<String, dynamic>)).toList();
+    // Convert map of date->insight to list of insights
+    return scoreInsights.values.map((insight) => InsightModel.fromJson(insight as Map<String, dynamic>)).toList();
   }
 
   @override

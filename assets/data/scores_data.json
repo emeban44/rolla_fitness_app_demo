@@ -2225,32 +2225,2587 @@
     ]
   },
   "insights": {
-    "health": [
-      {
-        "id": "h1",
-        "text": "Your Health Score brings rest and activity together into one number, showing how balanced your day is.",
-        "type": "info"
-      }
-    ],
-    "readiness": [
-      {
-        "id": "r1",
-        "text": "Great sleep quality! Your body is well-rested and ready for the day.",
+    "health": {
+      "2025-05-30": {
+        "id": "h_2025-05-30",
+        "text": "Your body is finding a good rhythm this week.",
         "type": "info"
       },
-      {
-        "id": "r2",
-        "text": "Your HRV is slightly lower than usual. Consider taking it easy today.",
-        "type": "warning"
-      }
-    ],
-    "activity": [
-      {
-        "id": "a1",
-        "text": "You're off to a good start! Keep up the momentum throughout the day.",
+      "2025-05-31": {
+        "id": "h_2025-05-31",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-06-01": {
+        "id": "h_2025-06-01",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-06-02": {
+        "id": "h_2025-06-02",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-06-03": {
+        "id": "h_2025-06-03",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-06-04": {
+        "id": "h_2025-06-04",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-06-05": {
+        "id": "h_2025-06-05",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-06-06": {
+        "id": "h_2025-06-06",
+        "text": "Consider balancing today's activity with adequate recovery.",
         "type": "suggestion"
+      },
+      "2025-06-07": {
+        "id": "h_2025-06-07",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-06-08": {
+        "id": "h_2025-06-08",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-06-09": {
+        "id": "h_2025-06-09",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-06-10": {
+        "id": "h_2025-06-10",
+        "text": "Health score is slightly up compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-06-11": {
+        "id": "h_2025-06-11",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-06-12": {
+        "id": "h_2025-06-12",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-06-13": {
+        "id": "h_2025-06-13",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-06-14": {
+        "id": "h_2025-06-14",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-06-15": {
+        "id": "h_2025-06-15",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-06-16": {
+        "id": "h_2025-06-16",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-06-17": {
+        "id": "h_2025-06-17",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-06-18": {
+        "id": "h_2025-06-18",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-06-19": {
+        "id": "h_2025-06-19",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-06-20": {
+        "id": "h_2025-06-20",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-06-21": {
+        "id": "h_2025-06-21",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-06-22": {
+        "id": "h_2025-06-22",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-06-23": {
+        "id": "h_2025-06-23",
+        "text": "Your overall wellness is trending in the right direction.",
+        "type": "info"
+      },
+      "2025-06-24": {
+        "id": "h_2025-06-24",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-06-25": {
+        "id": "h_2025-06-25",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-06-26": {
+        "id": "h_2025-06-26",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-06-27": {
+        "id": "h_2025-06-27",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-06-28": {
+        "id": "h_2025-06-28",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-06-29": {
+        "id": "h_2025-06-29",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-06-30": {
+        "id": "h_2025-06-30",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-07-01": {
+        "id": "h_2025-07-01",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-07-02": {
+        "id": "h_2025-07-02",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-07-04": {
+        "id": "h_2025-07-04",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-07-05": {
+        "id": "h_2025-07-05",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-07-06": {
+        "id": "h_2025-07-06",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-07-07": {
+        "id": "h_2025-07-07",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-07-08": {
+        "id": "h_2025-07-08",
+        "text": "Your balance between rest and activity is improving.",
+        "type": "info"
+      },
+      "2025-07-09": {
+        "id": "h_2025-07-09",
+        "text": "Health score is trending up compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-07-10": {
+        "id": "h_2025-07-10",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-07-11": {
+        "id": "h_2025-07-11",
+        "text": "Your balance between rest and activity is looking good.",
+        "type": "info"
+      },
+      "2025-07-12": {
+        "id": "h_2025-07-12",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-07-13": {
+        "id": "h_2025-07-13",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-07-14": {
+        "id": "h_2025-07-14",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-07-15": {
+        "id": "h_2025-07-15",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-07-16": {
+        "id": "h_2025-07-16",
+        "text": "Your balance between rest and activity is well-balanced.",
+        "type": "info"
+      },
+      "2025-07-17": {
+        "id": "h_2025-07-17",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-07-18": {
+        "id": "h_2025-07-18",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-07-19": {
+        "id": "h_2025-07-19",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-07-20": {
+        "id": "h_2025-07-20",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-07-21": {
+        "id": "h_2025-07-21",
+        "text": "Health score is holding steady compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-07-22": {
+        "id": "h_2025-07-22",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-07-23": {
+        "id": "h_2025-07-23",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-07-24": {
+        "id": "h_2025-07-24",
+        "text": "Your balance between rest and activity is looking good.",
+        "type": "info"
+      },
+      "2025-07-25": {
+        "id": "h_2025-07-25",
+        "text": "Your balance between rest and activity is stable.",
+        "type": "info"
+      },
+      "2025-07-26": {
+        "id": "h_2025-07-26",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-07-28": {
+        "id": "h_2025-07-28",
+        "text": "Your balance between rest and activity is looking good.",
+        "type": "info"
+      },
+      "2025-07-29": {
+        "id": "h_2025-07-29",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-07-30": {
+        "id": "h_2025-07-30",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-07-31": {
+        "id": "h_2025-07-31",
+        "text": "Your balance between rest and activity is on track.",
+        "type": "info"
+      },
+      "2025-08-01": {
+        "id": "h_2025-08-01",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-08-02": {
+        "id": "h_2025-08-02",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-08-03": {
+        "id": "h_2025-08-03",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-08-04": {
+        "id": "h_2025-08-04",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-08-05": {
+        "id": "h_2025-08-05",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-08-06": {
+        "id": "h_2025-08-06",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-08-08": {
+        "id": "h_2025-08-08",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-08-09": {
+        "id": "h_2025-08-09",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-08-10": {
+        "id": "h_2025-08-10",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-08-11": {
+        "id": "h_2025-08-11",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-08-12": {
+        "id": "h_2025-08-12",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-08-13": {
+        "id": "h_2025-08-13",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-08-14": {
+        "id": "h_2025-08-14",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-08-15": {
+        "id": "h_2025-08-15",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-08-16": {
+        "id": "h_2025-08-16",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-08-17": {
+        "id": "h_2025-08-17",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-08-18": {
+        "id": "h_2025-08-18",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-08-19": {
+        "id": "h_2025-08-19",
+        "text": "Your balance between rest and activity is improving.",
+        "type": "info"
+      },
+      "2025-08-20": {
+        "id": "h_2025-08-20",
+        "text": "Health score is holding steady compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-08-21": {
+        "id": "h_2025-08-21",
+        "text": "Your balance between rest and activity is well-balanced.",
+        "type": "info"
+      },
+      "2025-08-22": {
+        "id": "h_2025-08-22",
+        "text": "Health score is trending up compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-08-23": {
+        "id": "h_2025-08-23",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-08-24": {
+        "id": "h_2025-08-24",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-08-25": {
+        "id": "h_2025-08-25",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-08-26": {
+        "id": "h_2025-08-26",
+        "text": "Your balance between rest and activity is improving.",
+        "type": "info"
+      },
+      "2025-08-27": {
+        "id": "h_2025-08-27",
+        "text": "Health score is steady compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-08-28": {
+        "id": "h_2025-08-28",
+        "text": "Health score is slightly up compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-08-29": {
+        "id": "h_2025-08-29",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-08-30": {
+        "id": "h_2025-08-30",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-08-31": {
+        "id": "h_2025-08-31",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-09-01": {
+        "id": "h_2025-09-01",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-09-02": {
+        "id": "h_2025-09-02",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-09-03": {
+        "id": "h_2025-09-03",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-09-04": {
+        "id": "h_2025-09-04",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-09-05": {
+        "id": "h_2025-09-05",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-09-06": {
+        "id": "h_2025-09-06",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-09-07": {
+        "id": "h_2025-09-07",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-09-08": {
+        "id": "h_2025-09-08",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-09-09": {
+        "id": "h_2025-09-09",
+        "text": "Your overall wellness is trending steadily.",
+        "type": "info"
+      },
+      "2025-09-10": {
+        "id": "h_2025-09-10",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-09-11": {
+        "id": "h_2025-09-11",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-09-12": {
+        "id": "h_2025-09-12",
+        "text": "Your overall wellness is trending upward.",
+        "type": "info"
+      },
+      "2025-09-13": {
+        "id": "h_2025-09-13",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-09-14": {
+        "id": "h_2025-09-14",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-09-15": {
+        "id": "h_2025-09-15",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-09-16": {
+        "id": "h_2025-09-16",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-09-17": {
+        "id": "h_2025-09-17",
+        "text": "Health score is slightly up compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-09-18": {
+        "id": "h_2025-09-18",
+        "text": "Your overall wellness is trending positively.",
+        "type": "info"
+      },
+      "2025-09-19": {
+        "id": "h_2025-09-19",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-09-20": {
+        "id": "h_2025-09-20",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-09-21": {
+        "id": "h_2025-09-21",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-09-22": {
+        "id": "h_2025-09-22",
+        "text": "Your balance between rest and activity is stable.",
+        "type": "info"
+      },
+      "2025-09-23": {
+        "id": "h_2025-09-23",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-09-24": {
+        "id": "h_2025-09-24",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-09-25": {
+        "id": "h_2025-09-25",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-09-26": {
+        "id": "h_2025-09-26",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-09-27": {
+        "id": "h_2025-09-27",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-09-28": {
+        "id": "h_2025-09-28",
+        "text": "Your overall wellness is trending steadily.",
+        "type": "info"
+      },
+      "2025-09-29": {
+        "id": "h_2025-09-29",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-09-30": {
+        "id": "h_2025-09-30",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-10-02": {
+        "id": "h_2025-10-02",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-10-03": {
+        "id": "h_2025-10-03",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-10-04": {
+        "id": "h_2025-10-04",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-10-05": {
+        "id": "h_2025-10-05",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-10-06": {
+        "id": "h_2025-10-06",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-10-07": {
+        "id": "h_2025-10-07",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-10-08": {
+        "id": "h_2025-10-08",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-10-09": {
+        "id": "h_2025-10-09",
+        "text": "Your overall wellness is trending positively.",
+        "type": "info"
+      },
+      "2025-10-10": {
+        "id": "h_2025-10-10",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-10-11": {
+        "id": "h_2025-10-11",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-10-12": {
+        "id": "h_2025-10-12",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-10-13": {
+        "id": "h_2025-10-13",
+        "text": "Your overall wellness is trending positively.",
+        "type": "info"
+      },
+      "2025-10-14": {
+        "id": "h_2025-10-14",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-10-15": {
+        "id": "h_2025-10-15",
+        "text": "Your balance between rest and activity is looking good.",
+        "type": "info"
+      },
+      "2025-10-16": {
+        "id": "h_2025-10-16",
+        "text": "Health score is improving compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-10-17": {
+        "id": "h_2025-10-17",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-10-18": {
+        "id": "h_2025-10-18",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-10-19": {
+        "id": "h_2025-10-19",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-10-20": {
+        "id": "h_2025-10-20",
+        "text": "Health score is trending up compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-10-22": {
+        "id": "h_2025-10-22",
+        "text": "Your balance between rest and activity is improving.",
+        "type": "info"
+      },
+      "2025-10-23": {
+        "id": "h_2025-10-23",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-10-24": {
+        "id": "h_2025-10-24",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-10-25": {
+        "id": "h_2025-10-25",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-10-26": {
+        "id": "h_2025-10-26",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-10-27": {
+        "id": "h_2025-10-27",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-10-28": {
+        "id": "h_2025-10-28",
+        "text": "Your balance between rest and activity is improving.",
+        "type": "info"
+      },
+      "2025-10-29": {
+        "id": "h_2025-10-29",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-10-30": {
+        "id": "h_2025-10-30",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-10-31": {
+        "id": "h_2025-10-31",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-11-01": {
+        "id": "h_2025-11-01",
+        "text": "Health score is steady compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-11-02": {
+        "id": "h_2025-11-02",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-11-03": {
+        "id": "h_2025-11-03",
+        "text": "Great harmony between your Readiness and Activity today.",
+        "type": "info"
+      },
+      "2025-11-04": {
+        "id": "h_2025-11-04",
+        "text": "Your overall wellness is trending in the right direction.",
+        "type": "info"
+      },
+      "2025-11-05": {
+        "id": "h_2025-11-05",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-11-06": {
+        "id": "h_2025-11-06",
+        "text": "Consider balancing today's activity with adequate recovery.",
+        "type": "suggestion"
+      },
+      "2025-11-08": {
+        "id": "h_2025-11-08",
+        "text": "Your overall wellness is trending upward.",
+        "type": "info"
+      },
+      "2025-11-09": {
+        "id": "h_2025-11-09",
+        "text": "Health score is improving compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-11-10": {
+        "id": "h_2025-11-10",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-11-11": {
+        "id": "h_2025-11-11",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-11-12": {
+        "id": "h_2025-11-12",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-11-13": {
+        "id": "h_2025-11-13",
+        "text": "Your balance between rest and activity is improving.",
+        "type": "info"
+      },
+      "2025-11-14": {
+        "id": "h_2025-11-14",
+        "text": "Your body is finding a good rhythm this week.",
+        "type": "info"
+      },
+      "2025-11-15": {
+        "id": "h_2025-11-15",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-11-17": {
+        "id": "h_2025-11-17",
+        "text": "Your overall wellness is trending in the right direction.",
+        "type": "info"
+      },
+      "2025-11-18": {
+        "id": "h_2025-11-18",
+        "text": "Health score is slightly up compared to your weekly average.",
+        "type": "info"
+      },
+      "2025-11-19": {
+        "id": "h_2025-11-19",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-11-20": {
+        "id": "h_2025-11-20",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
+      },
+      "2025-11-21": {
+        "id": "h_2025-11-21",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-11-22": {
+        "id": "h_2025-11-22",
+        "text": "Your health metrics show consistent improvement.",
+        "type": "info"
+      },
+      "2025-11-23": {
+        "id": "h_2025-11-23",
+        "text": "Your body is adapting well to your routine.",
+        "type": "info"
+      },
+      "2025-11-24": {
+        "id": "h_2025-11-24",
+        "text": "Nice balance! Keep this momentum going.",
+        "type": "info"
+      },
+      "2025-11-25": {
+        "id": "h_2025-11-25",
+        "text": "Today's score reflects good lifestyle choices.",
+        "type": "info"
       }
-    ]
+    },
+    "readiness": {
+      "2025-05-30": {
+        "id": "r_2025-05-30",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-05-31": {
+        "id": "r_2025-05-31",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-06-01": {
+        "id": "r_2025-06-01",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-06-02": {
+        "id": "r_2025-06-02",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-06-03": {
+        "id": "r_2025-06-03",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-06-05": {
+        "id": "r_2025-06-05",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-06-06": {
+        "id": "r_2025-06-06",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-06-07": {
+        "id": "r_2025-06-07",
+        "text": "Resting heart rate is above your baseline - looking good.",
+        "type": "info"
+      },
+      "2025-06-08": {
+        "id": "r_2025-06-08",
+        "text": "Your overnight metrics indicate deep, restorative sleep.",
+        "type": "info"
+      },
+      "2025-06-09": {
+        "id": "r_2025-06-09",
+        "text": "Resting heart rate is slightly above your baseline - excellent.",
+        "type": "info"
+      },
+      "2025-06-10": {
+        "id": "r_2025-06-10",
+        "text": "Sleep duration was adequate, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-06-11": {
+        "id": "r_2025-06-11",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-06-12": {
+        "id": "r_2025-06-12",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-06-13": {
+        "id": "r_2025-06-13",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-06-14": {
+        "id": "r_2025-06-14",
+        "text": "Resting heart rate is near your baseline - great sign.",
+        "type": "info"
+      },
+      "2025-06-15": {
+        "id": "r_2025-06-15",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-06-16": {
+        "id": "r_2025-06-16",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-06-17": {
+        "id": "r_2025-06-17",
+        "text": "Resting heart rate is near your baseline - excellent.",
+        "type": "info"
+      },
+      "2025-06-18": {
+        "id": "r_2025-06-18",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-06-20": {
+        "id": "r_2025-06-20",
+        "text": "Resting heart rate is above your baseline - great sign.",
+        "type": "info"
+      },
+      "2025-06-21": {
+        "id": "r_2025-06-21",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-06-22": {
+        "id": "r_2025-06-22",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-06-23": {
+        "id": "r_2025-06-23",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-06-24": {
+        "id": "r_2025-06-24",
+        "text": "Resting heart rate is near your baseline - looking good.",
+        "type": "info"
+      },
+      "2025-06-25": {
+        "id": "r_2025-06-25",
+        "text": "Sleep duration was good, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-06-26": {
+        "id": "r_2025-06-26",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-06-27": {
+        "id": "r_2025-06-27",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-06-28": {
+        "id": "r_2025-06-28",
+        "text": "Your overnight metrics indicate deep, restorative sleep.",
+        "type": "info"
+      },
+      "2025-06-29": {
+        "id": "r_2025-06-29",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-06-30": {
+        "id": "r_2025-06-30",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-07-02": {
+        "id": "r_2025-07-02",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-07-03": {
+        "id": "r_2025-07-03",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-07-04": {
+        "id": "r_2025-07-04",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-07-05": {
+        "id": "r_2025-07-05",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-07-06": {
+        "id": "r_2025-07-06",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-07-07": {
+        "id": "r_2025-07-07",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-07-08": {
+        "id": "r_2025-07-08",
+        "text": "Sleep duration was optimal, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-07-10": {
+        "id": "r_2025-07-10",
+        "text": "Sleep duration was optimal, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-07-11": {
+        "id": "r_2025-07-11",
+        "text": "Sleep duration was sufficient, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-07-12": {
+        "id": "r_2025-07-12",
+        "text": "Your overnight metrics indicate deep, restorative sleep.",
+        "type": "info"
+      },
+      "2025-07-13": {
+        "id": "r_2025-07-13",
+        "text": "Sleep duration was good, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-07-14": {
+        "id": "r_2025-07-14",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-07-16": {
+        "id": "r_2025-07-16",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-07-17": {
+        "id": "r_2025-07-17",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-07-18": {
+        "id": "r_2025-07-18",
+        "text": "Sleep duration was sufficient, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-07-19": {
+        "id": "r_2025-07-19",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-07-20": {
+        "id": "r_2025-07-20",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-07-21": {
+        "id": "r_2025-07-21",
+        "text": "Your HRV is within normal range today, indicating good recovery.",
+        "type": "info"
+      },
+      "2025-07-22": {
+        "id": "r_2025-07-22",
+        "text": "Your HRV is strong today, indicating excellent preparation.",
+        "type": "info"
+      },
+      "2025-07-23": {
+        "id": "r_2025-07-23",
+        "text": "Resting HR is elevated - your body may need more recovery.",
+        "type": "warning"
+      },
+      "2025-07-24": {
+        "id": "r_2025-07-24",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-07-25": {
+        "id": "r_2025-07-25",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-07-26": {
+        "id": "r_2025-07-26",
+        "text": "Sleep duration was sufficient, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-07-27": {
+        "id": "r_2025-07-27",
+        "text": "Resting heart rate is at your baseline - great sign.",
+        "type": "info"
+      },
+      "2025-07-28": {
+        "id": "r_2025-07-28",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-07-29": {
+        "id": "r_2025-07-29",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-07-30": {
+        "id": "r_2025-07-30",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-07-31": {
+        "id": "r_2025-07-31",
+        "text": "Resting HR is elevated - your body may need more recovery.",
+        "type": "warning"
+      },
+      "2025-08-01": {
+        "id": "r_2025-08-01",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-08-02": {
+        "id": "r_2025-08-02",
+        "text": "Resting HR is elevated - your body may need more recovery.",
+        "type": "warning"
+      },
+      "2025-08-04": {
+        "id": "r_2025-08-04",
+        "text": "Your HRV is optimal today, indicating good recovery.",
+        "type": "info"
+      },
+      "2025-08-05": {
+        "id": "r_2025-08-05",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-08-06": {
+        "id": "r_2025-08-06",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-08-07": {
+        "id": "r_2025-08-07",
+        "text": "Your HRV is elevated today, indicating strong readiness.",
+        "type": "info"
+      },
+      "2025-08-08": {
+        "id": "r_2025-08-08",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-08-10": {
+        "id": "r_2025-08-10",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-08-11": {
+        "id": "r_2025-08-11",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-08-12": {
+        "id": "r_2025-08-12",
+        "text": "Your HRV is optimal today, indicating excellent preparation.",
+        "type": "info"
+      },
+      "2025-08-13": {
+        "id": "r_2025-08-13",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-08-14": {
+        "id": "r_2025-08-14",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-08-15": {
+        "id": "r_2025-08-15",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-08-16": {
+        "id": "r_2025-08-16",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-08-17": {
+        "id": "r_2025-08-17",
+        "text": "Your HRV is good today, indicating excellent preparation.",
+        "type": "info"
+      },
+      "2025-08-18": {
+        "id": "r_2025-08-18",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-08-19": {
+        "id": "r_2025-08-19",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-08-20": {
+        "id": "r_2025-08-20",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-08-21": {
+        "id": "r_2025-08-21",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-08-22": {
+        "id": "r_2025-08-22",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-08-23": {
+        "id": "r_2025-08-23",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-08-24": {
+        "id": "r_2025-08-24",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-08-25": {
+        "id": "r_2025-08-25",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-08-26": {
+        "id": "r_2025-08-26",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-08-27": {
+        "id": "r_2025-08-27",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-08-28": {
+        "id": "r_2025-08-28",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-08-29": {
+        "id": "r_2025-08-29",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-08-30": {
+        "id": "r_2025-08-30",
+        "text": "Resting HR is elevated - your body may need more recovery.",
+        "type": "warning"
+      },
+      "2025-08-31": {
+        "id": "r_2025-08-31",
+        "text": "Resting heart rate is near your baseline - your body is ready.",
+        "type": "info"
+      },
+      "2025-09-01": {
+        "id": "r_2025-09-01",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-09-02": {
+        "id": "r_2025-09-02",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-09-03": {
+        "id": "r_2025-09-03",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-09-04": {
+        "id": "r_2025-09-04",
+        "text": "Your overnight metrics indicate deep, restorative sleep.",
+        "type": "info"
+      },
+      "2025-09-05": {
+        "id": "r_2025-09-05",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-09-06": {
+        "id": "r_2025-09-06",
+        "text": "Your HRV is strong today, indicating good recovery.",
+        "type": "info"
+      },
+      "2025-09-07": {
+        "id": "r_2025-09-07",
+        "text": "Your overnight metrics indicate deep, restorative sleep.",
+        "type": "info"
+      },
+      "2025-09-08": {
+        "id": "r_2025-09-08",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-09-09": {
+        "id": "r_2025-09-09",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-09-10": {
+        "id": "r_2025-09-10",
+        "text": "Resting heart rate is slightly above your baseline - looking good.",
+        "type": "info"
+      },
+      "2025-09-11": {
+        "id": "r_2025-09-11",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-09-12": {
+        "id": "r_2025-09-12",
+        "text": "Sleep duration was adequate, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-09-13": {
+        "id": "r_2025-09-13",
+        "text": "Your overnight metrics indicate deep, restorative sleep.",
+        "type": "info"
+      },
+      "2025-09-14": {
+        "id": "r_2025-09-14",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-09-15": {
+        "id": "r_2025-09-15",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-09-16": {
+        "id": "r_2025-09-16",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-09-17": {
+        "id": "r_2025-09-17",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-09-18": {
+        "id": "r_2025-09-18",
+        "text": "Your HRV is strong today, indicating strong readiness.",
+        "type": "info"
+      },
+      "2025-09-19": {
+        "id": "r_2025-09-19",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-09-20": {
+        "id": "r_2025-09-20",
+        "text": "Sleep duration was optimal, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-09-21": {
+        "id": "r_2025-09-21",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-09-22": {
+        "id": "r_2025-09-22",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-09-23": {
+        "id": "r_2025-09-23",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-09-24": {
+        "id": "r_2025-09-24",
+        "text": "Sleep duration was optimal, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-09-25": {
+        "id": "r_2025-09-25",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-09-26": {
+        "id": "r_2025-09-26",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-09-27": {
+        "id": "r_2025-09-27",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-09-28": {
+        "id": "r_2025-09-28",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-09-29": {
+        "id": "r_2025-09-29",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-09-30": {
+        "id": "r_2025-09-30",
+        "text": "Sleep duration was good, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-10-01": {
+        "id": "r_2025-10-01",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-10-02": {
+        "id": "r_2025-10-02",
+        "text": "Your HRV is elevated today, indicating strong readiness.",
+        "type": "info"
+      },
+      "2025-10-03": {
+        "id": "r_2025-10-03",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-10-04": {
+        "id": "r_2025-10-04",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-10-05": {
+        "id": "r_2025-10-05",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-10-06": {
+        "id": "r_2025-10-06",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-10-07": {
+        "id": "r_2025-10-07",
+        "text": "Sleep duration was good, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-10-08": {
+        "id": "r_2025-10-08",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-10-09": {
+        "id": "r_2025-10-09",
+        "text": "Sleep duration was sufficient, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-10-10": {
+        "id": "r_2025-10-10",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-10-11": {
+        "id": "r_2025-10-11",
+        "text": "Sleep duration was optimal, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-10-12": {
+        "id": "r_2025-10-12",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-10-13": {
+        "id": "r_2025-10-13",
+        "text": "Recovery is on track - your body is adapting well.",
+        "type": "info"
+      },
+      "2025-10-14": {
+        "id": "r_2025-10-14",
+        "text": "Resting heart rate is above your baseline - great sign.",
+        "type": "info"
+      },
+      "2025-10-15": {
+        "id": "r_2025-10-15",
+        "text": "Resting HR is elevated - your body may need more recovery.",
+        "type": "warning"
+      },
+      "2025-10-16": {
+        "id": "r_2025-10-16",
+        "text": "Sleep duration was excellent, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-10-17": {
+        "id": "r_2025-10-17",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-10-18": {
+        "id": "r_2025-10-18",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-10-19": {
+        "id": "r_2025-10-19",
+        "text": "Sleep duration was excellent, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-10-20": {
+        "id": "r_2025-10-20",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-10-21": {
+        "id": "r_2025-10-21",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-10-22": {
+        "id": "r_2025-10-22",
+        "text": "Your HRV is strong today, indicating good recovery.",
+        "type": "info"
+      },
+      "2025-10-23": {
+        "id": "r_2025-10-23",
+        "text": "Resting heart rate is at your baseline - looking good.",
+        "type": "info"
+      },
+      "2025-10-24": {
+        "id": "r_2025-10-24",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-10-25": {
+        "id": "r_2025-10-25",
+        "text": "Your overnight metrics indicate deep, restorative sleep.",
+        "type": "info"
+      },
+      "2025-10-26": {
+        "id": "r_2025-10-26",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-10-27": {
+        "id": "r_2025-10-27",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-10-28": {
+        "id": "r_2025-10-28",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-10-29": {
+        "id": "r_2025-10-29",
+        "text": "Your overnight metrics indicate deep, restorative sleep.",
+        "type": "info"
+      },
+      "2025-10-30": {
+        "id": "r_2025-10-30",
+        "text": "Your overnight metrics indicate deep, restorative sleep.",
+        "type": "info"
+      },
+      "2025-10-31": {
+        "id": "r_2025-10-31",
+        "text": "Resting heart rate is above your baseline - looking good.",
+        "type": "info"
+      },
+      "2025-11-01": {
+        "id": "r_2025-11-01",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-11-02": {
+        "id": "r_2025-11-02",
+        "text": "Your HRV is strong today, indicating strong readiness.",
+        "type": "info"
+      },
+      "2025-11-03": {
+        "id": "r_2025-11-03",
+        "text": "Sleep duration was optimal, giving your body time to recover.",
+        "type": "info"
+      },
+      "2025-11-04": {
+        "id": "r_2025-11-04",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-11-05": {
+        "id": "r_2025-11-05",
+        "text": "Resting HR is elevated - your body may need more recovery.",
+        "type": "warning"
+      },
+      "2025-11-06": {
+        "id": "r_2025-11-06",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-11-07": {
+        "id": "r_2025-11-07",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-11-08": {
+        "id": "r_2025-11-08",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      },
+      "2025-11-09": {
+        "id": "r_2025-11-09",
+        "text": "HRV suggests you're well-prepared for physical activity.",
+        "type": "info"
+      },
+      "2025-11-10": {
+        "id": "r_2025-11-10",
+        "text": "Your HRV is elevated today, indicating you're well-rested.",
+        "type": "info"
+      },
+      "2025-11-11": {
+        "id": "r_2025-11-11",
+        "text": "Resting heart rate is slightly above your baseline - great sign.",
+        "type": "info"
+      },
+      "2025-11-12": {
+        "id": "r_2025-11-12",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-11-13": {
+        "id": "r_2025-11-13",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-11-14": {
+        "id": "r_2025-11-14",
+        "text": "Your HRV is elevated today, indicating you're well-rested.",
+        "type": "info"
+      },
+      "2025-11-15": {
+        "id": "r_2025-11-15",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-11-16": {
+        "id": "r_2025-11-16",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-11-17": {
+        "id": "r_2025-11-17",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-11-18": {
+        "id": "r_2025-11-18",
+        "text": "HRV is lower than usual. Consider taking it easier today.",
+        "type": "warning"
+      },
+      "2025-11-19": {
+        "id": "r_2025-11-19",
+        "text": "Consider an earlier bedtime to boost tomorrow's readiness.",
+        "type": "suggestion"
+      },
+      "2025-11-20": {
+        "id": "r_2025-11-20",
+        "text": "Resting HR is elevated - your body may need more recovery.",
+        "type": "warning"
+      },
+      "2025-11-22": {
+        "id": "r_2025-11-22",
+        "text": "Your body shows signs of good recovery today.",
+        "type": "info"
+      },
+      "2025-11-23": {
+        "id": "r_2025-11-23",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-11-24": {
+        "id": "r_2025-11-24",
+        "text": "Your recovery metrics look strong today.",
+        "type": "info"
+      },
+      "2025-11-25": {
+        "id": "r_2025-11-25",
+        "text": "Excellent sleep quality! Your body recovered well overnight.",
+        "type": "info"
+      }
+    },
+    "activity": {
+      "2025-05-30": {
+        "id": "a_2025-05-30",
+        "text": "You're on track with your daily activity goals.",
+        "type": "info"
+      },
+      "2025-05-31": {
+        "id": "a_2025-05-31",
+        "text": "You're on track with your daily activity goals.",
+        "type": "info"
+      },
+      "2025-06-02": {
+        "id": "a_2025-06-02",
+        "text": "Your step count is on the rise - keep up the movement!",
+        "type": "info"
+      },
+      "2025-06-03": {
+        "id": "a_2025-06-03",
+        "text": "Move hours are impressive, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-06-04": {
+        "id": "a_2025-06-04",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-06-05": {
+        "id": "a_2025-06-05",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-06-06": {
+        "id": "a_2025-06-06",
+        "text": "You're approaching your daily activity goals.",
+        "type": "info"
+      },
+      "2025-06-07": {
+        "id": "a_2025-06-07",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-06-08": {
+        "id": "a_2025-06-08",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-06-09": {
+        "id": "a_2025-06-09",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-06-10": {
+        "id": "a_2025-06-10",
+        "text": "Active points reflect a excellent level of effort today.",
+        "type": "info"
+      },
+      "2025-06-11": {
+        "id": "a_2025-06-11",
+        "text": "You're meeting your daily activity goals.",
+        "type": "info"
+      },
+      "2025-06-12": {
+        "id": "a_2025-06-12",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-06-13": {
+        "id": "a_2025-06-13",
+        "text": "Activity level is good - nice job.",
+        "type": "info"
+      },
+      "2025-06-15": {
+        "id": "a_2025-06-15",
+        "text": "Move hours are good, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-06-16": {
+        "id": "a_2025-06-16",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-06-17": {
+        "id": "a_2025-06-17",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-06-18": {
+        "id": "a_2025-06-18",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-06-19": {
+        "id": "a_2025-06-19",
+        "text": "Active points reflect a solid level of effort today.",
+        "type": "info"
+      },
+      "2025-06-20": {
+        "id": "a_2025-06-20",
+        "text": "Active points reflect a healthy level of effort today.",
+        "type": "info"
+      },
+      "2025-06-21": {
+        "id": "a_2025-06-21",
+        "text": "Your step count is trending up - keep up the movement!",
+        "type": "info"
+      },
+      "2025-06-22": {
+        "id": "a_2025-06-22",
+        "text": "You're on track with your daily activity goals.",
+        "type": "info"
+      },
+      "2025-06-23": {
+        "id": "a_2025-06-23",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-06-24": {
+        "id": "a_2025-06-24",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-06-25": {
+        "id": "a_2025-06-25",
+        "text": "Activity level is healthy - keep it up.",
+        "type": "info"
+      },
+      "2025-06-26": {
+        "id": "a_2025-06-26",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-06-27": {
+        "id": "a_2025-06-27",
+        "text": "Move hours are strong, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-06-28": {
+        "id": "a_2025-06-28",
+        "text": "You're on track with your daily activity goals.",
+        "type": "info"
+      },
+      "2025-06-29": {
+        "id": "a_2025-06-29",
+        "text": "Your step count is increasing - keep up the movement!",
+        "type": "info"
+      },
+      "2025-06-30": {
+        "id": "a_2025-06-30",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-07-01": {
+        "id": "a_2025-07-01",
+        "text": "Your step count is trending up - keep up the movement!",
+        "type": "info"
+      },
+      "2025-07-02": {
+        "id": "a_2025-07-02",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-07-03": {
+        "id": "a_2025-07-03",
+        "text": "Your step count is increasing - keep up the movement!",
+        "type": "info"
+      },
+      "2025-07-04": {
+        "id": "a_2025-07-04",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-07-05": {
+        "id": "a_2025-07-05",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-07-06": {
+        "id": "a_2025-07-06",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-07-07": {
+        "id": "a_2025-07-07",
+        "text": "You're on track with your daily activity goals.",
+        "type": "info"
+      },
+      "2025-07-09": {
+        "id": "a_2025-07-09",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-07-10": {
+        "id": "a_2025-07-10",
+        "text": "Activity level is good - nice job.",
+        "type": "info"
+      },
+      "2025-07-11": {
+        "id": "a_2025-07-11",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-07-12": {
+        "id": "a_2025-07-12",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-07-13": {
+        "id": "a_2025-07-13",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-07-14": {
+        "id": "a_2025-07-14",
+        "text": "Activity level is solid - great work.",
+        "type": "info"
+      },
+      "2025-07-15": {
+        "id": "a_2025-07-15",
+        "text": "Your step count is on the rise - keep up the movement!",
+        "type": "info"
+      },
+      "2025-07-16": {
+        "id": "a_2025-07-16",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-07-17": {
+        "id": "a_2025-07-17",
+        "text": "Active points reflect a good level of effort today.",
+        "type": "info"
+      },
+      "2025-07-18": {
+        "id": "a_2025-07-18",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-07-19": {
+        "id": "a_2025-07-19",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-07-20": {
+        "id": "a_2025-07-20",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-07-21": {
+        "id": "a_2025-07-21",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-07-22": {
+        "id": "a_2025-07-22",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-07-23": {
+        "id": "a_2025-07-23",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-07-24": {
+        "id": "a_2025-07-24",
+        "text": "Move hours are impressive, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-07-25": {
+        "id": "a_2025-07-25",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-07-26": {
+        "id": "a_2025-07-26",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-07-27": {
+        "id": "a_2025-07-27",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-07-28": {
+        "id": "a_2025-07-28",
+        "text": "Your step count is on the rise - keep up the movement!",
+        "type": "info"
+      },
+      "2025-07-29": {
+        "id": "a_2025-07-29",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-07-30": {
+        "id": "a_2025-07-30",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-07-31": {
+        "id": "a_2025-07-31",
+        "text": "You're exceeding your daily activity goals.",
+        "type": "info"
+      },
+      "2025-08-01": {
+        "id": "a_2025-08-01",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-08-02": {
+        "id": "a_2025-08-02",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-08-03": {
+        "id": "a_2025-08-03",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-08-04": {
+        "id": "a_2025-08-04",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-08-05": {
+        "id": "a_2025-08-05",
+        "text": "You're meeting your daily activity goals.",
+        "type": "info"
+      },
+      "2025-08-06": {
+        "id": "a_2025-08-06",
+        "text": "Your step count is increasing - keep up the movement!",
+        "type": "info"
+      },
+      "2025-08-07": {
+        "id": "a_2025-08-07",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-08-08": {
+        "id": "a_2025-08-08",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-08-10": {
+        "id": "a_2025-08-10",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-08-11": {
+        "id": "a_2025-08-11",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-08-12": {
+        "id": "a_2025-08-12",
+        "text": "Active points reflect a solid level of effort today.",
+        "type": "info"
+      },
+      "2025-08-13": {
+        "id": "a_2025-08-13",
+        "text": "Your step count is improving - keep up the movement!",
+        "type": "info"
+      },
+      "2025-08-14": {
+        "id": "a_2025-08-14",
+        "text": "Active points reflect a excellent level of effort today.",
+        "type": "info"
+      },
+      "2025-08-15": {
+        "id": "a_2025-08-15",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-08-16": {
+        "id": "a_2025-08-16",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-08-18": {
+        "id": "a_2025-08-18",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-08-19": {
+        "id": "a_2025-08-19",
+        "text": "Active points reflect a excellent level of effort today.",
+        "type": "info"
+      },
+      "2025-08-20": {
+        "id": "a_2025-08-20",
+        "text": "You're meeting your daily activity goals.",
+        "type": "info"
+      },
+      "2025-08-21": {
+        "id": "a_2025-08-21",
+        "text": "Move hours are solid, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-08-22": {
+        "id": "a_2025-08-22",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-08-24": {
+        "id": "a_2025-08-24",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-08-25": {
+        "id": "a_2025-08-25",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-08-26": {
+        "id": "a_2025-08-26",
+        "text": "Activity level is good - great work.",
+        "type": "info"
+      },
+      "2025-08-27": {
+        "id": "a_2025-08-27",
+        "text": "Activity level is solid - keep it up.",
+        "type": "info"
+      },
+      "2025-08-28": {
+        "id": "a_2025-08-28",
+        "text": "You're meeting your daily activity goals.",
+        "type": "info"
+      },
+      "2025-08-29": {
+        "id": "a_2025-08-29",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-08-30": {
+        "id": "a_2025-08-30",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-08-31": {
+        "id": "a_2025-08-31",
+        "text": "Activity level is healthy - keep it up.",
+        "type": "info"
+      },
+      "2025-09-01": {
+        "id": "a_2025-09-01",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-09-02": {
+        "id": "a_2025-09-02",
+        "text": "You're on track with your daily activity goals.",
+        "type": "info"
+      },
+      "2025-09-03": {
+        "id": "a_2025-09-03",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-09-04": {
+        "id": "a_2025-09-04",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-09-05": {
+        "id": "a_2025-09-05",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-09-06": {
+        "id": "a_2025-09-06",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-09-07": {
+        "id": "a_2025-09-07",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-09-08": {
+        "id": "a_2025-09-08",
+        "text": "Activity level is strong - you're doing well.",
+        "type": "info"
+      },
+      "2025-09-09": {
+        "id": "a_2025-09-09",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-09-10": {
+        "id": "a_2025-09-10",
+        "text": "Your step count is improving - keep up the movement!",
+        "type": "info"
+      },
+      "2025-09-11": {
+        "id": "a_2025-09-11",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-09-12": {
+        "id": "a_2025-09-12",
+        "text": "Activity level is healthy - keep it up.",
+        "type": "info"
+      },
+      "2025-09-13": {
+        "id": "a_2025-09-13",
+        "text": "Your step count is trending up - keep up the movement!",
+        "type": "info"
+      },
+      "2025-09-14": {
+        "id": "a_2025-09-14",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-09-15": {
+        "id": "a_2025-09-15",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-09-16": {
+        "id": "a_2025-09-16",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-09-17": {
+        "id": "a_2025-09-17",
+        "text": "Activity level is strong - you're doing well.",
+        "type": "info"
+      },
+      "2025-09-18": {
+        "id": "a_2025-09-18",
+        "text": "Activity level is strong - keep it up.",
+        "type": "info"
+      },
+      "2025-09-19": {
+        "id": "a_2025-09-19",
+        "text": "Move hours are impressive, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-09-20": {
+        "id": "a_2025-09-20",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-09-21": {
+        "id": "a_2025-09-21",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-09-22": {
+        "id": "a_2025-09-22",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-09-23": {
+        "id": "a_2025-09-23",
+        "text": "Your step count is on the rise - keep up the movement!",
+        "type": "info"
+      },
+      "2025-09-24": {
+        "id": "a_2025-09-24",
+        "text": "Activity level is good - great work.",
+        "type": "info"
+      },
+      "2025-09-25": {
+        "id": "a_2025-09-25",
+        "text": "Move hours are impressive, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-09-26": {
+        "id": "a_2025-09-26",
+        "text": "Your step count is increasing - keep up the movement!",
+        "type": "info"
+      },
+      "2025-09-27": {
+        "id": "a_2025-09-27",
+        "text": "Move hours are good, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-09-28": {
+        "id": "a_2025-09-28",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-09-29": {
+        "id": "a_2025-09-29",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-09-30": {
+        "id": "a_2025-09-30",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-10-01": {
+        "id": "a_2025-10-01",
+        "text": "Move hours are solid, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-10-02": {
+        "id": "a_2025-10-02",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-10-03": {
+        "id": "a_2025-10-03",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-10-04": {
+        "id": "a_2025-10-04",
+        "text": "Active points reflect a solid level of effort today.",
+        "type": "info"
+      },
+      "2025-10-05": {
+        "id": "a_2025-10-05",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-10-06": {
+        "id": "a_2025-10-06",
+        "text": "Active points reflect a excellent level of effort today.",
+        "type": "info"
+      },
+      "2025-10-07": {
+        "id": "a_2025-10-07",
+        "text": "You're meeting your daily activity goals.",
+        "type": "info"
+      },
+      "2025-10-08": {
+        "id": "a_2025-10-08",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-10-10": {
+        "id": "a_2025-10-10",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-10-11": {
+        "id": "a_2025-10-11",
+        "text": "Activity level is healthy - nice job.",
+        "type": "info"
+      },
+      "2025-10-12": {
+        "id": "a_2025-10-12",
+        "text": "Move hours are good, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-10-13": {
+        "id": "a_2025-10-13",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-10-14": {
+        "id": "a_2025-10-14",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-10-15": {
+        "id": "a_2025-10-15",
+        "text": "Active points reflect a excellent level of effort today.",
+        "type": "info"
+      },
+      "2025-10-16": {
+        "id": "a_2025-10-16",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-10-17": {
+        "id": "a_2025-10-17",
+        "text": "Move hours are impressive, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-10-18": {
+        "id": "a_2025-10-18",
+        "text": "Great job breaking up sedentary time today.",
+        "type": "info"
+      },
+      "2025-10-19": {
+        "id": "a_2025-10-19",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-10-20": {
+        "id": "a_2025-10-20",
+        "text": "Active points reflect a solid level of effort today.",
+        "type": "info"
+      },
+      "2025-10-21": {
+        "id": "a_2025-10-21",
+        "text": "Active points reflect a healthy level of effort today.",
+        "type": "info"
+      },
+      "2025-10-22": {
+        "id": "a_2025-10-22",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-10-23": {
+        "id": "a_2025-10-23",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-10-24": {
+        "id": "a_2025-10-24",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-10-25": {
+        "id": "a_2025-10-25",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-10-26": {
+        "id": "a_2025-10-26",
+        "text": "Consider a short walk to increase your move hours.",
+        "type": "suggestion"
+      },
+      "2025-10-28": {
+        "id": "a_2025-10-28",
+        "text": "Active points reflect a healthy level of effort today.",
+        "type": "info"
+      },
+      "2025-10-29": {
+        "id": "a_2025-10-29",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-10-30": {
+        "id": "a_2025-10-30",
+        "text": "You're exceeding your daily activity goals.",
+        "type": "info"
+      },
+      "2025-11-01": {
+        "id": "a_2025-11-01",
+        "text": "Active points reflect a strong level of effort today.",
+        "type": "info"
+      },
+      "2025-11-02": {
+        "id": "a_2025-11-02",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-11-03": {
+        "id": "a_2025-11-03",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-11-04": {
+        "id": "a_2025-11-04",
+        "text": "Move hours are excellent, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-11-05": {
+        "id": "a_2025-11-05",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-11-06": {
+        "id": "a_2025-11-06",
+        "text": "Great work staying active throughout the day.",
+        "type": "info"
+      },
+      "2025-11-07": {
+        "id": "a_2025-11-07",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      },
+      "2025-11-08": {
+        "id": "a_2025-11-08",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-11-09": {
+        "id": "a_2025-11-09",
+        "text": "You're exceeding your daily activity goals.",
+        "type": "info"
+      },
+      "2025-11-10": {
+        "id": "a_2025-11-10",
+        "text": "Move hours are strong, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-11-11": {
+        "id": "a_2025-11-11",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-11-12": {
+        "id": "a_2025-11-12",
+        "text": "Your step count is trending up - keep up the movement!",
+        "type": "info"
+      },
+      "2025-11-13": {
+        "id": "a_2025-11-13",
+        "text": "Move hours are strong, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-11-14": {
+        "id": "a_2025-11-14",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-11-15": {
+        "id": "a_2025-11-15",
+        "text": "Move hours are good, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-11-16": {
+        "id": "a_2025-11-16",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-11-17": {
+        "id": "a_2025-11-17",
+        "text": "Activity level is good - nice job.",
+        "type": "info"
+      },
+      "2025-11-19": {
+        "id": "a_2025-11-19",
+        "text": "Activity level is healthy - nice job.",
+        "type": "info"
+      },
+      "2025-11-20": {
+        "id": "a_2025-11-20",
+        "text": "Try adding some movement to boost your activity score.",
+        "type": "suggestion"
+      },
+      "2025-11-21": {
+        "id": "a_2025-11-21",
+        "text": "Your activity pattern shows healthy variety.",
+        "type": "info"
+      },
+      "2025-11-22": {
+        "id": "a_2025-11-22",
+        "text": "Active points reflect a solid level of effort today.",
+        "type": "info"
+      },
+      "2025-11-23": {
+        "id": "a_2025-11-23",
+        "text": "Move hours are impressive, showing consistent activity.",
+        "type": "info"
+      },
+      "2025-11-24": {
+        "id": "a_2025-11-24",
+        "text": "Consistent movement today! Your body will thank you.",
+        "type": "info"
+      },
+      "2025-11-25": {
+        "id": "a_2025-11-25",
+        "text": "You're building great momentum with your activity today.",
+        "type": "info"
+      }
+    }
   },
   "metric_info": {
     "health_score": {
