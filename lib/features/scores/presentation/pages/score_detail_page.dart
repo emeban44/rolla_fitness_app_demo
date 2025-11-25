@@ -75,115 +75,118 @@ class ScoreDetailView extends StatelessWidget {
             initial: () => const Center(child: CircularProgressIndicator()),
             loading: () => const LoadingSkeletonView(),
             loaded: (score, history, insights, timeframe, scoreType, selectedDate) {
-              return RefreshIndicator(
+              return RefreshIndicator.adaptive(
                 onRefresh: () async {
                   await context.read<ScoreDetailCubit>().refresh();
                 },
-                child: SingleChildScrollView(
-                  physics: const AlwaysScrollableScrollPhysics(),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      // Timeframe selector
-                      TimeframeSelector(
-                        selectedTimeframe: timeframe,
-                        onTimeframeChanged: (newTimeframe) {
-                          context.read<ScoreDetailCubit>().changeTimeframe(
-                            newTimeframe,
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 24),
-
-                      // Score Header (consistent across all timeframes)
-                      ScoreHeader(
-                        scoreType: scoreType,
-                        onInfoTap: () {
-                          DailyScoreDetailBottomSheet.show(
-                            context: context,
-                            scoreTitle: score.displayName,
-                            scoreType: scoreType,
-                            scoreValue: score.value,
-                            metrics: score.metrics,
-                            info: scoreType.getInfo(),
-                          );
-                        },
-                        selectedDate: selectedDate,
-                        timeframe: timeframe,
-                        onPrevious: () => context.read<ScoreDetailCubit>().navigatePrevious(),
-                        onNext: () => context.read<ScoreDetailCubit>().navigateNext(),
-                        canGoNext: context.read<ScoreDetailCubit>().canNavigateNext(),
-                      ),
-                      const SizedBox(height: 24),
-
-                      // Score display or History chart
-                      if (timeframe == Timeframe.oneDay) ...[
-                        // 1D View - Show gauge with ripple background
-                        ScoreGaugeDecoratedSection(
-                          scoreType: scoreType,
-                          score: score.value,
-                        ),
-                      ] else ...[
-                        // 7D/30D/1Y View - Show chart
-                        TrendChart(
-                          historyPoints: history,
-                          color: scoreType.accentColor,
-                        ),
-                      ],
-
-                      const SizedBox(height: 16),
-
-                      // Metrics section
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Row(
-                          children: [
-                            const SectionTitle(title: 'Metrics'),
-                            const Spacer(),
-                            if (timeframe != Timeframe.oneDay)
-                              Text(
-                                'Daily Avg.',
-                                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                  color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
-                                ),
-                              ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 12),
-                      // Show "No data available" if metrics list is empty
-                      if (score.metrics.isEmpty)
-                        const SizedBox(
-                          height: 60,
-                          child: Center(child: Text('No data available')),
-                        )
-                      else
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          child: MetricsProgressiveList(
-                            metrics: score.metrics,
-                            timeframe: timeframe,
-                            scoreType: scoreType,
+                child: CustomScrollView(
+                  slivers: [
+                    SliverToBoxAdapter(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Timeframe selector
+                          TimeframeSelector(
+                            selectedTimeframe: timeframe,
+                            onTimeframeChanged: (newTimeframe) {
+                              context.read<ScoreDetailCubit>().changeTimeframe(
+                                newTimeframe,
+                              );
+                            },
                           ),
-                        ),
+                          const SizedBox(height: 24),
 
-                      const SizedBox(height: 32),
+                          // Score Header (consistent across all timeframes)
+                          ScoreHeader(
+                            scoreType: scoreType,
+                            onInfoTap: () {
+                              DailyScoreDetailBottomSheet.show(
+                                context: context,
+                                scoreTitle: score.displayName,
+                                scoreType: scoreType,
+                                scoreValue: score.value,
+                                metrics: score.metrics,
+                                info: scoreType.getInfo(),
+                              );
+                            },
+                            selectedDate: selectedDate,
+                            timeframe: timeframe,
+                            onPrevious: () => context.read<ScoreDetailCubit>().navigatePrevious(),
+                            onNext: () => context.read<ScoreDetailCubit>().navigateNext(),
+                            canGoNext: context.read<ScoreDetailCubit>().canNavigateNext(),
+                          ),
+                          const SizedBox(height: 24),
 
-                      // About section
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SectionTitle(title: 'About'),
-                            const SizedBox(height: 12),
-                            SectionDescription(text: scoreType.getInfo().description),
+                          // Score display or History chart
+                          if (timeframe == Timeframe.oneDay) ...[
+                            // 1D View - Show gauge with ripple background
+                            ScoreGaugeDecoratedSection(
+                              scoreType: scoreType,
+                              score: score.value,
+                            ),
+                          ] else ...[
+                            // 7D/30D/1Y View - Show chart
+                            TrendChart(
+                              historyPoints: history,
+                              color: scoreType.accentColor,
+                            ),
                           ],
-                        ),
+
+                          const SizedBox(height: 24),
+
+                          // Metrics section
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                            child: Row(
+                              children: [
+                                const SectionTitle(title: 'Metrics'),
+                                const Spacer(),
+                                if (timeframe != Timeframe.oneDay)
+                                  Text(
+                                    'Daily Avg.',
+                                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                      color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          // Show "No data available" if metrics list is empty
+                          if (score.metrics.isEmpty)
+                            const SizedBox(
+                              height: 60,
+                              child: Center(child: Text('No data available')),
+                            )
+                          else
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                              child: MetricsProgressiveList(
+                                metrics: score.metrics,
+                                timeframe: timeframe,
+                                scoreType: scoreType,
+                              ),
+                            ),
+
+                          const SizedBox(height: 32),
+
+                          // About section
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SectionTitle(title: 'About'),
+                                const SizedBox(height: 12),
+                                SectionDescription(text: scoreType.getInfo().description),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 50),
+                        ],
                       ),
-                      const SizedBox(height: 50),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               );
             },

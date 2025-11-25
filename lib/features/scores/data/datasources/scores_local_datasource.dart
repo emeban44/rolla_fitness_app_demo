@@ -57,19 +57,23 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
         final metricId = metricEntry.key;
         final metricData = metricEntry.value as Map<String, dynamic>;
 
-        metrics.add(MetricModel(
-          id: metricId,
-          title: metricData['title'] as String,
-          displayValue: metricData['value'] as String,
-          score: metricData['score'] as int?,
-        ));
+        metrics.add(
+          MetricModel(
+            id: metricId,
+            title: metricData['title'] as String,
+            displayValue: metricData['value'] as String,
+            score: metricData['score'] as int?,
+          ),
+        );
       }
 
-      scores.add(ScoreModel(
-        type: scoreType,
-        value: currentValue,
-        metrics: metrics,
-      ));
+      scores.add(
+        ScoreModel(
+          type: scoreType,
+          value: currentValue,
+          metrics: metrics,
+        ),
+      );
     }
 
     return scores;
@@ -107,10 +111,7 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
       }
     } else {
       // For 7D/30D/1Y: Calculate average metrics over the period
-      final validScores = history
-          .where((point) => point.value != null)
-          .map((point) => point.value!)
-          .toList();
+      final validScores = history.where((point) => point.value != null).map((point) => point.value!).toList();
 
       if (validScores.isNotEmpty) {
         final averageScore = validScores.reduce((a, b) => a + b) / validScores.length;
@@ -149,12 +150,14 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
         title = _formatMetricTitle(metricId);
       }
 
-      metrics.add(MetricModel(
-        id: metricId,
-        title: title,
-        displayValue: metricData['value'] as String,
-        score: metricData['score'] as int?,
-      ));
+      metrics.add(
+        MetricModel(
+          id: metricId,
+          title: title,
+          displayValue: metricData['value'] as String,
+          score: metricData['score'] as int?,
+        ),
+      );
     }
 
     return metrics;
@@ -211,12 +214,14 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
 
       final avgScore = (scores.reduce((a, b) => a + b) / scores.length).round();
 
-      metrics.add(MetricModel(
-        id: metricId,
-        title: data['title'] as String,
-        displayValue: data['sampleValue'] as String, // Use sample value for display
-        score: avgScore,
-      ));
+      metrics.add(
+        MetricModel(
+          id: metricId,
+          title: data['title'] as String,
+          displayValue: data['sampleValue'] as String, // Use sample value for display
+          score: avgScore,
+        ),
+      );
     }
 
     return metrics;
@@ -231,10 +236,7 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
 
   /// Format metric ID to title (e.g., "resting_hr" -> "Resting HR")
   String _formatMetricTitle(String metricId) {
-    return metricId
-        .split('_')
-        .map((word) => word[0].toUpperCase() + word.substring(1))
-        .join(' ');
+    return metricId.split('_').map((word) => word[0].toUpperCase() + word.substring(1)).join(' ');
   }
 
   @override
@@ -249,8 +251,7 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
 
     // Parse all history points
     final allHistory = scoreHistory
-        .map((point) =>
-            ScoreHistoryPointModel.fromJson(point as Map<String, dynamic>))
+        .map((point) => ScoreHistoryPointModel.fromJson(point as Map<String, dynamic>))
         .toList();
 
     // Calculate date range based on timeframe and selectedDate
@@ -260,13 +261,11 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
     switch (timeframe.toLowerCase()) {
       case '1d':
         // Single day
-        return allHistory
-            .where((point) {
-              final pointDate = DateTime.parse(point.date);
-              final normalizedPointDate = DateTime(pointDate.year, pointDate.month, pointDate.day);
-              return normalizedPointDate == endDate;
-            })
-            .toList();
+        return allHistory.where((point) {
+          final pointDate = DateTime.parse(point.date);
+          final normalizedPointDate = DateTime(pointDate.year, pointDate.month, pointDate.day);
+          return normalizedPointDate == endDate;
+        }).toList();
 
       case '7d':
         // Last 7 days ending on selectedDate
@@ -288,26 +287,20 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
     }
 
     // Filter history to date range
-    return allHistory
-        .where((point) {
-          final pointDate = DateTime.parse(point.date);
-          final normalizedPointDate = DateTime(pointDate.year, pointDate.month, pointDate.day);
-          return !normalizedPointDate.isBefore(startDate) && !normalizedPointDate.isAfter(endDate);
-        })
-        .toList();
+    return allHistory.where((point) {
+      final pointDate = DateTime.parse(point.date);
+      final normalizedPointDate = DateTime(pointDate.year, pointDate.month, pointDate.day);
+      return !normalizedPointDate.isBefore(startDate) && !normalizedPointDate.isAfter(endDate);
+    }).toList();
   }
 
   @override
   Future<List<InsightModel>> getInsights(String scoreType) async {
     final data = await _loadData();
     final insightsData = data['insights'] as Map<String, dynamic>;
-    final scoreInsights =
-        insightsData[scoreType.toLowerCase()] as List? ?? [];
+    final scoreInsights = insightsData[scoreType.toLowerCase()] as List? ?? [];
 
-    return scoreInsights
-        .map(
-            (insight) => InsightModel.fromJson(insight as Map<String, dynamic>))
-        .toList();
+    return scoreInsights.map((insight) => InsightModel.fromJson(insight as Map<String, dynamic>)).toList();
   }
 
   @override

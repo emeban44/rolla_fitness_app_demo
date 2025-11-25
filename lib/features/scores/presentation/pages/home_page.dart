@@ -49,7 +49,7 @@ class HomePageView extends StatelessWidget {
           return state.when(
             initial: () => const SizedBox.shrink(),
             loading: () => const _LoadingView(),
-            loaded: (scores) => RefreshIndicator(
+            loaded: (scores) => RefreshIndicator.adaptive(
               onRefresh: () => context.read<ScoresCubit>().refreshScores(),
               child: GridView.count(
                 crossAxisCount: 2,
