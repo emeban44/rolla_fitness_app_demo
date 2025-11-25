@@ -4858,7 +4858,7 @@
           },
           "resting_hr": {
             "value": "56 bpm",
-            "score": 82
+            "score": null
           },
           "hrv": {
             "value": "44 ms",
@@ -5039,7 +5039,7 @@
         "metrics": {
           "sleep": {
             "value": "6h 26min",
-            "score": 86
+            "score": null
           },
           "resting_hr": {
             "value": "56 bpm",
@@ -5206,7 +5206,7 @@
         "metrics": {
           "sleep": {
             "value": "8h 36min",
-            "score": 83
+            "score": null
           },
           "resting_hr": {
             "value": "51 bpm",
@@ -5394,7 +5394,7 @@
           },
           "hrv": {
             "value": "47 ms",
-            "score": 89
+            "score": null
           }
         }
       },
@@ -5544,7 +5544,7 @@
           },
           "resting_hr": {
             "value": "59 bpm",
-            "score": 73
+            "score": null
           },
           "hrv": {
             "value": "45 ms",
@@ -5715,7 +5715,7 @@
           },
           "hrv": {
             "value": "49 ms",
-            "score": 93
+            "score": null
           }
         }
       },
@@ -5895,7 +5895,7 @@
           },
           "hrv": {
             "value": "45 ms",
-            "score": 85
+            "score": null
           }
         }
       },
@@ -6063,7 +6063,7 @@
           },
           "resting_hr": {
             "value": "46 bpm",
-            "score": 96
+            "score": null
           },
           "hrv": {
             "value": "50 ms",
@@ -6247,7 +6247,7 @@
           },
           "hrv": {
             "value": "40 ms",
-            "score": 75
+            "score": null
           }
         }
       },
@@ -6419,7 +6419,7 @@
         "metrics": {
           "sleep": {
             "value": "7h 28min",
-            "score": 97
+            "score": null
           },
           "resting_hr": {
             "value": "49 bpm",
@@ -6617,7 +6617,7 @@
         "metrics": {
           "sleep": {
             "value": "8h 59min",
-            "score": 85
+            "score": null
           },
           "resting_hr": {
             "value": "51 bpm",
@@ -6797,7 +6797,7 @@
         "metrics": {
           "sleep": {
             "value": "8h 54min",
-            "score": 86
+            "score": null
           },
           "resting_hr": {
             "value": "57 bpm",
@@ -6977,7 +6977,7 @@
         "metrics": {
           "sleep": {
             "value": "7h 14min",
-            "score": 98
+            "score": null
           },
           "resting_hr": {
             "value": "55 bpm",
@@ -7165,7 +7165,7 @@
           },
           "hrv": {
             "value": "48 ms",
-            "score": 91
+            "score": null
           }
         }
       },
@@ -7345,7 +7345,7 @@
           },
           "hrv": {
             "value": "46 ms",
-            "score": 87
+            "score": null
           }
         }
       },
@@ -7525,7 +7525,7 @@
           },
           "hrv": {
             "value": "53 ms",
-            "score": 99
+            "score": null
           }
         }
       },
@@ -7715,7 +7715,7 @@
         "metrics": {
           "sleep": {
             "value": "7h 1min",
-            "score": 104
+            "score": null
           },
           "resting_hr": {
             "value": "59 bpm",
@@ -7895,7 +7895,7 @@
         "metrics": {
           "sleep": {
             "value": "8h 21min",
-            "score": 82
+            "score": null
           },
           "resting_hr": {
             "value": "50 bpm",
@@ -7996,7 +7996,7 @@
           },
           "steps": {
             "value": "7929",
-            "score": 78
+            "score": null
           },
           "move_hours": {
             "value": "9 h",
@@ -8177,7 +8177,7 @@
         "metrics": {
           "active_points": {
             "value": "33 pts",
-            "score": 100
+            "score": null
           },
           "steps": {
             "value": "9896",
@@ -8352,7 +8352,7 @@
           },
           "move_hours": {
             "value": "7 h",
-            "score": 63
+            "score": null
           }
         }
       },
@@ -8524,7 +8524,7 @@
         "metrics": {
           "active_points": {
             "value": "28 pts",
-            "score": 90
+            "score": null
           },
           "steps": {
             "value": "9983",
@@ -8695,7 +8695,7 @@
           },
           "steps": {
             "value": "9532",
-            "score": 91
+            "score": null
           },
           "move_hours": {
             "value": "8 h",
@@ -8871,7 +8871,7 @@
         "metrics": {
           "active_points": {
             "value": "21 pts",
-            "score": 73
+            "score": null
           },
           "steps": {
             "value": "6855",
@@ -9051,7 +9051,7 @@
         "metrics": {
           "active_points": {
             "value": "25 pts",
-            "score": 83
+            "score": null
           },
           "steps": {
             "value": "8073",
@@ -9240,7 +9240,7 @@
           },
           "steps": {
             "value": "7748",
-            "score": 76
+            "score": null
           },
           "move_hours": {
             "value": "7 h",
@@ -9403,7 +9403,7 @@
         "metrics": {
           "active_points": {
             "value": "22 pts",
-            "score": 75
+            "score": null
           },
           "steps": {
             "value": "5886",
@@ -9574,7 +9574,7 @@
           },
           "steps": {
             "value": "7124",
-            "score": 71
+            "score": null
           },
           "move_hours": {
             "value": "8 h",
@@ -9768,7 +9768,7 @@
         "metrics": {
           "active_points": {
             "value": "25 pts",
-            "score": 83
+            "score": null
           },
           "steps": {
             "value": "8714",
@@ -9952,7 +9952,7 @@
           },
           "steps": {
             "value": "8849",
-            "score": 85
+            "score": null
           },
           "move_hours": {
             "value": "9 h",
@@ -10136,7 +10136,7 @@
           },
           "move_hours": {
             "value": "8 h",
-            "score": 75
+            "score": null
           }
         }
       },
@@ -10295,7 +10295,7 @@
         "metrics": {
           "active_points": {
             "value": "28 pts",
-            "score": 90
+            "score": null
           },
           "steps": {
             "value": "8255",
@@ -10479,7 +10479,7 @@
           },
           "steps": {
             "value": "7238",
-            "score": 72
+            "score": null
           },
           "move_hours": {
             "value": "7 h",
@@ -10650,7 +10650,7 @@
           },
           "move_hours": {
             "value": "10 h",
-            "score": 100
+            "score": null
           }
         }
       },
@@ -10831,7 +10831,7 @@
           },
           "steps": {
             "value": "10682",
-            "score": 99
+            "score": null
           },
           "move_hours": {
             "value": "10 h",
@@ -10998,7 +10998,7 @@
           },
           "steps": {
             "value": "8054",
-            "score": 79
+            "score": null
           },
           "move_hours": {
             "value": "7 h",
@@ -11110,7 +11110,7 @@
           "activity": {
             "title": "Activity",
             "value": "62",
-            "score": 62
+            "score": null
           }
         }
       },
@@ -11286,7 +11286,7 @@
           "activity": {
             "title": "Activity",
             "value": "53",
-            "score": 53
+            "score": null
           }
         }
       },
@@ -11446,7 +11446,7 @@
           "activity": {
             "title": "Activity",
             "value": "59",
-            "score": 59
+            "score": null
           }
         }
       },
@@ -11606,7 +11606,7 @@
           "activity": {
             "title": "Activity",
             "value": "44",
-            "score": 44
+            "score": null
           }
         }
       },
@@ -11750,7 +11750,7 @@
           "readiness": {
             "title": "Readiness",
             "value": "59",
-            "score": 59
+            "score": null
           },
           "activity": {
             "title": "Activity",
@@ -11915,7 +11915,7 @@
           "activity": {
             "title": "Activity",
             "value": "64",
-            "score": 64
+            "score": null
           }
         }
       },
@@ -12059,7 +12059,7 @@
           "readiness": {
             "title": "Readiness",
             "value": "58",
-            "score": 58
+            "score": null
           },
           "activity": {
             "title": "Activity",
@@ -12229,7 +12229,7 @@
           "activity": {
             "title": "Activity",
             "value": "60",
-            "score": 60
+            "score": null
           }
         }
       },
@@ -12389,7 +12389,7 @@
           "activity": {
             "title": "Activity",
             "value": "48",
-            "score": 48
+            "score": null
           }
         }
       },
@@ -12549,7 +12549,7 @@
           "activity": {
             "title": "Activity",
             "value": "50",
-            "score": 50
+            "score": null
           }
         }
       },
@@ -12720,7 +12720,7 @@
           "readiness": {
             "title": "Readiness",
             "value": "62",
-            "score": 62
+            "score": null
           },
           "activity": {
             "title": "Activity",
@@ -12885,7 +12885,7 @@
           "activity": {
             "title": "Activity",
             "value": "69",
-            "score": 69
+            "score": null
           }
         }
       },
@@ -13045,7 +13045,7 @@
           "activity": {
             "title": "Activity",
             "value": "49",
-            "score": 49
+            "score": null
           }
         }
       },
@@ -13189,7 +13189,7 @@
           "readiness": {
             "title": "Readiness",
             "value": "57",
-            "score": 57
+            "score": null
           },
           "activity": {
             "title": "Activity",
@@ -13354,7 +13354,7 @@
           "activity": {
             "title": "Activity",
             "value": "57",
-            "score": 57
+            "score": null
           }
         }
       },
@@ -13498,7 +13498,7 @@
           "readiness": {
             "title": "Readiness",
             "value": "56",
-            "score": 56
+            "score": null
           },
           "activity": {
             "title": "Activity",
@@ -13668,7 +13668,7 @@
           "activity": {
             "title": "Activity",
             "value": "57",
-            "score": 57
+            "score": null
           }
         }
       },
@@ -13812,7 +13812,7 @@
           "readiness": {
             "title": "Readiness",
             "value": "67",
-            "score": 67
+            "score": null
           },
           "activity": {
             "title": "Activity",
