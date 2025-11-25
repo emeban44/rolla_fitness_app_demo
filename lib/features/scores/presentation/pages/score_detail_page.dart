@@ -11,7 +11,7 @@ import 'package:rolla_fitness_app_demo/features/scores/domain/entities/timeframe
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/daily_score_detail_bottom_sheet.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/detail_score_gauge_section.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_gauge_decorated_section.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metric_tile.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_header.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/timeframe_selector.dart';
@@ -102,8 +102,8 @@ class ScoreDetailView extends StatelessWidget {
                           DailyScoreDetailBottomSheet.show(
                             context: context,
                             scoreTitle: score.displayName,
+                            scoreType: scoreType,
                             scoreValue: score.value,
-                            scoreColor: scoreType.accentColor,
                             metrics: score.metrics,
                             info: scoreType.getInfo(),
                           );
@@ -119,7 +119,7 @@ class ScoreDetailView extends StatelessWidget {
                       // Score display or History chart
                       if (timeframe == Timeframe.oneDay) ...[
                         // 1D View - Show gauge with ripple background
-                        DetailScoreGaugeSection(
+                        ScoreGaugeDecoratedSection(
                           scoreType: scoreType,
                           score: score.value,
                         ),

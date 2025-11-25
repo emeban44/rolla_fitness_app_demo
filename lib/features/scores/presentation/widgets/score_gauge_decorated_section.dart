@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radial_gauge.dart';
 
-/// Gauge with ripple dotted background
-/// Focused only on displaying the gauge with visual background effect
-/// Shows "N/A" when score is null (missing data)
-class DetailScoreGaugeSection extends StatelessWidget {
+/// Radial gauge with decorative ripple dotted background
+class ScoreGaugeDecoratedSection extends StatelessWidget {
   final ScoreType scoreType;
   final int? score;
 
-  const DetailScoreGaugeSection({
+  const ScoreGaugeDecoratedSection({
     super.key,
     required this.scoreType,
     required this.score,

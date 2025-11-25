@@ -3,21 +3,22 @@ import 'package:rolla_fitness_app_demo/core/widgets/section_description.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric_info.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radial_gauge.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_gauge_decorated_section.dart';
 
 /// Bottom sheet showing daily score details with metrics and info
 class DailyScoreDetailBottomSheet extends StatelessWidget {
   final String scoreTitle;
+  final ScoreType scoreType;
   final int? scoreValue;
-  final Color scoreColor;
   final List<Metric> metrics;
   final MetricInfo info;
 
   const DailyScoreDetailBottomSheet({
     super.key,
     required this.scoreTitle,
+    required this.scoreType,
     required this.scoreValue,
-    required this.scoreColor,
     required this.metrics,
     required this.info,
   });
@@ -26,8 +27,8 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
   static void show({
     required BuildContext context,
     required String scoreTitle,
+    required ScoreType scoreType,
     required int? scoreValue,
-    required Color scoreColor,
     required List<Metric> metrics,
     required MetricInfo info,
   }) {
@@ -37,8 +38,8 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
       backgroundColor: Colors.transparent,
       builder: (context) => DailyScoreDetailBottomSheet(
         scoreTitle: scoreTitle,
+        scoreType: scoreType,
         scoreValue: scoreValue,
-        scoreColor: scoreColor,
         metrics: metrics,
         info: info,
       ),
@@ -82,17 +83,14 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
 
           Flexible(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Radial gauge
-                  Center(
-                    child: RadialGauge(
-                      score: scoreValue,
-                      color: scoreColor,
-                      size: 160,
-                    ),
+                  // Radial gauge with dotted background
+                  ScoreGaugeDecoratedSection(
+                    scoreType: scoreType,
+                    score: scoreValue,
                   ),
                   const SizedBox(height: 24),
 
@@ -155,12 +153,8 @@ class MetricInfoRow extends StatelessWidget {
           Text(
             metric.displayValue,
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Theme.of(context)
-                      .textTheme
-                      .bodySmall
-                      ?.color
-                      ?.withValues(alpha: 0.6),
-                ),
+              color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
+            ),
           ),
           const SizedBox(width: 8),
           // Star icon
@@ -170,8 +164,8 @@ class MetricInfoRow extends StatelessWidget {
           Text(
             metric.score?.toString() ?? '-',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  fontWeight: FontWeight.w600,
-                ),
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ],
       ),
