@@ -9,7 +9,7 @@ import 'package:rolla_fitness_app_demo/core/widgets/theme_switcher.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/score_detail_page.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_card.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/cards/score_card.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
 
 /// Home page displaying all three score cards in a grid

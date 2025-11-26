@@ -13,13 +13,13 @@ import 'package:rolla_fitness_app_demo/features/scores/domain/enums/timeframe.da
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/insight/insight.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_state.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/daily_score_detail_bottom_sheet.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_gauge_decorated_section.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metrics_progressive_list.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_header.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/timeframe_selector.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/trend_chart.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/daily_insight_note.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/bottom_sheets/daily_score_detail_bottom_sheet.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/score_gauge_decorated_section.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metrics/metrics_progressive_list.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/headers/score_header.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/selectors/timeframe_selector.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/charts/trend_chart.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/insights/daily_insight_note.dart';
 
 /// Score detail page - reusable for Health, Readiness, and Activity scores
 class ScoreDetailPage extends StatelessWidget {

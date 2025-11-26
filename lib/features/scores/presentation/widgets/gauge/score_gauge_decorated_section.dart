@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radial_gauge.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/radial_gauge.dart';
 
 /// Radial gauge with decorative ripple dotted background
 class ScoreGaugeDecoratedSection extends StatelessWidget {
