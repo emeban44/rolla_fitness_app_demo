@@ -29,10 +29,10 @@ import 'package:rolla_fitness_app_demo/features/scores/domain/usecases/get_score
     as _i294;
 import 'package:rolla_fitness_app_demo/features/scores/domain/usecases/get_scores.dart'
     as _i151;
-import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail_cubit.dart'
-    as _i917;
-import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_cubit.dart'
-    as _i217;
+import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail/score_detail_cubit.dart'
+    as _i642;
+import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_home/scores_home_cubit.dart'
+    as _i510;
 
 extension GetItInjectableX on _i174.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -65,16 +65,16 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i20.GetScoreDetail>(
       () => _i20.GetScoreDetail(gh<_i344.ScoresRepository>()),
     );
-    gh.factory<_i917.ScoreDetailCubit>(
-      () => _i917.ScoreDetailCubit(
+    gh.factory<_i642.ScoreDetailCubit>(
+      () => _i642.ScoreDetailCubit(
         gh<_i20.GetScoreDetail>(),
         gh<_i294.GetScoreHistory>(),
         gh<_i835.GetInsights>(),
         gh<_i784.DataGenerationService>(),
       ),
     );
-    gh.factory<_i217.ScoresCubit>(
-      () => _i217.ScoresCubit(
+    gh.factory<_i510.ScoresHomeCubit>(
+      () => _i510.ScoresHomeCubit(
         gh<_i151.GetScores>(),
         gh<_i784.DataGenerationService>(),
       ),

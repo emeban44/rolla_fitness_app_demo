@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'scores_state.dart';
+part of 'scores_home_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 );
 
 /// @nodoc
-mixin _$ScoresState {
+mixin _$ScoresHomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -64,24 +64,24 @@ mixin _$ScoresState {
 }
 
 /// @nodoc
-abstract class $ScoresStateCopyWith<$Res> {
-  factory $ScoresStateCopyWith(
-    ScoresState value,
-    $Res Function(ScoresState) then,
-  ) = _$ScoresStateCopyWithImpl<$Res, ScoresState>;
+abstract class $ScoresHomeStateCopyWith<$Res> {
+  factory $ScoresHomeStateCopyWith(
+    ScoresHomeState value,
+    $Res Function(ScoresHomeState) then,
+  ) = _$ScoresHomeStateCopyWithImpl<$Res, ScoresHomeState>;
 }
 
 /// @nodoc
-class _$ScoresStateCopyWithImpl<$Res, $Val extends ScoresState>
-    implements $ScoresStateCopyWith<$Res> {
-  _$ScoresStateCopyWithImpl(this._value, this._then);
+class _$ScoresHomeStateCopyWithImpl<$Res, $Val extends ScoresHomeState>
+    implements $ScoresHomeStateCopyWith<$Res> {
+  _$ScoresHomeStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ScoresState
+  /// Create a copy of ScoresHomeState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -95,14 +95,14 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$ScoresStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$ScoresHomeStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
     _$InitialImpl _value,
     $Res Function(_$InitialImpl) _then,
   ) : super(_value, _then);
 
-  /// Create a copy of ScoresState
+  /// Create a copy of ScoresHomeState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -113,7 +113,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'ScoresState.initial()';
+    return 'ScoresHomeState.initial()';
   }
 
   @override
@@ -200,7 +200,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements ScoresState {
+abstract class _Initial implements ScoresHomeState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -214,14 +214,14 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$ScoresStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$ScoresHomeStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
     _$LoadingImpl _value,
     $Res Function(_$LoadingImpl) _then,
   ) : super(_value, _then);
 
-  /// Create a copy of ScoresState
+  /// Create a copy of ScoresHomeState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -232,7 +232,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'ScoresState.loading()';
+    return 'ScoresHomeState.loading()';
   }
 
   @override
@@ -319,7 +319,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements ScoresState {
+abstract class _Loading implements ScoresHomeState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -335,14 +335,14 @@ abstract class _$$LoadedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$ScoresStateCopyWithImpl<$Res, _$LoadedImpl>
+    extends _$ScoresHomeStateCopyWithImpl<$Res, _$LoadedImpl>
     implements _$$LoadedImplCopyWith<$Res> {
   __$$LoadedImplCopyWithImpl(
     _$LoadedImpl _value,
     $Res Function(_$LoadedImpl) _then,
   ) : super(_value, _then);
 
-  /// Create a copy of ScoresState
+  /// Create a copy of ScoresHomeState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -373,7 +373,7 @@ class _$LoadedImpl implements _Loaded {
 
   @override
   String toString() {
-    return 'ScoresState.loaded(scores: $scores)';
+    return 'ScoresHomeState.loaded(scores: $scores)';
   }
 
   @override
@@ -388,7 +388,7 @@ class _$LoadedImpl implements _Loaded {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_scores));
 
-  /// Create a copy of ScoresState
+  /// Create a copy of ScoresHomeState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -471,12 +471,12 @@ class _$LoadedImpl implements _Loaded {
   }
 }
 
-abstract class _Loaded implements ScoresState {
+abstract class _Loaded implements ScoresHomeState {
   const factory _Loaded(final List<Score> scores) = _$LoadedImpl;
 
   List<Score> get scores;
 
-  /// Create a copy of ScoresState
+  /// Create a copy of ScoresHomeState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -495,14 +495,14 @@ abstract class _$$ErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$ScoresStateCopyWithImpl<$Res, _$ErrorImpl>
+    extends _$ScoresHomeStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
   __$$ErrorImplCopyWithImpl(
     _$ErrorImpl _value,
     $Res Function(_$ErrorImpl) _then,
   ) : super(_value, _then);
 
-  /// Create a copy of ScoresState
+  /// Create a copy of ScoresHomeState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -528,7 +528,7 @@ class _$ErrorImpl implements _Error {
 
   @override
   String toString() {
-    return 'ScoresState.error(failure: $failure)';
+    return 'ScoresHomeState.error(failure: $failure)';
   }
 
   @override
@@ -542,7 +542,7 @@ class _$ErrorImpl implements _Error {
   @override
   int get hashCode => Object.hash(runtimeType, failure);
 
-  /// Create a copy of ScoresState
+  /// Create a copy of ScoresHomeState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -625,12 +625,12 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements ScoresState {
+abstract class _Error implements ScoresHomeState {
   const factory _Error(final Failure failure) = _$ErrorImpl;
 
   Failure get failure;
 
-  /// Create a copy of ScoresState
+  /// Create a copy of ScoresHomeState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>

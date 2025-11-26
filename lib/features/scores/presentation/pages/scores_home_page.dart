@@ -6,27 +6,27 @@ import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/spinning_radial_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/theme_switcher.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_cubit.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_state.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_home/scores_home_cubit.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_home/scores_home_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/score_detail_page.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/cards/score_card.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
 
 /// Home page displaying all three score cards in a grid
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class ScoresHomePage extends StatelessWidget {
+  const ScoresHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<ScoresCubit>()..loadScores(),
-      child: const HomePageView(),
+      create: (context) => getIt<ScoresHomeCubit>()..loadScores(),
+      child: const ScoresHomePageView(),
     );
   }
 }
 
-class HomePageView extends StatelessWidget {
-  const HomePageView({super.key});
+class ScoresHomePageView extends StatelessWidget {
+  const ScoresHomePageView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class HomePageView extends StatelessWidget {
           ThemeSwitcher(),
         ],
       ),
-      body: BlocListener<ScoresCubit, ScoresState>(
+      body: BlocListener<ScoresHomeCubit, ScoresHomeState>(
         listener: (context, state) {
           state.whenOrNull(
             error: (failure) {
@@ -51,13 +51,13 @@ class HomePageView extends StatelessWidget {
             },
           );
         },
-        child: BlocBuilder<ScoresCubit, ScoresState>(
+        child: BlocBuilder<ScoresHomeCubit, ScoresHomeState>(
           builder: (context, state) {
             return state.when(
               initial: () => const SizedBox.shrink(),
               loading: () => const _LoadingView(),
               loaded: (scores) => RefreshIndicator.adaptive(
-                onRefresh: () => context.read<ScoresCubit>().refreshScores(),
+                onRefresh: () => context.read<ScoresHomeCubit>().refreshScores(),
                 child: GridView.count(
                   crossAxisCount: 2,
                   padding: const EdgeInsets.all(16),
@@ -83,7 +83,7 @@ class HomePageView extends StatelessWidget {
               ),
               error: (failure) => AppErrorWidget(
                 message: failure.message,
-                onRetry: () => context.read<ScoresCubit>().loadScores(),
+                onRetry: () => context.read<ScoresHomeCubit>().loadScores(),
               ),
             );
           },

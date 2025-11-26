@@ -4,23 +4,23 @@ import 'package:injectable/injectable.dart';
 import 'package:rolla_fitness_app_demo/core/error/failures.dart';
 import 'package:rolla_fitness_app_demo/core/services/data_generation_service.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/usecases/get_scores.dart';
-import 'scores_state.dart';
+import 'scores_home_state.dart';
 
 @injectable
-class ScoresCubit extends Cubit<ScoresState> {
+class ScoresHomeCubit extends Cubit<ScoresHomeState> {
   final GetScores getScores;
   final DataGenerationService dataGenerationService;
 
   // Counter for demonstrating error handling
   int _refreshCount = 0;
 
-  ScoresCubit(
+  ScoresHomeCubit(
     this.getScores,
     this.dataGenerationService,
-  ) : super(const ScoresState.initial());
+  ) : super(const ScoresHomeState.initial());
 
   Future<void> loadScores() async {
-    emit(const ScoresState.loading());
+    emit(const ScoresHomeState.loading());
 
     // Generate fresh data before loading
     final generated = await dataGenerationService.generateData();
@@ -37,8 +37,8 @@ class ScoresCubit extends Cubit<ScoresState> {
     final result = await getScores();
 
     result.fold(
-      (failure) => emit(ScoresState.error(failure)),
-      (scores) => emit(ScoresState.loaded(scores)),
+      (failure) => emit(ScoresHomeState.error(failure)),
+      (scores) => emit(ScoresHomeState.loaded(scores)),
     );
   }
 
@@ -48,12 +48,12 @@ class ScoresCubit extends Cubit<ScoresState> {
 
     // Every third refresh, emit an intentional error for demonstration
     if (_refreshCount % 3 == 0) {
-      emit(const ScoresState.error(DataFailure('Something went wrong.')));
+      emit(const ScoresHomeState.error(DataFailure('Something went wrong.')));
       return;
     }
 
     // Show loading state during refresh
-    emit(const ScoresState.loading());
+    emit(const ScoresHomeState.loading());
 
     // Generate fresh data
     await dataGenerationService.refreshData();
@@ -62,8 +62,8 @@ class ScoresCubit extends Cubit<ScoresState> {
     final result = await getScores();
 
     result.fold(
-      (failure) => emit(ScoresState.error(failure)),
-      (scores) => emit(ScoresState.loaded(scores)),
+      (failure) => emit(ScoresHomeState.error(failure)),
+      (scores) => emit(ScoresHomeState.loaded(scores)),
     );
   }
 }
