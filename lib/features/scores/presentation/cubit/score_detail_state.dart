@@ -11,7 +11,11 @@ part 'score_detail_state.freezed.dart';
 @freezed
 class ScoreDetailState with _$ScoreDetailState {
   const factory ScoreDetailState.initial() = _Initial;
-  const factory ScoreDetailState.loading() = _Loading;
+  const factory ScoreDetailState.loading({
+    required ScoreType scoreType,
+    required Timeframe timeframe,
+    required DateTime selectedDate,
+  }) = _Loading;
   const factory ScoreDetailState.loaded({
     required Score score,
     required List<ScoreHistoryPoint> history,

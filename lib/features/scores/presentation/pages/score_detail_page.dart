@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/scores_injection.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/chart_loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
-import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/metric_tile_loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_description.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/theme_switcher.dart';
@@ -61,7 +62,13 @@ class ScoreDetailView extends StatelessWidget {
         builder: (context, state) {
           return state.when(
             initial: () => const Center(child: CircularProgressIndicator()),
-            loading: () => const LoadingSkeletonView(),
+            loading: (scoreType, timeframe, selectedDate) {
+              return LoadingSkeletonView(
+                scoreType: scoreType,
+                timeframe: timeframe,
+                selectedDate: selectedDate,
+              );
+            },
             loaded: (score, history, insights, timeframe, scoreType, selectedDate) {
               return RefreshIndicator.adaptive(
                 onRefresh: () async {
@@ -84,7 +91,7 @@ class ScoreDetailView extends StatelessWidget {
                           ),
                           const SizedBox(height: 24),
 
-                          // Score Header (consistent across all timeframes)
+                          // Score Header
                           ScoreHeader(
                             scoreType: scoreType,
                             onInfoTap: () {
@@ -107,18 +114,16 @@ class ScoreDetailView extends StatelessWidget {
 
                           // Score display or History chart
                           if (timeframe == Timeframe.oneDay) ...[
-                            // 1D View - Show gauge with ripple background
                             ScoreGaugeDecoratedSection(
                               scoreType: scoreType,
                               score: score.value,
                             ),
-                            // Show insight for selected date if available
                             if (_getInsightForDate(insights, selectedDate) != null) ...[
                               const SizedBox(height: 16),
                               DailyInsightNote(text: _getInsightForDate(insights, selectedDate)!.text),
+                              const SizedBox(height: 8),
                             ],
                           ] else ...[
-                            // 7D/30D/1Y View - Show chart
                             TrendChart(
                               historyPoints: history,
                               color: scoreType.accentColor,
@@ -145,7 +150,6 @@ class ScoreDetailView extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 12),
-                          // Show "No data available" if metrics list is empty
                           if (score.metrics.isEmpty)
                             const SizedBox(
                               height: 60,
@@ -210,61 +214,95 @@ String _formatDate(DateTime date) {
 }
 
 /// Loading skeleton for the detail page
+/// Shows skeletons ONLY for chart and metrics - everything else stays visible
 class LoadingSkeletonView extends StatelessWidget {
-  const LoadingSkeletonView({super.key});
+  final ScoreType scoreType;
+  final Timeframe timeframe;
+  final DateTime selectedDate;
+
+  const LoadingSkeletonView({
+    super.key,
+    required this.scoreType,
+    required this.timeframe,
+    required this.selectedDate,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Timeframe selector skeleton
-          Row(
-            children: List.generate(
-              4,
-              (index) => Expanded(
-                child: LoadingSkeleton(
-                  width: double.infinity,
-                  height: 40,
-                  borderRadius: BorderRadius.circular(8),
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Timeframe selector - always visible
+              TimeframeSelector(
+                selectedTimeframe: timeframe,
+                onTimeframeChanged: (newTimeframe) {
+                  context.read<ScoreDetailCubit>().changeTimeframe(
+                    newTimeframe,
+                  );
+                },
+              ),
+              const SizedBox(height: 24),
+
+              // Score Header - always visible
+              ScoreHeader(
+                scoreType: scoreType,
+                onInfoTap: () {
+                  // Empty during loading
+                },
+                selectedDate: selectedDate,
+                timeframe: timeframe,
+                onPrevious: () => context.read<ScoreDetailCubit>().navigatePrevious(),
+                onNext: () => context.read<ScoreDetailCubit>().navigateNext(),
+                canGoNext: context.read<ScoreDetailCubit>().canNavigateNext(),
+              ),
+              const SizedBox(height: 24),
+
+              // Chart skeleton (only for 7D/30D/1Y, not for 1D)
+              if (timeframe != Timeframe.oneDay) ...[
+                const Padding(
+                  padding: EdgeInsets.all(16),
+                  child: ChartLoadingSkeleton(height: 220),
+                ),
+                const SizedBox(height: 24),
+              ],
+
+              // Metrics section - title stays, tiles are skeletons
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  children: [
+                    const SectionTitle(title: 'Metrics'),
+                    const Spacer(),
+                    if (timeframe != Timeframe.oneDay)
+                      Text(
+                        'Daily Avg.',
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
+                        ),
+                      ),
+                  ],
                 ),
               ),
-            ),
-          ),
-          const SizedBox(height: 32),
+              const SizedBox(height: 12),
 
-          // Gauge skeleton
-          Center(
-            child: LoadingSkeleton(
-              width: 200,
-              height: 200,
-              borderRadius: BorderRadius.circular(100),
-            ),
-          ),
-          const SizedBox(height: 32),
-
-          // Metrics section
-          LoadingSkeleton(
-            width: 100,
-            height: 20,
-            borderRadius: BorderRadius.circular(4),
-          ),
-          const SizedBox(height: 16),
-          ...List.generate(
-            3,
-            (index) => Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: LoadingSkeleton(
-                width: double.infinity,
-                height: 70,
-                borderRadius: BorderRadius.circular(12),
+              // Metric tile skeletons
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  children: [
+                    MetricTileLoadingSkeleton(color: scoreType.accentColor),
+                    MetricTileLoadingSkeleton(color: scoreType.accentColor),
+                  ],
+                ),
               ),
-            ),
+              const SizedBox(height: 24),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

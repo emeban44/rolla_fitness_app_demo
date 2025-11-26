@@ -20,7 +20,12 @@ mixin _$ScoreDetailState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )
+    loading,
     required TResult Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -35,7 +40,12 @@ mixin _$ScoreDetailState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    loading,
     TResult? Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -50,7 +60,12 @@ mixin _$ScoreDetailState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    loading,
     TResult Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -153,7 +168,12 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )
+    loading,
     required TResult Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -172,7 +192,12 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    loading,
     TResult? Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -191,7 +216,12 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    loading,
     TResult Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -258,6 +288,8 @@ abstract class _$$LoadingImplCopyWith<$Res> {
     _$LoadingImpl value,
     $Res Function(_$LoadingImpl) then,
   ) = __$$LoadingImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ScoreType scoreType, Timeframe timeframe, DateTime selectedDate});
 }
 
 /// @nodoc
@@ -271,32 +303,88 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
   /// Create a copy of ScoreDetailState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? scoreType = null,
+    Object? timeframe = null,
+    Object? selectedDate = null,
+  }) {
+    return _then(
+      _$LoadingImpl(
+        scoreType: null == scoreType
+            ? _value.scoreType
+            : scoreType // ignore: cast_nullable_to_non_nullable
+                  as ScoreType,
+        timeframe: null == timeframe
+            ? _value.timeframe
+            : timeframe // ignore: cast_nullable_to_non_nullable
+                  as Timeframe,
+        selectedDate: null == selectedDate
+            ? _value.selectedDate
+            : selectedDate // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 class _$LoadingImpl implements _Loading {
-  const _$LoadingImpl();
+  const _$LoadingImpl({
+    required this.scoreType,
+    required this.timeframe,
+    required this.selectedDate,
+  });
+
+  @override
+  final ScoreType scoreType;
+  @override
+  final Timeframe timeframe;
+  @override
+  final DateTime selectedDate;
 
   @override
   String toString() {
-    return 'ScoreDetailState.loading()';
+    return 'ScoreDetailState.loading(scoreType: $scoreType, timeframe: $timeframe, selectedDate: $selectedDate)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingImpl &&
+            (identical(other.scoreType, scoreType) ||
+                other.scoreType == scoreType) &&
+            (identical(other.timeframe, timeframe) ||
+                other.timeframe == timeframe) &&
+            (identical(other.selectedDate, selectedDate) ||
+                other.selectedDate == selectedDate));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, scoreType, timeframe, selectedDate);
+
+  /// Create a copy of ScoreDetailState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
+      __$$LoadingImplCopyWithImpl<_$LoadingImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )
+    loading,
     required TResult Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -308,14 +396,19 @@ class _$LoadingImpl implements _Loading {
     loaded,
     required TResult Function(Failure failure) error,
   }) {
-    return loading();
+    return loading(scoreType, timeframe, selectedDate);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    loading,
     TResult? Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -327,14 +420,19 @@ class _$LoadingImpl implements _Loading {
     loaded,
     TResult? Function(Failure failure)? error,
   }) {
-    return loading?.call();
+    return loading?.call(scoreType, timeframe, selectedDate);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    loading,
     TResult Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -348,7 +446,7 @@ class _$LoadingImpl implements _Loading {
     required TResult orElse(),
   }) {
     if (loading != null) {
-      return loading();
+      return loading(scoreType, timeframe, selectedDate);
     }
     return orElse();
   }
@@ -392,7 +490,21 @@ class _$LoadingImpl implements _Loading {
 }
 
 abstract class _Loading implements ScoreDetailState {
-  const factory _Loading() = _$LoadingImpl;
+  const factory _Loading({
+    required final ScoreType scoreType,
+    required final Timeframe timeframe,
+    required final DateTime selectedDate,
+  }) = _$LoadingImpl;
+
+  ScoreType get scoreType;
+  Timeframe get timeframe;
+  DateTime get selectedDate;
+
+  /// Create a copy of ScoreDetailState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -558,7 +670,12 @@ class _$LoadedImpl implements _Loaded {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )
+    loading,
     required TResult Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -577,7 +694,12 @@ class _$LoadedImpl implements _Loaded {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    loading,
     TResult? Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -603,7 +725,12 @@ class _$LoadedImpl implements _Loaded {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    loading,
     TResult Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -762,7 +889,12 @@ class _$ErrorImpl implements _Error {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )
+    loading,
     required TResult Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -781,7 +913,12 @@ class _$ErrorImpl implements _Error {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    loading,
     TResult? Function(
       Score score,
       List<ScoreHistoryPoint> history,
@@ -800,7 +937,12 @@ class _$ErrorImpl implements _Error {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    loading,
     TResult Function(
       Score score,
       List<ScoreHistoryPoint> history,

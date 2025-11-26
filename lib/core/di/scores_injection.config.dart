@@ -70,6 +70,7 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i20.GetScoreDetail>(),
         gh<_i294.GetScoreHistory>(),
         gh<_i835.GetInsights>(),
+        gh<_i784.DataGenerationService>(),
       ),
     );
     gh.factory<_i217.ScoresCubit>(

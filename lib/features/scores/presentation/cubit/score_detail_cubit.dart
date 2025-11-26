@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rolla_fitness_app_demo/core/error/failures.dart';
+import 'package:rolla_fitness_app_demo/core/services/data_generation_service.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_history_point.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/insight.dart';
@@ -17,9 +18,17 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
   final GetScoreDetail getScoreDetail;
   final GetScoreHistory getScoreHistory;
   final GetInsights getInsights;
+  final DataGenerationService dataGenerationService;
 
-  ScoreDetailCubit(this.getScoreDetail, this.getScoreHistory, this.getInsights)
-    : super(const ScoreDetailState.initial());
+  // Track which timeframes have been visited
+  final Set<Timeframe> _visitedTimeframes = {};
+
+  ScoreDetailCubit(
+    this.getScoreDetail,
+    this.getScoreHistory,
+    this.getInsights,
+    this.dataGenerationService,
+  ) : super(const ScoreDetailState.initial());
 
   Future<void> loadScoreDetail(
     ScoreType scoreType,
@@ -27,7 +36,17 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
     DateTime? selectedDate,
   }) async {
     final date = selectedDate ?? DateTime.now();
-    emit(const ScoreDetailState.loading());
+
+    // Mark this timeframe as visited
+    _visitedTimeframes.add(timeframe);
+
+    emit(
+      ScoreDetailState.loading(
+        scoreType: scoreType,
+        timeframe: timeframe,
+        selectedDate: date,
+      ),
+    );
 
     final (
       Either<Failure, Score> scoreResult,
@@ -80,7 +99,21 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
 
   Future<void> changeTimeframe(Timeframe newTimeframe) async {
     state.maybeWhen(
-      loaded: (score, history, insights, timeframe, scoreType, selectedDate) {
+      loaded: (score, history, insights, timeframe, scoreType, selectedDate) async {
+        // Only show loading delay for first-time visits to this timeframe
+        if (!_visitedTimeframes.contains(newTimeframe)) {
+          emit(
+            ScoreDetailState.loading(
+              scoreType: scoreType,
+              timeframe: newTimeframe,
+              selectedDate: DateTime.now(),
+            ),
+          );
+
+          // Intentional delay to demonstrate loading state for presentation purposes.
+          await Future.delayed(const Duration(milliseconds: 600));
+        }
+
         // Always reset to today when changing timeframe
         loadScoreDetail(scoreType, newTimeframe, selectedDate: DateTime.now());
       },
@@ -90,7 +123,11 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
 
   Future<void> refresh() async {
     state.maybeWhen(
-      loaded: (score, history, insights, timeframe, scoreType, selectedDate) {
+      loaded: (score, history, insights, timeframe, scoreType, selectedDate) async {
+        // Regenerate data like home page does
+        await dataGenerationService.refreshData();
+
+        // Reload with fresh data
         loadScoreDetail(scoreType, timeframe, selectedDate: selectedDate);
       },
       orElse: () {},
