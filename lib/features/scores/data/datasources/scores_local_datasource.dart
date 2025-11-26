@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
-import 'package:rolla_fitness_app_demo/features/scores/data/models/score_model.dart';
-import 'package:rolla_fitness_app_demo/features/scores/data/models/metric_model.dart';
-import 'package:rolla_fitness_app_demo/features/scores/data/models/score_history_point_model.dart';
-import 'package:rolla_fitness_app_demo/features/scores/data/models/insight_model.dart';
-import 'package:rolla_fitness_app_demo/features/scores/data/models/metric_info_model.dart';
+import 'package:rolla_fitness_app_demo/features/scores/data/models/score_model/score_model.dart';
+import 'package:rolla_fitness_app_demo/features/scores/data/models/metric_model/metric_model.dart';
+import 'package:rolla_fitness_app_demo/features/scores/data/models/score_history_point_model/score_history_point_model.dart';
+import 'package:rolla_fitness_app_demo/features/scores/data/models/insight_model/insight_model.dart';
+import 'package:rolla_fitness_app_demo/features/scores/data/models/metric_info_model/metric_info_model.dart';
 
 /// Abstract datasource interface
 abstract class ScoresLocalDataSource {
