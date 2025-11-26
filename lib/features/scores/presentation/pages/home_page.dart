@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/scores_injection.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/basic_snackbar.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/spinning_radial_skeleton.dart';
@@ -36,42 +37,57 @@ class HomePageView extends StatelessWidget {
           ThemeSwitcher(),
         ],
       ),
-      body: BlocBuilder<ScoresCubit, ScoresState>(
-        builder: (context, state) {
-          return state.when(
-            initial: () => const SizedBox.shrink(),
-            loading: () => const _LoadingView(),
-            loaded: (scores) => RefreshIndicator.adaptive(
-              onRefresh: () => context.read<ScoresCubit>().refreshScores(),
-              child: GridView.count(
-                crossAxisCount: 2,
-                padding: const EdgeInsets.all(16),
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
-                childAspectRatio: 0.95, // Slightly taller cards
-                children: scores.map((score) {
-                  return ScoreCard(
-                    scoreType: score.type,
-                    score: score.value,
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => ScoreDetailPage(
-                            scoreType: score.type,
-                          ),
-                        ),
-                      );
-                    },
-                  );
-                }).toList(),
-              ),
-            ),
-            error: (failure) => AppErrorWidget(
-              message: failure.message,
-              onRetry: () => context.read<ScoresCubit>().loadScores(),
-            ),
+      body: BlocListener<ScoresCubit, ScoresState>(
+        listener: (context, state) {
+          state.whenOrNull(
+            error: (failure) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                basicSnackbar(
+                  context: context,
+                  title: failure.message,
+                  variant: SnackbarVariant.error,
+                ),
+              );
+            },
           );
         },
+        child: BlocBuilder<ScoresCubit, ScoresState>(
+          builder: (context, state) {
+            return state.when(
+              initial: () => const SizedBox.shrink(),
+              loading: () => const _LoadingView(),
+              loaded: (scores) => RefreshIndicator.adaptive(
+                onRefresh: () => context.read<ScoresCubit>().refreshScores(),
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  padding: const EdgeInsets.all(16),
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 16,
+                  childAspectRatio: 0.95, // Slightly taller cards
+                  children: scores.map((score) {
+                    return ScoreCard(
+                      scoreType: score.type,
+                      score: score.value,
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => ScoreDetailPage(
+                              scoreType: score.type,
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  }).toList(),
+                ),
+              ),
+              error: (failure) => AppErrorWidget(
+                message: failure.message,
+                onRetry: () => context.read<ScoresCubit>().loadScores(),
+              ),
+            );
+          },
+        ),
       ),
     );
   }

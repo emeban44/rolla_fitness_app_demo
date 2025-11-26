@@ -35,7 +35,13 @@ mixin _$ScoreDetailState {
       DateTime selectedDate,
     )
     loaded,
-    required TResult Function(Failure failure) error,
+    required TResult Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )
+    error,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
@@ -55,7 +61,13 @@ mixin _$ScoreDetailState {
       DateTime selectedDate,
     )?
     loaded,
-    TResult? Function(Failure failure)? error,
+    TResult? Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    error,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
@@ -75,7 +87,13 @@ mixin _$ScoreDetailState {
       DateTime selectedDate,
     )?
     loaded,
-    TResult Function(Failure failure)? error,
+    TResult Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    error,
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -183,7 +201,13 @@ class _$InitialImpl implements _Initial {
       DateTime selectedDate,
     )
     loaded,
-    required TResult Function(Failure failure) error,
+    required TResult Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )
+    error,
   }) {
     return initial();
   }
@@ -207,7 +231,13 @@ class _$InitialImpl implements _Initial {
       DateTime selectedDate,
     )?
     loaded,
-    TResult? Function(Failure failure)? error,
+    TResult? Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    error,
   }) {
     return initial?.call();
   }
@@ -231,7 +261,13 @@ class _$InitialImpl implements _Initial {
       DateTime selectedDate,
     )?
     loaded,
-    TResult Function(Failure failure)? error,
+    TResult Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -394,7 +430,13 @@ class _$LoadingImpl implements _Loading {
       DateTime selectedDate,
     )
     loaded,
-    required TResult Function(Failure failure) error,
+    required TResult Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )
+    error,
   }) {
     return loading(scoreType, timeframe, selectedDate);
   }
@@ -418,7 +460,13 @@ class _$LoadingImpl implements _Loading {
       DateTime selectedDate,
     )?
     loaded,
-    TResult? Function(Failure failure)? error,
+    TResult? Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    error,
   }) {
     return loading?.call(scoreType, timeframe, selectedDate);
   }
@@ -442,7 +490,13 @@ class _$LoadingImpl implements _Loading {
       DateTime selectedDate,
     )?
     loaded,
-    TResult Function(Failure failure)? error,
+    TResult Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -685,7 +739,13 @@ class _$LoadedImpl implements _Loaded {
       DateTime selectedDate,
     )
     loaded,
-    required TResult Function(Failure failure) error,
+    required TResult Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )
+    error,
   }) {
     return loaded(score, history, insights, timeframe, scoreType, selectedDate);
   }
@@ -709,7 +769,13 @@ class _$LoadedImpl implements _Loaded {
       DateTime selectedDate,
     )?
     loaded,
-    TResult? Function(Failure failure)? error,
+    TResult? Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    error,
   }) {
     return loaded?.call(
       score,
@@ -740,7 +806,13 @@ class _$LoadedImpl implements _Loaded {
       DateTime selectedDate,
     )?
     loaded,
-    TResult Function(Failure failure)? error,
+    TResult Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -825,7 +897,12 @@ abstract class _$$ErrorImplCopyWith<$Res> {
     $Res Function(_$ErrorImpl) then,
   ) = __$$ErrorImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({Failure failure});
+  $Res call({
+    Failure failure,
+    ScoreType scoreType,
+    Timeframe timeframe,
+    DateTime selectedDate,
+  });
 }
 
 /// @nodoc
@@ -841,13 +918,30 @@ class __$$ErrorImplCopyWithImpl<$Res>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? failure = null}) {
+  $Res call({
+    Object? failure = null,
+    Object? scoreType = null,
+    Object? timeframe = null,
+    Object? selectedDate = null,
+  }) {
     return _then(
       _$ErrorImpl(
-        null == failure
+        failure: null == failure
             ? _value.failure
             : failure // ignore: cast_nullable_to_non_nullable
                   as Failure,
+        scoreType: null == scoreType
+            ? _value.scoreType
+            : scoreType // ignore: cast_nullable_to_non_nullable
+                  as ScoreType,
+        timeframe: null == timeframe
+            ? _value.timeframe
+            : timeframe // ignore: cast_nullable_to_non_nullable
+                  as Timeframe,
+        selectedDate: null == selectedDate
+            ? _value.selectedDate
+            : selectedDate // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
       ),
     );
   }
@@ -856,14 +950,25 @@ class __$$ErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ErrorImpl implements _Error {
-  const _$ErrorImpl(this.failure);
+  const _$ErrorImpl({
+    required this.failure,
+    required this.scoreType,
+    required this.timeframe,
+    required this.selectedDate,
+  });
 
   @override
   final Failure failure;
+  @override
+  final ScoreType scoreType;
+  @override
+  final Timeframe timeframe;
+  @override
+  final DateTime selectedDate;
 
   @override
   String toString() {
-    return 'ScoreDetailState.error(failure: $failure)';
+    return 'ScoreDetailState.error(failure: $failure, scoreType: $scoreType, timeframe: $timeframe, selectedDate: $selectedDate)';
   }
 
   @override
@@ -871,11 +976,18 @@ class _$ErrorImpl implements _Error {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl &&
-            (identical(other.failure, failure) || other.failure == failure));
+            (identical(other.failure, failure) || other.failure == failure) &&
+            (identical(other.scoreType, scoreType) ||
+                other.scoreType == scoreType) &&
+            (identical(other.timeframe, timeframe) ||
+                other.timeframe == timeframe) &&
+            (identical(other.selectedDate, selectedDate) ||
+                other.selectedDate == selectedDate));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, failure);
+  int get hashCode =>
+      Object.hash(runtimeType, failure, scoreType, timeframe, selectedDate);
 
   /// Create a copy of ScoreDetailState
   /// with the given fields replaced by the non-null parameter values.
@@ -904,9 +1016,15 @@ class _$ErrorImpl implements _Error {
       DateTime selectedDate,
     )
     loaded,
-    required TResult Function(Failure failure) error,
+    required TResult Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )
+    error,
   }) {
-    return error(failure);
+    return error(failure, scoreType, timeframe, selectedDate);
   }
 
   @override
@@ -928,9 +1046,15 @@ class _$ErrorImpl implements _Error {
       DateTime selectedDate,
     )?
     loaded,
-    TResult? Function(Failure failure)? error,
+    TResult? Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    error,
   }) {
-    return error?.call(failure);
+    return error?.call(failure, scoreType, timeframe, selectedDate);
   }
 
   @override
@@ -952,11 +1076,17 @@ class _$ErrorImpl implements _Error {
       DateTime selectedDate,
     )?
     loaded,
-    TResult Function(Failure failure)? error,
+    TResult Function(
+      Failure failure,
+      ScoreType scoreType,
+      Timeframe timeframe,
+      DateTime selectedDate,
+    )?
+    error,
     required TResult orElse(),
   }) {
     if (error != null) {
-      return error(failure);
+      return error(failure, scoreType, timeframe, selectedDate);
     }
     return orElse();
   }
@@ -1000,9 +1130,17 @@ class _$ErrorImpl implements _Error {
 }
 
 abstract class _Error implements ScoreDetailState {
-  const factory _Error(final Failure failure) = _$ErrorImpl;
+  const factory _Error({
+    required final Failure failure,
+    required final ScoreType scoreType,
+    required final Timeframe timeframe,
+    required final DateTime selectedDate,
+  }) = _$ErrorImpl;
 
   Failure get failure;
+  ScoreType get scoreType;
+  Timeframe get timeframe;
+  DateTime get selectedDate;
 
   /// Create a copy of ScoreDetailState
   /// with the given fields replaced by the non-null parameter values.

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/scores_injection.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/basic_snackbar.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/chart_loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/metric_tile_loading_skeleton.dart';
@@ -58,11 +59,25 @@ class ScoreDetailView extends StatelessWidget {
           ThemeSwitcher(),
         ],
       ),
-      body: BlocBuilder<ScoreDetailCubit, ScoreDetailState>(
-        builder: (context, state) {
-          return state.when(
-            initial: () => const Center(child: CircularProgressIndicator()),
-            loading: (scoreType, timeframe, selectedDate) {
+      body: BlocListener<ScoreDetailCubit, ScoreDetailState>(
+        listener: (context, state) {
+          state.whenOrNull(
+            error: (failure, scoreType, timeframe, selectedDate) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                basicSnackbar(
+                  context: context,
+                  title: failure.message,
+                  variant: SnackbarVariant.error,
+                ),
+              );
+            },
+          );
+        },
+        child: BlocBuilder<ScoreDetailCubit, ScoreDetailState>(
+          builder: (context, state) {
+            return state.when(
+              initial: () => const Center(child: CircularProgressIndicator()),
+              loading: (scoreType, timeframe, selectedDate) {
               return LoadingSkeletonView(
                 scoreType: scoreType,
                 timeframe: timeframe,
@@ -187,14 +202,62 @@ class ScoreDetailView extends StatelessWidget {
                 ),
               );
             },
-            error: (failure) => AppErrorWidget(
-              message: 'Failed to load score details',
-              onRetry: () {
-                context.read<ScoreDetailCubit>().refresh();
-              },
-            ),
+            error: (failure, scoreType, timeframe, selectedDate) {
+              return CustomScrollView(
+                slivers: [
+                  SliverToBoxAdapter(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Timeframe selector - always visible
+                        TimeframeSelector(
+                          selectedTimeframe: timeframe,
+                          onTimeframeChanged: (newTimeframe) {
+                            context.read<ScoreDetailCubit>().changeTimeframe(
+                              newTimeframe,
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 24),
+
+                        // Score Header - always visible
+                        ScoreHeader(
+                          scoreType: scoreType,
+                          onInfoTap: () {
+                            // Empty during error
+                          },
+                          selectedDate: selectedDate,
+                          timeframe: timeframe,
+                          onPrevious: () => context.read<ScoreDetailCubit>().navigatePrevious(),
+                          onNext: () => context.read<ScoreDetailCubit>().navigateNext(),
+                          canGoNext: context.read<ScoreDetailCubit>().canNavigateNext(),
+                        ),
+                        const SizedBox(height: 24),
+                      ],
+                    ),
+                  ),
+                  // Error widget - centered in remaining space
+                  SliverFillRemaining(
+                    hasScrollBody: false,
+                    child: Center(
+                      child: AppErrorWidget(
+                        message: failure.message,
+                        onRetry: () {
+                          context.read<ScoreDetailCubit>().loadScoreDetail(
+                            scoreType,
+                            timeframe,
+                            selectedDate: selectedDate,
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            },
           );
         },
+        ),
       ),
     );
   }

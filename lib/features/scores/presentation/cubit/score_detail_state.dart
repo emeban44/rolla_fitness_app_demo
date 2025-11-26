@@ -24,5 +24,10 @@ class ScoreDetailState with _$ScoreDetailState {
     required ScoreType scoreType,
     required DateTime selectedDate,
   }) = _Loaded;
-  const factory ScoreDetailState.error(Failure failure) = _Error;
+  const factory ScoreDetailState.error({
+    required Failure failure,
+    required ScoreType scoreType,
+    required Timeframe timeframe,
+    required DateTime selectedDate,
+  }) = _Error;
 }

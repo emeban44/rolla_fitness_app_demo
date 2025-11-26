@@ -60,7 +60,12 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
 
     final score = scoreResult.fold(
       (failure) {
-        emit(ScoreDetailState.error(failure));
+        emit(ScoreDetailState.error(
+          failure: failure,
+          scoreType: scoreType,
+          timeframe: timeframe,
+          selectedDate: date,
+        ));
         return null;
       },
       (success) => success,
@@ -69,7 +74,12 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
 
     final history = historyResult.fold(
       (failure) {
-        emit(ScoreDetailState.error(failure));
+        emit(ScoreDetailState.error(
+          failure: failure,
+          scoreType: scoreType,
+          timeframe: timeframe,
+          selectedDate: date,
+        ));
         return null;
       },
       (success) => success,
@@ -78,7 +88,12 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
 
     final insights = insightsResult.fold(
       (failure) {
-        emit(ScoreDetailState.error(failure));
+        emit(ScoreDetailState.error(
+          failure: failure,
+          scoreType: scoreType,
+          timeframe: timeframe,
+          selectedDate: date,
+        ));
         return null;
       },
       (success) => success,
@@ -98,27 +113,51 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
   }
 
   Future<void> changeTimeframe(Timeframe newTimeframe) async {
-    state.maybeWhen(
+    final currentState = state;
+
+    currentState.maybeWhen(
       loaded: (score, history, insights, timeframe, scoreType, selectedDate) async {
-        // Only show loading delay for first-time visits to this timeframe
-        if (!_visitedTimeframes.contains(newTimeframe)) {
-          emit(
-            ScoreDetailState.loading(
-              scoreType: scoreType,
-              timeframe: newTimeframe,
-              selectedDate: DateTime.now(),
-            ),
-          );
-
-          // Intentional delay to demonstrate loading state for presentation purposes.
-          await Future.delayed(const Duration(milliseconds: 600));
-        }
-
-        // Always reset to today when changing timeframe
-        loadScoreDetail(scoreType, newTimeframe, selectedDate: DateTime.now());
+        await _handleTimeframeChange(newTimeframe, scoreType);
+      },
+      error: (failure, scoreType, timeframe, selectedDate) async {
+        await _handleTimeframeChange(newTimeframe, scoreType);
       },
       orElse: () {},
     );
+  }
+
+  Future<void> _handleTimeframeChange(Timeframe newTimeframe, ScoreType scoreType) async {
+    // Only process first-time visits to this timeframe
+    if (!_visitedTimeframes.contains(newTimeframe)) {
+      // Add the timeframe to visited list
+      _visitedTimeframes.add(newTimeframe);
+
+      // Show loading state with delay
+      emit(
+        ScoreDetailState.loading(
+          scoreType: scoreType,
+          timeframe: newTimeframe,
+          selectedDate: DateTime.now(),
+        ),
+      );
+
+      // Intentional delay to demonstrate loading state for presentation purposes.
+      await Future.delayed(const Duration(milliseconds: 600));
+
+      // Check if this is the fourth timeframe visit (for error demonstration)
+      if (_visitedTimeframes.length == 4) {
+        emit(ScoreDetailState.error(
+          failure: const DataFailure('Something went wrong.'),
+          scoreType: scoreType,
+          timeframe: newTimeframe,
+          selectedDate: DateTime.now(),
+        ));
+        return;
+      }
+    }
+
+    // Always reset to today when changing timeframe
+    loadScoreDetail(scoreType, newTimeframe, selectedDate: DateTime.now());
   }
 
   Future<void> refresh() async {
@@ -141,6 +180,10 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
         final newDate = _calculatePreviousDate(selectedDate, timeframe);
         loadScoreDetail(scoreType, timeframe, selectedDate: newDate);
       },
+      error: (failure, scoreType, timeframe, selectedDate) {
+        final newDate = _calculatePreviousDate(selectedDate, timeframe);
+        loadScoreDetail(scoreType, timeframe, selectedDate: newDate);
+      },
       orElse: () {},
     );
   }
@@ -149,6 +192,10 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
   Future<void> navigateNext() async {
     state.maybeWhen(
       loaded: (score, history, insights, timeframe, scoreType, selectedDate) {
+        final newDate = _calculateNextDate(selectedDate, timeframe);
+        loadScoreDetail(scoreType, timeframe, selectedDate: newDate);
+      },
+      error: (failure, scoreType, timeframe, selectedDate) {
         final newDate = _calculateNextDate(selectedDate, timeframe);
         loadScoreDetail(scoreType, timeframe, selectedDate: newDate);
       },
@@ -188,13 +235,20 @@ class ScoreDetailCubit extends Cubit<ScoreDetailState> {
   bool canNavigateNext() {
     return state.maybeWhen(
       loaded: (score, history, insights, timeframe, scoreType, selectedDate) {
-        final today = DateTime.now();
-        // Normalize both dates to start of day for comparison
-        final normalizedToday = DateTime(today.year, today.month, today.day);
-        final normalizedSelected = DateTime(selectedDate.year, selectedDate.month, selectedDate.day);
-        return normalizedSelected.isBefore(normalizedToday);
+        return _canNavigateToNext(selectedDate);
+      },
+      error: (failure, scoreType, timeframe, selectedDate) {
+        return _canNavigateToNext(selectedDate);
       },
       orElse: () => false,
     );
+  }
+
+  bool _canNavigateToNext(DateTime selectedDate) {
+    final today = DateTime.now();
+    // Normalize both dates to start of day for comparison
+    final normalizedToday = DateTime(today.year, today.month, today.day);
+    final normalizedSelected = DateTime(selectedDate.year, selectedDate.month, selectedDate.day);
+    return normalizedSelected.isBefore(normalizedToday);
   }
 }

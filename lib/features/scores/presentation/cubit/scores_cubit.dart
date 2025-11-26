@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
+import 'package:rolla_fitness_app_demo/core/error/failures.dart';
 import 'package:rolla_fitness_app_demo/core/services/data_generation_service.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/usecases/get_scores.dart';
 import 'scores_state.dart';
@@ -9,6 +10,9 @@ import 'scores_state.dart';
 class ScoresCubit extends Cubit<ScoresState> {
   final GetScores getScores;
   final DataGenerationService dataGenerationService;
+
+  // Counter for demonstrating error handling
+  int _refreshCount = 0;
 
   ScoresCubit(
     this.getScores,
@@ -39,6 +43,15 @@ class ScoresCubit extends Cubit<ScoresState> {
   }
 
   Future<void> refreshScores() async {
+    // Increment refresh counter
+    _refreshCount++;
+
+    // Every third refresh, emit an intentional error for demonstration
+    if (_refreshCount % 3 == 0) {
+      emit(const ScoresState.error(DataFailure('Something went wrong.')));
+      return;
+    }
+
     // Show loading state during refresh
     emit(const ScoresState.loading());
 
