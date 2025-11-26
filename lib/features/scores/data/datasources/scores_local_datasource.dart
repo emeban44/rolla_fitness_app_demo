@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rolla_fitness_app_demo/features/scores/data/models/score_model.dart';
@@ -22,6 +23,8 @@ abstract class ScoresLocalDataSource {
   );
   Future<List<InsightModel>> getInsights(String scoreType);
   Future<MetricInfoModel> getMetricInfo(String metricId);
+  void clearCache();
+  void setGeneratedData(Map<String, dynamic> data);
 }
 
 /// Implementation of local datasource
@@ -176,12 +179,12 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
       if (historyPoint.value == null) continue;
 
       final dateStr = historyPoint.date;
-      final dayData = scoreTypeData.firstWhere(
+      final dayData = scoreTypeData.cast<Map<String, dynamic>>().firstWhere(
         (entry) => entry['date'] == dateStr,
-        orElse: () => null,
+        orElse: () => <String, dynamic>{},
       );
 
-      if (dayData == null) continue;
+      if (dayData.isEmpty) continue;
       final metricsData = dayData['metrics'] as Map<String, dynamic>?;
       if (metricsData == null) continue;
 
@@ -311,5 +314,15 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
     final infoData = metricInfoData[metricId] as Map<String, dynamic>;
 
     return MetricInfoModel.fromJson(infoData);
+  }
+
+  @override
+  void clearCache() {
+    _cachedData = null;
+  }
+
+  @override
+  void setGeneratedData(Map<String, dynamic> data) {
+    _cachedData = data;
   }
 }

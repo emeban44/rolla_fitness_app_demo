@@ -3,11 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/scores_injection.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/spinning_radial_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/theme_switcher.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/score_detail_page.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_card.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
 
 /// Home page displaying all three score cards in a grid
 class HomePage extends StatelessWidget {
@@ -75,12 +77,19 @@ class HomePageView extends StatelessWidget {
   }
 }
 
-/// Loading view with skeleton cards
+/// Loading view with spinning skeleton cards
 class _LoadingView extends StatelessWidget {
   const _LoadingView();
 
   @override
   Widget build(BuildContext context) {
+    // Define the three score types for consistent colors
+    final scoreTypes = [
+      ScoreType.health,
+      ScoreType.readiness,
+      ScoreType.activity,
+    ];
+
     return GridView.count(
       crossAxisCount: 2,
       padding: const EdgeInsets.all(16),
@@ -89,47 +98,52 @@ class _LoadingView extends StatelessWidget {
       childAspectRatio: 0.95, // Match the loaded grid
       children: List.generate(
         3,
-        (index) => Container(
-          decoration: BoxDecoration(
-            color: Theme.of(context).cardColor,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.05),
-                blurRadius: 10,
-                offset: const Offset(0, 4),
-              ),
-            ],
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                final gaugeSize = (constraints.maxHeight * 0.65).clamp(80.0, 180.0);
+        (index) {
+          final scoreType = scoreTypes[index];
 
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    LoadingSkeleton(
-                      width: 80,
-                      height: 16,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    const SizedBox(height: 8),
-                    Flexible(
-                      child: LoadingSkeleton(
-                        width: gaugeSize,
-                        height: gaugeSize,
-                        borderRadius: BorderRadius.circular(gaugeSize / 2),
-                      ),
-                    ),
-                  ],
-                );
-              },
+          return Container(
+            decoration: BoxDecoration(
+              color: Theme.of(context).cardColor,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                ),
+              ],
             ),
-          ),
-        ),
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  final gaugeSize = (constraints.maxHeight * 0.65).clamp(80.0, 180.0);
+
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // Title skeleton
+                      LoadingSkeleton(
+                        width: 80,
+                        height: 16,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      const SizedBox(height: 12),
+                      // Spinning radial gauge skeleton
+                      Flexible(
+                        child: SpinningRadialSkeleton(
+                          size: gaugeSize,
+                          color: scoreType.accentColor,
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+          );
+        },
       ),
     );
   }
