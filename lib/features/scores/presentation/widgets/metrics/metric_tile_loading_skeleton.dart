@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/loading/loading_skeleton.dart';
 
 /// Loading skeleton for a metric tile
 /// Matches the actual metric tile structure with animated progress bar

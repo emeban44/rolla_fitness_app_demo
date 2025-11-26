@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/scores_injection.dart';
-import 'package:rolla_fitness_app_demo/core/widgets/basic_snackbar.dart';
-import 'package:rolla_fitness_app_demo/core/widgets/error_widget.dart';
-import 'package:rolla_fitness_app_demo/core/widgets/loading_skeleton.dart';
-import 'package:rolla_fitness_app_demo/core/widgets/spinning_radial_skeleton.dart';
-import 'package:rolla_fitness_app_demo/core/widgets/theme_switcher.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/snackbar/basic_snackbar.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/error/error_widget.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/loading/loading_skeleton.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/spinning_radial_skeleton.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/theme_switcher/theme_switcher.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_home/scores_home_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_home/scores_home_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/score_detail_page.dart';

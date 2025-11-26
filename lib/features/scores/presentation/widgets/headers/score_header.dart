@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/section/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/selectors/time_period_selector.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/enums/timeframe.dart';
