@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rolla_fitness_app_demo/core/error/failures.dart';
-import 'package:rolla_fitness_app_demo/core/services/data_generation_service.dart';
+import 'package:rolla_fitness_app_demo/core/services/data_generation/data_generation_service.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/usecases/get_scores.dart';
 import 'scores_home_state.dart';
 

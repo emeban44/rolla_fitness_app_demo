@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:rolla_fitness_app_demo/core/services/data_generator.dart';
+import 'package:rolla_fitness_app_demo/core/services/data_generation/data_generator.dart';
 import 'package:rolla_fitness_app_demo/features/scores/data/datasources/scores_local_datasource.dart';
 
 /// Service for generating fitness data using pure Dart
