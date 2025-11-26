@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_colors.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric_info.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric_info/metric_info.dart';
 
 /// Enum representing different types of scores
 enum ScoreType {

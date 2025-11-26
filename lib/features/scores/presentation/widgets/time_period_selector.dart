@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/timeframe.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/enums/timeframe.dart';
 
 /// Time period selector with navigation chevrons
 /// Shows single date for 1D, date range for 7D/30D/1Y

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_colors.dart';
 import 'package:rolla_fitness_app_demo/core/utils/helpers/metric_helper.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric/metric.dart';
 
 /// Metric tile widget showing icon, name, value, and progress bar
 class MetricTile extends StatelessWidget {

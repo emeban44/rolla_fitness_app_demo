@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score/score.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
 import 'metric_model.dart';
 
 part 'score_model.freezed.dart';

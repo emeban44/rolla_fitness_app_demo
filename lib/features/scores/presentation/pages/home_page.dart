@@ -10,7 +10,7 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/score_detail_page.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/score_card.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
 
 /// Home page displaying all three score cards in a grid
 class HomePage extends StatelessWidget {

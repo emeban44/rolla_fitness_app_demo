@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/core/utils/helpers/metric_helper.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric/metric.dart';
 
 /// Details metrics list with info rows in a card container
 class MetricsDetailsList extends StatelessWidget {

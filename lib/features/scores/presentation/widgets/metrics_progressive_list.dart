@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/timeframe.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric/metric.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/enums/timeframe.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/score_detail_page.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metric_tile.dart';
 

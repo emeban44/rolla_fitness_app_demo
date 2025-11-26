@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:rolla_fitness_app_demo/core/error/failures.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score/score.dart';
 
 part 'scores_state.freezed.dart';
 

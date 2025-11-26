@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric/metric.dart';
 
 part 'metric_model.freezed.dart';
 part 'metric_model.g.dart';

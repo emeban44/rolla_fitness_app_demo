@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section_title.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/time_period_selector.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/timeframe.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/enums/timeframe.dart';
 
 /// Reusable score header with title, info icon, and time period selector
 /// Used consistently across all timeframes (1D, 7D, 30D, 1Y)

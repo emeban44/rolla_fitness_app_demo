@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/timeframe.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/enums/timeframe.dart';
 
 /// Timeframe selector widget with 1D, 7D, 30D, 1Y tabs
 class TimeframeSelector extends StatelessWidget {

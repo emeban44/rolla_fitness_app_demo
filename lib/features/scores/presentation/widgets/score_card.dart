@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_type.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/radial_gauge.dart';
 
 /// Reusable score card widget displaying a score with radial gauge

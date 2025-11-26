@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_history_point.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_history_point/score_history_point.dart';
 
 part 'score_history_point_model.freezed.dart';
 part 'score_history_point_model.g.dart';

@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_history_point.dart';
+import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_history_point/score_history_point.dart';
 
 /// Bar chart widget for displaying score history
 class TrendChart extends StatelessWidget {
