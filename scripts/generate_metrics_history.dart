@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
+import 'package:flutter/rendering.dart';
+
 void main() async {
   final random = Random(42); // Fixed seed for reproducibility
 
@@ -54,10 +56,10 @@ void main() async {
   final prettyJson = encoder.convert(data);
   await file.writeAsString(prettyJson);
 
-  print('✅ Generated historical metrics data successfully!');
-  print('📊 Total days processed:');
+  debugPrint('✅ Generated historical metrics data successfully!');
+  debugPrint('📊 Total days processed:');
   for (final scoreType in dailyMetrics.keys) {
-    print('  - $scoreType: ${dailyMetrics[scoreType]!.length} days');
+    debugPrint('  - $scoreType: ${dailyMetrics[scoreType]!.length} days');
   }
 }
 
@@ -85,21 +87,19 @@ Map<String, dynamic> _generateReadinessMetrics(int score, Random random) {
   final variance = 0.15; // 15% variance
 
   // Sleep: higher score = more sleep (6-9 hours)
-  final sleepHours = (baselineSleep * scoreFactor * (1 + (random.nextDouble() - 0.5) * variance))
-      .clamp(5.5, 9.5);
+  final sleepHours = (baselineSleep * scoreFactor * (1 + (random.nextDouble() - 0.5) * variance)).clamp(5.5, 9.5);
   final sleepMinutes = (random.nextDouble() * 60).round();
   final sleepScore = _calculateSleepScore(sleepHours + sleepMinutes / 60);
 
   // Resting HR: higher score = lower HR (45-65 bpm)
-  final restingHR = (baselineRestingHR / scoreFactor * (1 + (random.nextDouble() - 0.5) * variance))
-      .round()
-      .clamp(45, 70);
+  final restingHR = (baselineRestingHR / scoreFactor * (1 + (random.nextDouble() - 0.5) * variance)).round().clamp(
+    45,
+    70,
+  );
   final restingHRScore = _calculateRestingHRScore(restingHR);
 
   // HRV: higher score = higher HRV (30-65 ms)
-  final hrv = (baselineHRV * scoreFactor * (1 + (random.nextDouble() - 0.5) * variance))
-      .round()
-      .clamp(25, 70);
+  final hrv = (baselineHRV * scoreFactor * (1 + (random.nextDouble() - 0.5) * variance)).round().clamp(25, 70);
   final hrvScore = _calculateHRVScore(hrv);
 
   return {
@@ -135,15 +135,14 @@ Map<String, dynamic> _generateActivityMetrics(int score, Random random) {
   final activePointsScore = _calculateActivePointsScore(activePoints);
 
   // Steps (1000-15000)
-  final steps = (baselineSteps * scoreFactor * (1 + (random.nextDouble() - 0.5) * variance))
-      .round()
-      .clamp(1000, 15000);
+  final steps = (baselineSteps * scoreFactor * (1 + (random.nextDouble() - 0.5) * variance)).round().clamp(1000, 15000);
   final stepsScore = _calculateStepsScore(steps);
 
   // Move hours (1-12h)
-  final moveHours = (baselineMoveHours * scoreFactor * (1 + (random.nextDouble() - 0.5) * variance))
-      .round()
-      .clamp(3, 12);
+  final moveHours = (baselineMoveHours * scoreFactor * (1 + (random.nextDouble() - 0.5) * variance)).round().clamp(
+    3,
+    12,
+  );
   final moveHoursScore = _calculateMoveHoursScore(moveHours);
 
   return {
