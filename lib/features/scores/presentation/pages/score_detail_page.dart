@@ -71,64 +71,89 @@ class ScoreDetailView extends StatelessWidget {
             message: failure.message,
           ),
         ),
-        child: BlocBuilder<ScoreDetailCubit, ScoreDetailState>(
-          builder: (context, state) {
-            return state.when(
-              initial: () => const Center(child: CircularProgressIndicator()),
-              loading: (scoreType, timeframe, selectedDate) => ScoreDetailBody(
-                scoreType: scoreType,
-                timeframe: timeframe,
-                selectedDate: selectedDate,
-                onInfoTap: null,
-                content: _LoadingContent(scoreType: scoreType, timeframe: timeframe),
+        child: Column(
+          children: [
+            // TimeframeSelector is outside of state-dependent rebuild to
+            // ensure the sliding selection animates smoothly between states.
+            BlocSelector<ScoreDetailCubit, ScoreDetailState, Timeframe>(
+              selector: (state) => state.maybeWhen(
+                loading: (scoreType, timeframe, selectedDate) => timeframe,
+                loaded: (score, history, insights, timeframe, scoreType, selectedDate) => timeframe,
+                error: (failure, scoreType, timeframe, selectedDate) => timeframe,
+                orElse: () => Timeframe.oneDay,
               ),
-              loaded: (score, history, insights, timeframe, scoreType, selectedDate) {
-                return RefreshIndicator.adaptive(
-                  onRefresh: () async => context.read<ScoreDetailCubit>().refresh(),
-                  child: ScoreDetailBody(
-                    scoreType: scoreType,
-                    timeframe: timeframe,
-                    selectedDate: selectedDate,
-                    onInfoTap: () => DailyScoreDetailBottomSheet.show(
-                      context: context,
-                      scoreTitle: score.displayName,
-                      scoreType: scoreType,
-                      scoreValue: score.value,
-                      metrics: score.metrics,
-                      info: scoreType.getInfo(),
-                    ),
-                    content: _LoadedContent(
-                      score: score,
-                      history: history,
-                      insights: insights,
-                      timeframe: timeframe,
-                      scoreType: scoreType,
-                      selectedDate: selectedDate,
-                    ),
-                  ),
+              builder: (context, timeframe) {
+                return TimeframeSelector(
+                  selectedTimeframe: timeframe,
+                  onTimeframeChanged: (newTimeframe) {
+                    context.read<ScoreDetailCubit>().changeTimeframe(newTimeframe);
+                  },
                 );
               },
-              error: (failure, scoreType, timeframe, selectedDate) => ScoreDetailBody(
-                scoreType: scoreType,
-                timeframe: timeframe,
-                selectedDate: selectedDate,
-                onInfoTap: null,
-                content: SliverFillRemaining(
-                  hasScrollBody: false,
-                  child: Center(
-                    child: AppErrorWidget(
-                      message: failure.message,
-                      onRetry: () => context.read<ScoreDetailCubit>().loadScoreDetail(
-                        scoreType,
-                        timeframe,
-                        selectedDate: selectedDate,
+            ),
+            // Rest of the content
+            Expanded(
+              child: BlocBuilder<ScoreDetailCubit, ScoreDetailState>(
+                builder: (context, state) {
+                  return state.when(
+                    initial: () => const Center(child: CircularProgressIndicator()),
+                    loading: (scoreType, timeframe, selectedDate) => ScoreDetailBodyContent(
+                      scoreType: scoreType,
+                      timeframe: timeframe,
+                      selectedDate: selectedDate,
+                      onInfoTap: null,
+                      content: _LoadingContent(scoreType: scoreType, timeframe: timeframe),
+                    ),
+                    loaded: (score, history, insights, timeframe, scoreType, selectedDate) {
+                      return RefreshIndicator.adaptive(
+                        onRefresh: () async => context.read<ScoreDetailCubit>().refresh(),
+                        child: ScoreDetailBodyContent(
+                          scoreType: scoreType,
+                          timeframe: timeframe,
+                          selectedDate: selectedDate,
+                          onInfoTap: () => DailyScoreDetailBottomSheet.show(
+                            context: context,
+                            scoreTitle: score.displayName,
+                            scoreType: scoreType,
+                            scoreValue: score.value,
+                            metrics: score.metrics,
+                            info: scoreType.getInfo(),
+                          ),
+                          content: _LoadedContent(
+                            score: score,
+                            history: history,
+                            insights: insights,
+                            timeframe: timeframe,
+                            scoreType: scoreType,
+                            selectedDate: selectedDate,
+                          ),
+                        ),
+                      );
+                    },
+                    error: (failure, scoreType, timeframe, selectedDate) => ScoreDetailBodyContent(
+                      scoreType: scoreType,
+                      timeframe: timeframe,
+                      selectedDate: selectedDate,
+                      onInfoTap: null,
+                      content: SliverFillRemaining(
+                        hasScrollBody: false,
+                        child: Center(
+                          child: AppErrorWidget(
+                            message: failure.message,
+                            onRetry: () => context.read<ScoreDetailCubit>().loadScoreDetail(
+                              scoreType,
+                              timeframe,
+                              selectedDate: selectedDate,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
-                ),
+                  );
+                },
               ),
-            );
-          },
+            ),
+          ],
         ),
       ),
     );
@@ -136,14 +161,15 @@ class ScoreDetailView extends StatelessWidget {
 }
 
 /// Unified body structure for all states (loading, loaded, error)
-class ScoreDetailBody extends StatelessWidget {
+/// Note: TimeframeSelector is extracted outside to preserve its animation.
+class ScoreDetailBodyContent extends StatelessWidget {
   final ScoreType scoreType;
   final Timeframe timeframe;
   final DateTime selectedDate;
   final VoidCallback? onInfoTap;
   final Widget content;
 
-  const ScoreDetailBody({
+  const ScoreDetailBodyContent({
     super.key,
     required this.scoreType,
     required this.timeframe,
@@ -160,12 +186,6 @@ class ScoreDetailBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TimeframeSelector(
-                selectedTimeframe: timeframe,
-                onTimeframeChanged: (newTimeframe) {
-                  context.read<ScoreDetailCubit>().changeTimeframe(newTimeframe);
-                },
-              ),
               const SizedBox(height: 24),
               ScoreHeader(
                 title: timeframe == Timeframe.oneDay ? scoreType.displayName : 'History',
