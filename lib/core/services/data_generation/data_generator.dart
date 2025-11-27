@@ -72,12 +72,18 @@ class DataGenerator {
           totalDays,
         );
 
-        // Check if we should add missing data (every 10th day)
+        // Check if we should add missing data (10th and 25th of month)
         final day = int.parse(date.split('-')[2]);
         final isTenthDay = (day % 10 == 0);
+        final isMissingDataDay = (day == 10 || day == 25);
 
-        // Occasionally set overall score to null (2% chance), but NEVER for today
-        if (!isToday) {
+        // Set scores to null on 10th and 25th of month (but NEVER for today)
+        if (!isToday && isMissingDataDay) {
+          healthScore = null;
+          readinessScore = null;
+          activityScore = null;
+        } else if (!isToday) {
+          // Occasionally set overall score to null (2% chance) for other days
           if (_random.nextDouble() < 0.02) healthScore = null;
           if (_random.nextDouble() < 0.02) readinessScore = null;
           if (_random.nextDouble() < 0.02) activityScore = null;
