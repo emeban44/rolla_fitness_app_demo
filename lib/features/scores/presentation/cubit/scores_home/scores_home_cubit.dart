@@ -31,7 +31,6 @@ class ScoresHomeCubit extends Cubit<ScoresHomeState> {
     }
 
     // Intentional delay to demonstrate loading state for presentation purposes.
-    // Remove in production as data generation completes in ~100-200ms.
     await Future.delayed(const Duration(milliseconds: 1500));
 
     final result = await getScores();

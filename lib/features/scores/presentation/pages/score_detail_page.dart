@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/scores_injection.dart';
 import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
+import 'package:rolla_fitness_app_demo/core/utils/helpers/date_time_helper.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/snackbar/basic_snackbar.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/charts/chart_loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error/error_widget.dart';
@@ -266,15 +267,8 @@ class ScoreDetailView extends StatelessWidget {
 
 /// Helper function to get insight for a specific date
 Insight? _getInsightForDate(List<Insight> insights, DateTime date) {
-  final dateStr = _formatDate(date);
+  final dateStr = DateTimeHelper.formatToISO8601Date(date);
   return insights.where((i) => i.id.endsWith(dateStr)).firstOrNull;
-}
-
-/// Helper function to format date as YYYY-MM-DD
-String _formatDate(DateTime date) {
-  return '${date.year.toString().padLeft(4, '0')}-'
-      '${date.month.toString().padLeft(2, '0')}-'
-      '${date.day.toString().padLeft(2, '0')}';
 }
 
 /// Loading skeleton for the detail page

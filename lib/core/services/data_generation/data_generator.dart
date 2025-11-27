@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
+import 'package:rolla_fitness_app_demo/core/utils/helpers/date_time_helper.dart';
 
 /// Pure Dart implementation of data generation
 /// Generates 6 months of realistic fitness data
@@ -285,7 +286,7 @@ class DataGenerator {
 
     for (var i = 0; i < totalDays; i++) {
       final date = today.subtract(Duration(days: i));
-      dates.add(_formatDate(date));
+      dates.add(DateTimeHelper.formatToISO8601Date(date));
     }
 
     dates.sort(); // Chronological order (oldest first)
@@ -385,12 +386,6 @@ class DataGenerator {
     return options[_random.nextInt(options.length)];
   }
 
-  /// Format date to YYYY-MM-DD
-  String _formatDate(DateTime date) {
-    return '${date.year.toString().padLeft(4, '0')}-'
-        '${date.month.toString().padLeft(2, '0')}-'
-        '${date.day.toString().padLeft(2, '0')}';
-  }
 
   /// Insight templates for each score type
   static final Map<String, List<Map<String, String>>> _insightTemplates = {
