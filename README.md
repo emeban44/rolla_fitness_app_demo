@@ -6,7 +6,6 @@ A Flutter application demonstrating reusable UI components, clean architecture, 
 
 https://github.com/user-attachments/assets/44c147c3-bf14-445a-bc83-3b60c48d7b02
 
-LINK: https://www.youtube.com/shorts/IoQxtrSepTc
 
 ## Architecture Overview
 
@@ -124,3 +123,5 @@ flutter run
 ---
 
 **Original Creator:** Emerald Podbicanin
+
+YouTube video link: https://www.youtube.com/shorts/IoQxtrSepTc
