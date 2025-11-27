@@ -25,4 +25,20 @@ class MetricHelper {
         return null;
     }
   }
+
+  /// Format metric ID to human-readable title
+  ///
+  /// Converts snake_case metric IDs to Title Case.
+  ///
+  /// Example:
+  /// ```dart
+  /// MetricHelper.formatMetricTitle('resting_hr')
+  /// // Returns: "Resting Hr"
+  /// ```
+  static String formatMetricTitle(String metricId) {
+    return metricId
+        .split('_')
+        .map((word) => word[0].toUpperCase() + word.substring(1))
+        .join(' ');
+  }
 }

@@ -11,9 +11,7 @@ class ThemeSwitcher extends StatelessWidget {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return TextButton.icon(
-      onPressed: () {
-        context.read<ThemeCubit>().toggleTheme();
-      },
+      onPressed: context.read<ThemeCubit>().toggleTheme,
       icon: Icon(
         isDark ? Icons.light_mode : Icons.dark_mode,
         color: isDark ? Colors.white : Colors.black,

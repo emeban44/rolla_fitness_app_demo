@@ -12,9 +12,11 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:rolla_fitness_app_demo/core/services/data_generation/data_generation_service.dart'
-    as _i784;
+    as _i149;
 import 'package:rolla_fitness_app_demo/features/scores/data/datasources/scores_local_datasource.dart'
     as _i1057;
+import 'package:rolla_fitness_app_demo/features/scores/data/datasources/scores_local_datasource_impl.dart'
+    as _i846;
 import 'package:rolla_fitness_app_demo/features/scores/data/repositories/scores_repository_impl.dart'
     as _i419;
 import 'package:rolla_fitness_app_demo/features/scores/domain/repositories/scores_repository.dart'
@@ -42,13 +44,13 @@ extension GetItInjectableX on _i174.GetIt {
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     gh.lazySingleton<_i1057.ScoresLocalDataSource>(
-      () => _i1057.ScoresLocalDataSourceImpl(),
+      () => _i846.ScoresLocalDataSourceImpl(),
+    );
+    gh.lazySingleton<_i149.DataGenerationService>(
+      () => _i149.DataGenerationService(gh<_i1057.ScoresLocalDataSource>()),
     );
     gh.lazySingleton<_i344.ScoresRepository>(
       () => _i419.ScoresRepositoryImpl(gh<_i1057.ScoresLocalDataSource>()),
-    );
-    gh.lazySingleton<_i784.DataGenerationService>(
-      () => _i784.DataGenerationService(gh<_i1057.ScoresLocalDataSource>()),
     );
     gh.lazySingleton<_i294.GetScoreHistory>(
       () => _i294.GetScoreHistory(gh<_i344.ScoresRepository>()),
@@ -65,18 +67,18 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i20.GetScoreDetail>(
       () => _i20.GetScoreDetail(gh<_i344.ScoresRepository>()),
     );
+    gh.factory<_i510.ScoresHomeCubit>(
+      () => _i510.ScoresHomeCubit(
+        gh<_i151.GetScores>(),
+        gh<_i149.DataGenerationService>(),
+      ),
+    );
     gh.factory<_i642.ScoreDetailCubit>(
       () => _i642.ScoreDetailCubit(
         gh<_i20.GetScoreDetail>(),
         gh<_i294.GetScoreHistory>(),
         gh<_i835.GetInsights>(),
-        gh<_i784.DataGenerationService>(),
-      ),
-    );
-    gh.factory<_i510.ScoresHomeCubit>(
-      () => _i510.ScoresHomeCubit(
-        gh<_i151.GetScores>(),
-        gh<_i784.DataGenerationService>(),
+        gh<_i149.DataGenerationService>(),
       ),
     );
     return this;
