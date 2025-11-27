@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 
 /// Shared card widget with consistent decoration across the app
 class CustomCard extends StatelessWidget {
@@ -23,7 +24,7 @@ class CustomCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.05),
+              color: context.colors.shadowLight,
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),

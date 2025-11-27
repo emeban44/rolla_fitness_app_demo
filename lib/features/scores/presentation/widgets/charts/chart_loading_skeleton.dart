@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 
 /// Animated loading skeleton for trend charts
 /// Shows animated bars that shimmer to indicate loading
@@ -40,10 +41,8 @@ class _ChartLoadingSkeletonState extends State<ChartLoadingSkeleton>
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final baseColor = isDark ? const Color(0xFF374151) : const Color(0xFFE5E7EB);
-    final highlightColor =
-        isDark ? const Color(0xFF4B5563) : const Color(0xFFF3F4F6);
+    final baseColor = context.colors.skeletonBase;
+    final highlightColor = context.colors.skeletonShimmer;
 
     return Container(
       height: widget.height,

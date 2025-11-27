@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/loading/loading_skeleton.dart';
 
 /// Loading skeleton for a metric tile
@@ -48,7 +49,7 @@ class _MetricTileLoadingSkeletonState extends State<MetricTileLoadingSkeleton> w
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: context.colors.shadowLight,
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -98,9 +99,7 @@ class _MetricTileLoadingSkeletonState extends State<MetricTileLoadingSkeleton> w
                     children: [
                       // Background (gray)
                       Container(
-                        color: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white.withValues(alpha: 0.1)
-                            : Colors.grey.withValues(alpha: 0.2),
+                        color: context.colors.gridLine,
                       ),
                       // Animated loading bar
                       FractionallySizedBox(

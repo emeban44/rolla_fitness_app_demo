@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_colors.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/core/utils/helpers/metric_helper.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric/metric.dart';
 
@@ -32,7 +33,7 @@ class MetricTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.05),
+              color: context.colors.shadowLight,
               blurRadius: 4,
               offset: const Offset(0, 2),
             ),
@@ -84,9 +85,7 @@ class MetricTile extends StatelessWidget {
                   ),
                   child: LinearProgressIndicator(
                     value: animatedValue,
-                    backgroundColor: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.white.withValues(alpha: 0.1)
-                        : Colors.grey.withValues(alpha: 0.2),
+                    backgroundColor: context.colors.gridLine,
                     valueColor: AlwaysStoppedAnimation<Color>(progressColor),
                     minHeight: 6,
                   ),

@@ -20,7 +20,7 @@ class MetricsDetailsList extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: context.colors.shadowLight,
             blurRadius: 8,
             spreadRadius: 2,
             offset: const Offset(0, 0),
@@ -53,19 +53,11 @@ class MetricsDetailsList extends StatelessWidget {
     final scaffoldColor = Theme.of(context).scaffoldBackgroundColor;
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
-    if (isDark) {
-      // In dark mode, make it slightly lighter by blending with white
-      return Color.alphaBlend(
-        Colors.white.withValues(alpha: 0.05),
-        scaffoldColor,
-      );
-    } else {
-      // In light mode, make it slightly darker by blending with black
-      return Color.alphaBlend(
-        Colors.black.withValues(alpha: 0.01),
-        scaffoldColor,
-      );
-    }
+    // Create a slightly different background by blending
+    final blendColor = isDark
+        ? Colors.white.withValues(alpha: 0.05)
+        : Colors.black.withValues(alpha: 0.01);
+    return Color.alphaBlend(blendColor, scaffoldColor);
   }
 }
 
