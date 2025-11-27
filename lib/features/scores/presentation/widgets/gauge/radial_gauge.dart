@@ -5,7 +5,6 @@ import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 
 /// Neumorphic circular radial gauge showing score 0-100
 /// Shows "N/A" when score is null (missing data)
-/// Clean, reusable widget without background decorations
 class RadialGauge extends StatelessWidget {
   final int? score;
   final Color color;

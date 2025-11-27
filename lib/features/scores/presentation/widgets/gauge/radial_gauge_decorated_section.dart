@@ -5,11 +5,11 @@ import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.d
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/radial_gauge.dart';
 
 /// Radial gauge with decorative ripple dotted background
-class ScoreGaugeDecoratedSection extends StatelessWidget {
+class RadialGaugeDecoratedSection extends StatelessWidget {
   final ScoreType scoreType;
   final int? score;
 
-  const ScoreGaugeDecoratedSection({
+  const RadialGaugeDecoratedSection({
     super.key,
     required this.scoreType,
     required this.score,

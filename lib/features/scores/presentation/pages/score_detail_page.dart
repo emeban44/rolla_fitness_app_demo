@@ -17,7 +17,7 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/score_detail/score_detail_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/charts/chart_loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/charts/trend_chart.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/score_gauge_decorated_section.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/radial_gauge_decorated_section.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/headers/score_header.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/insights/daily_insight_note.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metrics/metric_tile_loading_skeleton.dart';
@@ -213,7 +213,7 @@ class _LoadedContent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (timeframe == Timeframe.oneDay) ...[
-            ScoreGaugeDecoratedSection(
+            RadialGaugeDecoratedSection(
               scoreType: scoreType,
               score: score.value,
             ),

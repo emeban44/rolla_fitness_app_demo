@@ -5,7 +5,7 @@ import 'package:rolla_fitness_app_demo/core/widgets/section/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric/metric.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric_info/metric_info.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/score_gauge_decorated_section.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/radial_gauge_decorated_section.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/metrics/metrics_details_list.dart';
 
 /// Bottom sheet showing daily score details with metrics and info
@@ -72,7 +72,7 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Radial gauge with dotted background
-                  ScoreGaugeDecoratedSection(
+                  RadialGaugeDecoratedSection(
                     scoreType: scoreType,
                     score: scoreValue,
                   ),

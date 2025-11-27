@@ -5,21 +5,21 @@ import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 /// A spinning radial gauge skeleton for loading states
 /// Looks like a radial gauge that's spinning/loading
 /// Perfect for showing loading while maintaining the visual structure
-class SpinningRadialSkeleton extends StatefulWidget {
+class SpinningRadialGaugeSkeleton extends StatefulWidget {
   final double size;
   final Color? color;
 
-  const SpinningRadialSkeleton({
+  const SpinningRadialGaugeSkeleton({
     super.key,
     this.size = 200,
     this.color,
   });
 
   @override
-  State<SpinningRadialSkeleton> createState() => _SpinningRadialSkeletonState();
+  State<SpinningRadialGaugeSkeleton> createState() => _SpinningRadialGaugeSkeletonState();
 }
 
-class _SpinningRadialSkeletonState extends State<SpinningRadialSkeleton> with SingleTickerProviderStateMixin {
+class _SpinningRadialGaugeSkeletonState extends State<SpinningRadialGaugeSkeleton> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
   @override

@@ -12,7 +12,7 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_home/scores_home_state.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/score_detail_page.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/cards/score_card.dart';
-import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/spinning_radial_skeleton.dart';
+import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/spinning_radial_gauge_skeleton.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/grid/scores_grid.dart';
 
 /// Home page displaying all three score cards in a grid
@@ -117,7 +117,7 @@ class _LoadingView extends StatelessWidget {
                     const SizedBox(height: 12),
                     // Score value shimmer
                     Flexible(
-                      child: SpinningRadialSkeleton(
+                      child: SpinningRadialGaugeSkeleton(
                         size: gaugeSize,
                         color: scoreType.accentColor,
                       ),
