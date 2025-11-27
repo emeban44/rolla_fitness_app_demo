@@ -159,7 +159,7 @@ class DataGenerator {
           };
 
           readinessMetrics[metricType] = {
-            'title': titles[metricType]!,
+            'title': titles[metricType] ?? metricType,
             'value': metricValue,
             'score': metricScore,
           };
@@ -201,7 +201,7 @@ class DataGenerator {
           };
 
           activityMetrics[metricType] = {
-            'title': titles[metricType]!,
+            'title': titles[metricType] ?? metricType,
             'value': metricValue,
             'score': metricScore,
           };
@@ -348,7 +348,10 @@ class DataGenerator {
 
   /// Generate a random insight
   Map<String, String> _generateInsight(String scoreType) {
-    final templates = _insightTemplates[scoreType]!;
+    final templates = _insightTemplates[scoreType];
+    if (templates == null || templates.isEmpty) {
+      return {'text': 'Keep up the good work!', 'type': 'info'};
+    }
     final template = templates[_random.nextInt(templates.length)];
 
     return _fillInsightTemplate(template);

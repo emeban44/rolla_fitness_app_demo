@@ -166,16 +166,19 @@ class TrendChart extends StatelessWidget {
       final month = DateTime(currentMonth.year, currentMonth.month - i, 1);
       final monthKey = '${month.year}-${month.month.toString().padLeft(2, '0')}';
 
-      if (monthlyBuckets.containsKey(monthKey)) {
+      final points = monthlyBuckets[monthKey];
+      if (points != null && points.isNotEmpty) {
         // Month has data - calculate average
-        final points = monthlyBuckets[monthKey]!;
-        final validPoints = points.where((p) => p.value != null).toList();
+        final validValues = points
+            .map((p) => p.value)
+            .whereType<int>()
+            .toList();
 
-        if (validPoints.isEmpty) {
+        if (validValues.isEmpty) {
           monthlyData.add(ScoreHistoryPoint(date: month, value: null));
         } else {
-          final sum = validPoints.fold<double>(0, (sum, point) => sum + point.value!);
-          final average = sum / validPoints.length;
+          final sum = validValues.fold<int>(0, (sum, value) => sum + value);
+          final average = sum / validValues.length;
           monthlyData.add(ScoreHistoryPoint(date: month, value: average.round()));
         }
       } else {

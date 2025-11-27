@@ -71,8 +71,8 @@ class MetricTile extends StatelessWidget {
             const SizedBox(height: 12),
             TweenAnimationBuilder<double>(
               tween: Tween<double>(
-                begin: metric.hasData ? (metric.score! / 100) : 0,
-                end: metric.hasData ? (metric.score! / 100) : 0,
+                begin: (metric.score ?? 0) / 100,
+                end: (metric.score ?? 0) / 100,
               ),
               duration: const Duration(milliseconds: 600),
               curve: Curves.easeInOut,

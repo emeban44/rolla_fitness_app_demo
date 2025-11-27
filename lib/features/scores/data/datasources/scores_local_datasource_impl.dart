@@ -18,11 +18,18 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
 
   /// Load and cache JSON data
   Future<Map<String, dynamic>> _loadData() async {
-    if (_cachedData != null) return _cachedData!;
+    final cached = _cachedData;
+    if (cached != null) return cached;
 
     final jsonString = await rootBundle.loadString(_jsonPath);
-    _cachedData = json.decode(jsonString) as Map<String, dynamic>;
-    return _cachedData!;
+    final decoded = json.decode(jsonString);
+
+    if (decoded is! Map<String, dynamic>) {
+      throw FormatException('Invalid JSON format: expected Map<String, dynamic>');
+    }
+
+    _cachedData = decoded;
+    return decoded;
   }
 
   @override
@@ -97,7 +104,10 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
       }
     } else {
       // For 7D/30D/1Y: Calculate average metrics over the period
-      final validScores = history.where((point) => point.value != null).map((point) => point.value!).toList();
+      final validScores = history
+          .map((point) => point.value)
+          .whereType<int>()
+          .toList();
 
       if (validScores.isNotEmpty) {
         final averageScore = validScores.reduce((a, b) => a + b) / validScores.length;
@@ -124,13 +134,12 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
       final metricData = entry.value as Map<String, dynamic>;
 
       // Get title from metric_info
-      String title = metricId;
+      String title;
       try {
-        final data = _cachedData!;
-        final metricInfo = data['metric_info'] as Map<String, dynamic>;
-        if (metricInfo.containsKey(metricId)) {
-          title = (metricInfo[metricId] as Map<String, dynamic>)['title'] as String;
-        }
+        final data = _cachedData;
+        final metricInfo = data?['metric_info'] as Map<String, dynamic>?;
+        final metricDetails = metricInfo?[metricId] as Map<String, dynamic>?;
+        title = metricDetails?['title'] as String? ?? MetricHelper.formatMetricTitle(metricId);
       } catch (_) {
         // Use default title if not found
         title = MetricHelper.formatMetricTitle(metricId);
@@ -177,14 +186,15 @@ class ScoresLocalDataSourceImpl implements ScoresLocalDataSource {
         final score = metricData['score'] as int?;
 
         if (score != null) {
-          if (!metricAverages.containsKey(metricId)) {
-            metricAverages[metricId] = {
+          final metricAverage = metricAverages.putIfAbsent(
+            metricId,
+            () => {
               'scores': <int>[],
               'title': metricData['title'] ?? MetricHelper.formatMetricTitle(metricId),
               'sampleValue': metricData['value'],
-            };
-          }
-          (metricAverages[metricId]!['scores'] as List<int>).add(score);
+            },
+          );
+          (metricAverage['scores'] as List<int>).add(score);
         }
       }
     }

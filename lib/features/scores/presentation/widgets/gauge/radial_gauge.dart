@@ -113,7 +113,8 @@ class ArcPainter extends CustomPainter {
     );
 
     // Only draw colored arc if score is available (not null)
-    if (score != null) {
+    final scoreValue = score;
+    if (scoreValue != null) {
       final progressPaint = Paint()
         ..color = color
         ..style = PaintingStyle.stroke
@@ -121,7 +122,7 @@ class ArcPainter extends CustomPainter {
         ..strokeCap = StrokeCap.round;
 
       const startAngle = -math.pi / 2; // Start at top
-      final sweepAngle = 2 * math.pi * (score! / 100); // Score percentage
+      final sweepAngle = 2 * math.pi * (scoreValue / 100); // Score percentage
 
       canvas.drawArc(
         rect,
