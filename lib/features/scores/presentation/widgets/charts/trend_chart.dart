@@ -1,8 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_history_point/score_history_point.dart';
+import 'package:rolla_fitness_app_demo/features/scores/utils/helpers/trend_chart_helper.dart';
 
 /// Bar chart widget for displaying score history
 class TrendChart extends StatelessWidget {
@@ -24,8 +24,7 @@ class TrendChart extends StatelessWidget {
       );
     }
 
-    // Aggregate data for 1Y view to improve readability
-    final displayData = _getProcessedData();
+    final displayData = TrendChartHelper.processData(historyPoints);
 
     return SizedBox(
       height: 250,
@@ -45,189 +44,157 @@ class TrendChart extends StatelessWidget {
               leftTitles: const AxisTitles(
                 sideTitles: SideTitles(showTitles: false),
               ),
-              rightTitles: AxisTitles(
-                sideTitles: SideTitles(
-                  showTitles: true,
-                  reservedSize: 50,
-                  interval: 25,
-                  getTitlesWidget: (value, meta) {
-                    return Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Text(
-                        value.toInt().toString(),
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: context.colors.foregroundSubtle,
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              ),
-              bottomTitles: AxisTitles(
-                sideTitles: SideTitles(
-                  showTitles: true,
-                  getTitlesWidget: (value, meta) {
-                    final index = value.toInt();
-
-                    // Only show labels at specific intervals
-                    if (!_shouldShowLabel(index, displayData.length)) {
-                      return const SizedBox.shrink();
-                    }
-
-                    if (index >= 0 && index < displayData.length) {
-                      final date = displayData[index].date;
-                      final label = _getXAxisLabel(date, index, displayData.length);
-                      return Padding(
-                        padding: const EdgeInsets.only(top: 8),
-                        child: Text(
-                          label,
-                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            fontSize: 11,
-                            color: context.colors.foregroundSubtle,
-                          ),
-                        ),
-                      );
-                    }
-                    return const SizedBox.shrink();
-                  },
-                ),
+              rightTitles: _RightAxisTitles.build(context),
+              bottomTitles: _BottomAxisTitles.build(
+                context,
+                displayData: displayData,
+                originalDataCount: historyPoints.length,
               ),
             ),
-            gridData: FlGridData(
-              show: true,
-              drawVerticalLine: false,
-              horizontalInterval: 25,
-              getDrawingHorizontalLine: (value) {
-                return FlLine(
-                  color: context.colors.gridLine,
-                  strokeWidth: 1,
-                );
-              },
-            ),
-            extraLinesData: ExtraLinesData(
-              horizontalLines: [
-                HorizontalLine(y: 0, color: context.colors.gridLine, strokeWidth: 1),
-                HorizontalLine(y: 100, color: context.colors.gridLine, strokeWidth: 1),
-              ],
-            ),
+            gridData: _buildGridData(context),
+            extraLinesData: _buildExtraLines(context),
             borderData: FlBorderData(show: false),
-            barGroups: displayData.asMap().entries.map((entry) {
-              final index = entry.key;
-              final point = entry.value;
-              return BarChartGroupData(
-                x: index,
-                barRods: [
-                  BarChartRodData(
-                    toY: point.value?.toDouble() ?? 0,
-                    color: point.value != null ? color : Colors.transparent,
-                    width: _getBarWidth(displayData.length),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4),
-                      topRight: Radius.circular(4),
-                    ),
-                  ),
-                ],
-              );
-            }).toList(),
+            barGroups: _buildBarGroups(displayData),
           ),
         ),
       ),
     );
   }
 
-  /// Get processed data - aggregate for 1Y view, use original for others
-  List<ScoreHistoryPoint> _getProcessedData() {
-    if (historyPoints.length > 60) {
-      // Aggregate to monthly data for year view
-      return _aggregateToMonthly();
-    }
-    return historyPoints;
+  /// Builds grid configuration
+  FlGridData _buildGridData(BuildContext context) {
+    return FlGridData(
+      show: true,
+      drawVerticalLine: false,
+      horizontalInterval: 25,
+      getDrawingHorizontalLine: (value) {
+        return FlLine(
+          color: context.colors.gridLine,
+          strokeWidth: 1,
+        );
+      },
+    );
   }
 
-  /// Aggregate data into monthly buckets
-  List<ScoreHistoryPoint> _aggregateToMonthly() {
-    if (historyPoints.isEmpty) return [];
-
-    // Group existing points by year-month
-    final Map<String, List<ScoreHistoryPoint>> monthlyBuckets = {};
-
-    for (final point in historyPoints) {
-      final monthKey = '${point.date.year}-${point.date.month.toString().padLeft(2, '0')}';
-      monthlyBuckets.putIfAbsent(monthKey, () => []).add(point);
-    }
-
-    // Generate all 12 months going back from today
-    final List<ScoreHistoryPoint> monthlyData = [];
-    final today = DateTime.now();
-    final currentMonth = DateTime(today.year, today.month, 1);
-
-    // Generate 12 months going backwards
-    for (int i = 11; i >= 0; i--) {
-      final month = DateTime(currentMonth.year, currentMonth.month - i, 1);
-      final monthKey = '${month.year}-${month.month.toString().padLeft(2, '0')}';
-
-      final points = monthlyBuckets[monthKey];
-      if (points != null && points.isNotEmpty) {
-        // Month has data - calculate average
-        final validValues = points
-            .map((p) => p.value)
-            .whereType<int>()
-            .toList();
-
-        if (validValues.isEmpty) {
-          monthlyData.add(ScoreHistoryPoint(date: month, value: null));
-        } else {
-          final sum = validValues.fold<int>(0, (sum, value) => sum + value);
-          final average = sum / validValues.length;
-          monthlyData.add(ScoreHistoryPoint(date: month, value: average.round()));
-        }
-      } else {
-        // Month has no data - add empty entry
-        monthlyData.add(ScoreHistoryPoint(date: month, value: null));
-      }
-    }
-
-    return monthlyData;
+  /// Builds extra horizontal lines (top and bottom borders)
+  ExtraLinesData _buildExtraLines(BuildContext context) {
+    return ExtraLinesData(
+      horizontalLines: [
+        HorizontalLine(y: 0, color: context.colors.gridLine, strokeWidth: 1),
+        HorizontalLine(y: 100, color: context.colors.gridLine, strokeWidth: 1),
+      ],
+    );
   }
 
-  /// Get bar width based on original data count
-  double _getBarWidth(int displayCount) {
-    final originalCount = historyPoints.length;
-    if (originalCount <= 7) {
-      return 16; // Wider bars for 7D
-    } else if (originalCount <= 30) {
-      return 5; // Thinner bars for 30D
-    } else {
-      return 12; // Wider bars for 1Y (monthly aggregated, ~12 bars)
-    }
+  /// Builds bar groups from display data
+  List<BarChartGroupData> _buildBarGroups(List<ScoreHistoryPoint> displayData) {
+    return displayData.asMap().entries.map((entry) {
+      final index = entry.key;
+      final point = entry.value;
+      return BarChartGroupData(
+        x: index,
+        barRods: [
+          BarChartRodData(
+            toY: point.value?.toDouble() ?? 0,
+            color: point.value != null ? color : Colors.transparent,
+            width: _getBarWidth(),
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(4),
+              topRight: Radius.circular(4),
+            ),
+          ),
+        ],
+      );
+    }).toList();
   }
 
-  /// Check if label should be shown at this index
-  bool _shouldShowLabel(int index, int displayCount) {
-    final originalCount = historyPoints.length;
-    if (originalCount <= 7) {
-      return true; // Show all labels for 7D
-    } else if (originalCount <= 30) {
-      // Show labels every 3rd day and the last one
-      return index % 3 == 0 || index == displayCount - 1;
-    } else {
-      // Show all month labels for 1Y (monthly aggregated)
-      return true;
-    }
+  /// Calculates bar width based on timeframe
+  double _getBarWidth() {
+    final dataCount = historyPoints.length;
+
+    // Weekly view: wider bars for better visibility
+    if (dataCount <= 7) return 16;
+
+    // Monthly view: thinner bars to fit more data
+    if (dataCount <= 30) return 5;
+
+    // Yearly view: medium bars (data is aggregated to ~12 months)
+    return 12;
+  }
+}
+
+/// Private widget for right axis titles (Y-axis values)
+class _RightAxisTitles {
+  static AxisTitles build(BuildContext context) {
+    return AxisTitles(
+      sideTitles: SideTitles(
+        showTitles: true,
+        reservedSize: 50,
+        interval: 25,
+        getTitlesWidget: (value, meta) {
+          return Padding(
+            padding: const EdgeInsets.only(left: 8),
+            child: Text(
+              value.toInt().toString(),
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: context.colors.foregroundSubtle,
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+/// Private widget for bottom axis titles (X-axis date labels)
+class _BottomAxisTitles {
+  static AxisTitles build(
+    BuildContext context, {
+    required List<ScoreHistoryPoint> displayData,
+    required int originalDataCount,
+  }) {
+    return AxisTitles(
+      sideTitles: SideTitles(
+        showTitles: true,
+        getTitlesWidget: (value, meta) {
+          final index = value.toInt();
+
+          // Only show labels at specific intervals
+          if (!_shouldShowLabel(index, displayData.length, originalDataCount)) {
+            return const SizedBox.shrink();
+          }
+
+          if (index >= 0 && index < displayData.length) {
+            final date = displayData[index].date;
+            final label = TrendChartHelper.formatXAxisLabel(date, originalDataCount);
+            return Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: Text(
+                label,
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  fontSize: 11,
+                  color: context.colors.foregroundSubtle,
+                ),
+              ),
+            );
+          }
+          return const SizedBox.shrink();
+        },
+      ),
+    );
   }
 
-  /// Get X-axis label based on timeframe
-  String _getXAxisLabel(DateTime date, int index, int displayCount) {
-    final originalCount = historyPoints.length;
-    if (originalCount <= 7) {
-      // 7D: Show day of week (Mon, Tue, etc.)
-      return DateFormat('E').format(date);
-    } else if (originalCount <= 30) {
-      // 30D: Show day number (1, 7, 13, 19, 25)
-      return DateFormat('d').format(date);
-    } else {
-      // 1Y: Show month (Jan, Feb, etc.)
-      return DateFormat('MMM').format(date);
-    }
+  static bool _shouldShowLabel(int index, int displayCount, int originalDataCount) {
+    // Weekly view: show all labels (7 days total)
+    if (originalDataCount <= 7) return true;
+
+    // Monthly view: show every 3rd label + last one to avoid crowding
+    final isEveryThird = index % 3 == 0;
+    final isLastLabel = index == displayCount - 1;
+    if (originalDataCount <= 30) return isEveryThird || isLastLabel;
+
+    // Yearly view: show all labels (~12 months, already aggregated)
+    return true;
   }
 }
