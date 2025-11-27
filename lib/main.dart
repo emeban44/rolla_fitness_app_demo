@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/scores_injection.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_theme.dart';
@@ -7,6 +8,12 @@ import 'package:rolla_fitness_app_demo/features/scores/presentation/pages/scores
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Set preferred orientations to portrait only (up and down)
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
 
   // Initialize dependency injection
   await configureDependencies();
