@@ -4,13 +4,13 @@ import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/core/utils/helpers/metric_helper.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric/metric.dart';
 
-/// Metric tile widget showing icon, name, value, and progress bar
-class MetricTile extends StatelessWidget {
+/// Metric progressive tile widget showing icon, name, value, and progress bar
+class MetricProgressiveTile extends StatelessWidget {
   final Metric metric;
   final bool showAvgLabel;
   final VoidCallback? onTap;
 
-  const MetricTile({
+  const MetricProgressiveTile({
     super.key,
     required this.metric,
     this.showAvgLabel = false,
@@ -19,8 +19,7 @@ class MetricTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final progressColor = metric.hasData ? AppColors.getScoreColor(metric.score) : AppColors.scoreNeutral;
-
+    final progressColor = AppColors.getScoreColor(metric.score);
     final icon = MetricHelper.getIconForMetric(metric.id);
 
     return GestureDetector(
@@ -70,6 +69,7 @@ class MetricTile extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 12),
+            // Linear progress bar indicator
             TweenAnimationBuilder<double>(
               tween: Tween<double>(
                 begin: (metric.score ?? 0) / 100,

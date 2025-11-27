@@ -229,7 +229,7 @@ class _LoadedContent extends StatelessWidget {
             ),
           ],
           const SizedBox(height: 24),
-          MetricsSectionHeader(timeframe: timeframe),
+          MetricsSectionHeader(showDailyAvgLabel: timeframe != Timeframe.oneDay),
           const SizedBox(height: 12),
           if (score.metrics.isEmpty)
             const SizedBox(
@@ -287,7 +287,9 @@ class _LoadingContent extends StatelessWidget {
             ),
             const SizedBox(height: 24),
           ],
-          MetricsSectionHeader(timeframe: timeframe),
+          MetricsSectionHeader(
+            showDailyAvgLabel: timeframe != Timeframe.oneDay,
+          ),
           const SizedBox(height: 12),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),

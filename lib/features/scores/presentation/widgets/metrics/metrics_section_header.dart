@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section/section_title.dart';
-import 'package:rolla_fitness_app_demo/features/scores/domain/enums/timeframe.dart';
 
 /// Metrics section header with optional "Daily Avg." label
 class MetricsSectionHeader extends StatelessWidget {
-  final Timeframe timeframe;
+  final bool showDailyAvgLabel;
 
   const MetricsSectionHeader({
     super.key,
-    required this.timeframe,
+    this.showDailyAvgLabel = false,
   });
 
   @override
@@ -20,7 +19,7 @@ class MetricsSectionHeader extends StatelessWidget {
         children: [
           const SectionTitle(title: 'Metrics'),
           const Spacer(),
-          if (timeframe != Timeframe.oneDay)
+          if (showDailyAvgLabel)
             Text(
               'Daily Avg.',
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
