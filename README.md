@@ -2,6 +2,10 @@
 
 A Flutter application demonstrating reusable UI components, clean architecture, and smooth interactions.
 
+## App video demonstration (60 seconds)
+
+https://www.youtube.com/shorts/IoQxtrSepTc
+
 ## Architecture Overview
 
 This project follows **Clean Architecture** with a **feature-first** structure, ensuring separation of concerns and maintainability.
@@ -99,6 +103,10 @@ flutter pub get
 flutter run
 ```
 
+**Devices used for development:**
+- iPhone 11 (real iOS device)
+- Xiaomi 10T (real Android device)
+
 ## Notes on Assumptions and Component Usage
 
 **Data Generation:** To ensure data is fresh and this demo app is time-independent, a data generation service runs on every app start and creates realistic fitness data for the past six months starting from today. This intentionally leaves some empty data spots to demonstrate empty cases - for example, every 10th of the month is left empty, and some metrics randomly have null scores. This approach allows the app to work standalone without a backend while showcasing various UI states.
@@ -108,6 +116,8 @@ flutter run
 **State Management Choice:** I opted for Cubits over Blocs for state management. Having worked extensively with Cubits in previous projects, I've found they provide a cleaner, more straightforward approach for the scope of this assignment. Cubits offer everything needed without the additional complexity of events and event handlers that Blocs require. The simpler emit-based pattern perfectly suits the reactive nature of this UI.
 
 **UI Philosophy:** The main goal was to create a smooth UX/UI that reacts to every user interaction.  The comprehensive component structure with reusable widgets, makes it easier to extend this project in the future with minimal effort. Every animation and every state (loading, empty and error) was implemented to feel polished and intentional.
+
+**Device Orientation:** The app is configured to support portrait orientation only (both upright and upside down). Since the design specifications and task requirements focused exclusively on portrait mode, landscape support was intentionally excluded from the scope of this demo.
 
 ---
 
