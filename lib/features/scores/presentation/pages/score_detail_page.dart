@@ -168,8 +168,8 @@ class ScoreDetailBody extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               ScoreHeader(
-                scoreType: scoreType,
-                onInfoTap: onInfoTap ?? () {},
+                title: timeframe == Timeframe.oneDay ? scoreType.displayName : 'History',
+                onInfoTap: timeframe == Timeframe.oneDay ? onInfoTap : null,
                 selectedDate: selectedDate,
                 timeframe: timeframe,
                 onPrevious: () => context.read<ScoreDetailCubit>().navigatePrevious(),
