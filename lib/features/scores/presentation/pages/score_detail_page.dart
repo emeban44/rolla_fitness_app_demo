@@ -62,19 +62,9 @@ class ScoreDetailView extends StatelessWidget {
         ],
       ),
       body: BlocListener<ScoreDetailCubit, ScoreDetailState>(
-        listener: (context, state) {
-          state.whenOrNull(
-            error: (failure, scoreType, timeframe, selectedDate) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                basicSnackbar(
-                  context: context,
-                  title: failure.message,
-                  variant: SnackbarVariant.error,
-                ),
-              );
-            },
-          );
-        },
+        listener: (context, state) => state.whenOrNull(
+          error: (failure, scoreType, timeframe, selectedDate) => showErrorSnackbar(context, message: failure.message),
+        ),
         child: BlocBuilder<ScoreDetailCubit, ScoreDetailState>(
           builder: (context, state) {
             return state.when(

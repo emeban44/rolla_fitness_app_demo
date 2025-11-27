@@ -1,7 +1,29 @@
 import 'package:flutter/material.dart';
 
+/// Show an error snackbar with the given message
+void showErrorSnackbar(BuildContext context, {required String message}) {
+  ScaffoldMessenger.of(context).showSnackBar(
+    _basicSnackbar(
+      context: context,
+      title: message,
+      variant: SnackbarVariant.error,
+    ),
+  );
+}
+
+/// Show a success snackbar with the given message
+void showSuccessSnackbar(BuildContext context, {required String message}) {
+  ScaffoldMessenger.of(context).showSnackBar(
+    _basicSnackbar(
+      context: context,
+      title: message,
+      variant: SnackbarVariant.success,
+    ),
+  );
+}
+
 /// Factory function that returns a custom SnackBar using [_BasicSnackbarContent].
-SnackBar basicSnackbar({
+SnackBar _basicSnackbar({
   required BuildContext context,
   required String title,
   Widget? leading,
