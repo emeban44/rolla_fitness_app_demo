@@ -53,6 +53,7 @@ class DataGenerator {
       // Generate data for each date
       for (var dayIndex = 0; dayIndex < dates.length; dayIndex++) {
         final date = dates[dayIndex];
+        final isToday = (dayIndex == dates.length - 1); // Last date is today
 
         // Generate scores for this day
         var healthScore = _generateScoreWithTrend(
@@ -75,10 +76,12 @@ class DataGenerator {
         final day = int.parse(date.split('-')[2]);
         final isTenthDay = (day % 10 == 0);
 
-        // Occasionally set overall score to null (2% chance)
-        if (_random.nextDouble() < 0.02) healthScore = null;
-        if (_random.nextDouble() < 0.02) readinessScore = null;
-        if (_random.nextDouble() < 0.02) activityScore = null;
+        // Occasionally set overall score to null (2% chance), but NEVER for today
+        if (!isToday) {
+          if (_random.nextDouble() < 0.02) healthScore = null;
+          if (_random.nextDouble() < 0.02) readinessScore = null;
+          if (_random.nextDouble() < 0.02) activityScore = null;
+        }
 
         // Add to history
         (data['history']!['health'] as List).add({
@@ -104,8 +107,8 @@ class DataGenerator {
             ? (activityScore + _random.nextInt(11) - 5).clamp(0, 100)
             : null;
 
-        // On 10th days, randomly nullify one metric (30% chance)
-        if (isTenthDay && _random.nextDouble() < 0.3) {
+        // On 10th days, randomly nullify one metric (30% chance), but NEVER for today
+        if (!isToday && isTenthDay && _random.nextDouble() < 0.3) {
           if (_random.nextBool()) {
             readinessMetricScore = null;
           } else {
@@ -141,7 +144,7 @@ class DataGenerator {
             var baseMetricScore =
                 (readinessScore + _random.nextInt(21) - 10).clamp(0, 100);
 
-            if (isTenthDay && _random.nextDouble() < 0.3) {
+            if (!isToday && isTenthDay && _random.nextDouble() < 0.3) {
               metricScore = null;
               metricValue = 'N/A';
             } else {
@@ -183,7 +186,7 @@ class DataGenerator {
             var baseMetricScore =
                 (activityScore + _random.nextInt(21) - 10).clamp(0, 100);
 
-            if (isTenthDay && _random.nextDouble() < 0.3) {
+            if (!isToday && isTenthDay && _random.nextDouble() < 0.3) {
               metricScore = null;
               metricValue = 'N/A';
             } else {
