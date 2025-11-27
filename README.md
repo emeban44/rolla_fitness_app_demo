@@ -4,7 +4,9 @@ A Flutter application demonstrating reusable UI components, clean architecture, 
 
 ## App video demonstration (60 seconds)
 
-https://www.youtube.com/shorts/IoQxtrSepTc
+https://github.com/user-attachments/assets/44c147c3-bf14-445a-bc83-3b60c48d7b02
+
+LINK: https://www.youtube.com/shorts/IoQxtrSepTc
 
 ## Architecture Overview
 
