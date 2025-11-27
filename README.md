@@ -101,27 +101,14 @@ flutter run
 
 ## Notes on Assumptions and Component Usage
 
-### Data Generation Service
-Implemented a sophisticated data generation service that creates realistic fitness data with temporal patterns, score correlations, and missing data simulation. This allows for rich UI testing without a backend and demonstrates pull-to-refresh functionality.
+**Data Generation:** To ensure data is fresh and this demo app is time-independent, a data generation service runs on every app start and creates realistic fitness data for the past six months starting from today. This intentionally leaves some empty data spots to demonstrate "no data" cases - for example, every 10th of the month is left empty, and some metrics randomly have null scores. This approach allows the app to work standalone without a backend while showcasing various UI states.
 
-### Key Implementation Decisions
+**Intentional Error States:** To fully demonstrate a realistic app flow, I've intentionally included error cases. On the home page, every third pull-to-refresh will trigger an error state showing an error snackbar - pressing "Try again" resolves it and returns to the loaded state. Similarly on the detail page, the last visited timeframe will intentionally emit an error state that can be fixed by pressing "Try again". This demonstrates proper error handling and recovery flows.
 
-**Timeframes:** All four timeframes (1D, 7D, 30D, 1Y) fully implemented. 1D shows daily totals with radial gauge, while 7D/30D/1Y show daily averages with "Avg" labels and trend charts.
+**State Management Choice:** I opted for Cubits over Blocs for state management. Having worked extensively with Cubits in previous projects, I've found they provide a cleaner, more straightforward approach for this type of application. For the scope of this assignment, Cubits offer everything needed without the additional complexity of events and event handlers that Blocs require. The simpler emit-based pattern perfectly suits the reactive nature of this UI.
 
-**Health Score Composition:** Calculated as the average of Readiness and Activity scores. The Health detail screen shows summary metrics from both categories.
-
-**Progress Bar Colors:** Conditional coloring based on score value - 0-49: neutral gray, 50-79: blue, 80+: green. This provides visual feedback relative to the personal baseline of 80.
-
-**Loading States:** Skeleton loaders shown on first visit to each timeframe, instant switching thereafter. Tracks visited timeframes for smooth UX. Demo includes error state on 4th timeframe visit.
-
-**Period Navigation:** Added previous/next period navigation for exploring historical data across all timeframes, with date-aware logic preventing navigation beyond today.
-
-**Charts:** Custom painters for 1D radial gauge (precise control over appearance), fl_chart for trend charts (robust performance). Both handle missing data with visual gaps.
-
-**Theme Support:** Full light/dark mode implementation with theme switcher, using centralized color system and Outfit font throughout.
-
-**Component Reusability:** Extensive use of reusable widgets following atomic design principles - from basic elements (CustomCard, LoadingSkeleton) to complex organisms (ScoreCard, TrendChart, ScoreHeader). Same widget components used across home and detail screens.
+**UI Philosophy:** The main goal was to create a smooth UX/UI that reacts to every user interaction.  The comprehensive component structure - with reusable widgets organized by atomic design principles - means this project could be extended in the future with minimal effort. Every animation and every state (loading, empty and error), was implemented to feel polished and intentional.
 
 ---
 
-**Flutter Version:** 3.35.5
+**Original Creator:** Emerald Podbicanin
