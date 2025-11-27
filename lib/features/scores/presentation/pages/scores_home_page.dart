@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/constants/app_dimensions.dart';
 import 'package:rolla_fitness_app_demo/core/di/scores_injection.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/app_bars/custom_app_bar.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/cards/custom_card.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error/error_widget.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/loading/loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/snackbar/basic_snackbar.dart';
-import 'package:rolla_fitness_app_demo/core/widgets/theme_switcher/theme_switcher.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_home/scores_home_cubit.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/cubit/scores_home/scores_home_state.dart';
@@ -34,10 +34,7 @@ class ScoresHomePageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Rolla Fitness'),
-        actions: const [ThemeSwitcher()],
-      ),
+      appBar: const CustomAppBar(title: 'Rolla Fitness'),
       body: BlocListener<ScoresHomeCubit, ScoresHomeState>(
         listener: (context, state) => state.whenOrNull(
           error: (failure) => showErrorSnackbar(context, message: failure.message),
