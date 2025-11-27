@@ -86,14 +86,12 @@ lib/
 
 ## Setup & Run Instructions
 
+Flutter version: 3.35.5
+Dart version: 3.9.2
+
 **Install dependencies:**
 ```bash
 flutter pub get
-```
-
-**Generate code (Freezed, Injectable, JSON):**
-```bash
-flutter pub run build_runner build --delete-conflicting-outputs
 ```
 
 **Run the app:**
