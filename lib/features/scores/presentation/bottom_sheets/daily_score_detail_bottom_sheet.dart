@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/widgets/bottom_sheet/bottom_sheet_header.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section/section_description.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/section/section_title.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric/metric.dart';
@@ -63,25 +64,7 @@ class DailyScoreDetailBottomSheet extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Header
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    scoreTitle,
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                ),
-                IconButton(
-                  onPressed: () => Navigator.pop(context),
-                  icon: const Icon(Icons.close),
-                ),
-              ],
-            ),
-          ),
-
+          BottomSheetHeader(title: scoreTitle),
           Flexible(
             child: SingleChildScrollView(
               padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
