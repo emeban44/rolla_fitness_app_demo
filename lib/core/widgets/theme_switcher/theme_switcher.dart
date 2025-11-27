@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/theme/theme_cubit.dart';
 
-/// Reusable theme switcher widget for app bars
+/// Reusable theme switcher action widget.
 class ThemeSwitcher extends StatelessWidget {
   const ThemeSwitcher({super.key});
 

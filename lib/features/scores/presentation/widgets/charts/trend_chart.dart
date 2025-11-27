@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/score_history_point/score_history_point.dart';
 
 /// Bar chart widget for displaying score history
@@ -55,7 +56,7 @@ class TrendChart extends StatelessWidget {
                       child: Text(
                         value.toInt().toString(),
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
+                          color: context.colors.foregroundSubtle,
                         ),
                       ),
                     );
@@ -82,7 +83,7 @@ class TrendChart extends StatelessWidget {
                           label,
                           style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             fontSize: 11,
-                            color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
+                            color: context.colors.foregroundSubtle,
                           ),
                         ),
                       );
@@ -98,15 +99,15 @@ class TrendChart extends StatelessWidget {
               horizontalInterval: 25,
               getDrawingHorizontalLine: (value) {
                 return FlLine(
-                  color: _getGridLineColor(context),
+                  color: context.colors.gridLine,
                   strokeWidth: 1,
                 );
               },
             ),
             extraLinesData: ExtraLinesData(
               horizontalLines: [
-                _createHorizontalLine(0, context),
-                _createHorizontalLine(100, context),
+                HorizontalLine(y: 0, color: context.colors.gridLine, strokeWidth: 1),
+                HorizontalLine(y: 100, color: context.colors.gridLine, strokeWidth: 1),
               ],
             ),
             borderData: FlBorderData(show: false),
@@ -225,21 +226,5 @@ class TrendChart extends StatelessWidget {
       // 1Y: Show month (Jan, Feb, etc.)
       return DateFormat('MMM').format(date);
     }
-  }
-
-  /// Get grid line color based on theme
-  Color _getGridLineColor(BuildContext context) {
-    return Theme.of(context).brightness == Brightness.dark
-        ? Colors.white.withValues(alpha: 0.1)
-        : Colors.grey.withValues(alpha: 0.2);
-  }
-
-  /// Create horizontal line at specified y-value
-  HorizontalLine _createHorizontalLine(double y, BuildContext context) {
-    return HorizontalLine(
-      y: y,
-      color: _getGridLineColor(context),
-      strokeWidth: 1,
-    );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_colors.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 
 /// Reusable error widget with retry functionality
 class AppErrorWidget extends StatelessWidget {
@@ -35,7 +36,7 @@ class AppErrorWidget extends StatelessWidget {
               message,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Theme.of(context).textTheme.bodySmall?.color,
+                    color: context.colors.foregroundSecondary,
                   ),
             ),
             if (onRetry != null) ...[

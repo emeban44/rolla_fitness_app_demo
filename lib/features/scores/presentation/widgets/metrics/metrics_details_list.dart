@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/core/utils/helpers/metric_helper.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/entities/metric/metric.dart';
 
@@ -103,7 +104,7 @@ class _MetricInfoRow extends StatelessWidget {
         Text(
           metric.displayValue,
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-            color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
+            color: context.colors.foregroundSubtle,
           ),
         ),
         const SizedBox(width: 8),

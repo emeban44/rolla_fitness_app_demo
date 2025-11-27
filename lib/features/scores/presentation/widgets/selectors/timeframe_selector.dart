@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/enums/timeframe.dart';
 
 /// Timeframe selector widget with 1D, 7D, 30D, 1Y tabs
@@ -51,7 +52,7 @@ class TimeframeSelector extends StatelessWidget {
                   child: Container(
                     width: tabWidth,
                     height: 2,
-                    color: Theme.of(context).textTheme.bodyLarge?.color ?? Colors.black,
+                    color: context.colors.foregroundPrimary,
                   ),
                 );
               },
@@ -110,8 +111,8 @@ class TimeframeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textColor = isSelected
-        ? Theme.of(context).textTheme.bodyLarge?.color
-        : Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.5);
+        ? context.colors.foregroundPrimary
+        : context.colors.foregroundSubtle;
 
     return Expanded(
       child: GestureDetector(

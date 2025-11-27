@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/enums/timeframe.dart';
 
 /// Time period selector with navigation chevrons
@@ -25,8 +26,6 @@ class TimePeriodSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textColor = Theme.of(context).textTheme.bodyLarge?.color;
-
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -36,7 +35,7 @@ class TimePeriodSelector extends StatelessWidget {
           child: Icon(
             Icons.chevron_left,
             size: 24,
-            color: canGoPrevious ? textColor : textColor?.withValues(alpha: 0.3),
+            color: canGoPrevious ? context.colors.foregroundPrimary : context.colors.foregroundDisabled,
           ),
         ),
 
@@ -50,7 +49,7 @@ class TimePeriodSelector extends StatelessWidget {
             fontWeight: FontWeight.w400,
             height: 1.0,
             letterSpacing: 0,
-            color: textColor,
+            color: context.colors.foregroundPrimary,
           ),
         ),
 
@@ -62,7 +61,7 @@ class TimePeriodSelector extends StatelessWidget {
           child: Icon(
             Icons.chevron_right,
             size: 24,
-            color: canGoNext ? textColor : textColor?.withValues(alpha: 0.3),
+            color: canGoNext ? context.colors.foregroundPrimary : context.colors.foregroundDisabled,
           ),
         ),
       ],

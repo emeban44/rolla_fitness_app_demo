@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:rolla_fitness_app_demo/core/theme/app_typography.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 
 /// Neumorphic circular radial gauge showing score 0-100
 /// Shows "N/A" when score is null (missing data)
@@ -30,12 +31,12 @@ class RadialGauge extends StatelessWidget {
           color: Theme.of(context).scaffoldBackgroundColor,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.1),
+              color: context.colors.shadowMedium,
               blurRadius: 20,
               offset: const Offset(0, 10),
             ),
             BoxShadow(
-              color: Colors.white.withValues(alpha: 0.8),
+              color: context.colors.shadowStrong,
               blurRadius: 20,
               offset: const Offset(0, 1),
             ),
@@ -52,10 +53,10 @@ class RadialGauge extends StatelessWidget {
             final displayScore = score == null ? null : animatedValue.round();
             return CustomPaint(
               painter: ArcPainter(
+                context: context,
                 score: displayScore,
                 color: color,
                 strokeWidth: 6,
-                isDark: Theme.of(context).brightness == Brightness.dark,
               ),
               child: Center(
                 child: Text(
@@ -73,16 +74,16 @@ class RadialGauge extends StatelessWidget {
 
 /// Painter for the colored arc showing score with background track
 class ArcPainter extends CustomPainter {
+  final BuildContext context;
   final int? score;
   final Color color;
   final double strokeWidth;
-  final bool isDark;
 
   ArcPainter({
+    required this.context,
     required this.score,
     required this.color,
     required this.strokeWidth,
-    required this.isDark,
   });
 
   @override
@@ -96,9 +97,7 @@ class ArcPainter extends CustomPainter {
     );
 
     // Background track color (same as dots)
-    final backgroundTrackColor = isDark
-        ? Colors.white.withValues(alpha: 0.1)
-        : Colors.grey.withValues(alpha: 0.2);
+    final backgroundTrackColor = context.colors.gridLine;
 
     // Draw full circle background track (unfinished progress)
     final backgroundPaint = Paint()
@@ -138,6 +137,6 @@ class ArcPainter extends CustomPainter {
   bool shouldRepaint(covariant ArcPainter oldDelegate) {
     return oldDelegate.score != score ||
         oldDelegate.color != color ||
-        oldDelegate.isDark != isDark;
+        Theme.of(oldDelegate.context).brightness != Theme.of(context).brightness;
   }
 }

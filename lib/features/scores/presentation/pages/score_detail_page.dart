@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rolla_fitness_app_demo/core/di/scores_injection.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/snackbar/basic_snackbar.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/charts/chart_loading_skeleton.dart';
 import 'package:rolla_fitness_app_demo/core/widgets/error/error_widget.dart';
@@ -158,7 +159,7 @@ class ScoreDetailView extends StatelessWidget {
                                   Text(
                                     'Daily Avg.',
                                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                      color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
+                                      color: context.colors.foregroundSubtle,
                                     ),
                                   ),
                               ],
@@ -343,7 +344,7 @@ class LoadingSkeletonView extends StatelessWidget {
                       Text(
                         'Daily Avg.',
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.6),
+                          color: context.colors.foregroundSubtle,
                         ),
                       ),
                   ],

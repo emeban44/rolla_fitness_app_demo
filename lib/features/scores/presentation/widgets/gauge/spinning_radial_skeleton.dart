@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 
 /// A spinning radial gauge skeleton for loading states
 /// Looks like a radial gauge that's spinning/loading
@@ -38,9 +39,7 @@ class _SpinningRadialSkeletonState extends State<SpinningRadialSkeleton> with Si
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final baseColor =
-        widget.color ?? (isDark ? Colors.white.withValues(alpha: 0.2) : Colors.grey.withValues(alpha: 0.3));
+    final baseColor = widget.color ?? context.colors.skeletonBase;
 
     return SizedBox(
       width: widget.size,
@@ -51,12 +50,12 @@ class _SpinningRadialSkeletonState extends State<SpinningRadialSkeleton> with Si
           color: Theme.of(context).scaffoldBackgroundColor,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.1),
+              color: context.colors.shadowMedium,
               blurRadius: 20,
               offset: const Offset(0, 10),
             ),
             BoxShadow(
-              color: Colors.white.withValues(alpha: 0.8),
+              color: context.colors.shadowStrong,
               blurRadius: 20,
               offset: const Offset(0, 1),
             ),
@@ -67,15 +66,14 @@ class _SpinningRadialSkeletonState extends State<SpinningRadialSkeleton> with Si
           builder: (context, child) {
             return CustomPaint(
               painter: _SpinningArcPainter(
+                context: context,
                 progress: _controller.value,
                 color: baseColor,
                 strokeWidth: 6,
-                isDark: isDark,
               ),
               child: Center(
                 child: _ShimmeringText(
                   controller: _controller,
-                  isDark: isDark,
                 ),
               ),
             );
@@ -89,11 +87,9 @@ class _SpinningRadialSkeletonState extends State<SpinningRadialSkeleton> with Si
 /// Shimmer effect for the score text during loading
 class _ShimmeringText extends StatelessWidget {
   final AnimationController controller;
-  final bool isDark;
 
   const _ShimmeringText({
     required this.controller,
-    required this.isDark,
   });
 
   @override
@@ -109,7 +105,7 @@ class _ShimmeringText extends StatelessWidget {
           height: 30,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            color: isDark ? Colors.white.withValues(alpha: opacity) : Colors.grey.withValues(alpha: opacity),
+            color: context.colors.decorativeWithOpacity(opacity),
           ),
         );
       },
@@ -119,16 +115,16 @@ class _ShimmeringText extends StatelessWidget {
 
 /// Painter for the spinning arc
 class _SpinningArcPainter extends CustomPainter {
+  final BuildContext context;
   final double progress;
   final Color color;
   final double strokeWidth;
-  final bool isDark;
 
   _SpinningArcPainter({
+    required this.context,
     required this.progress,
     required this.color,
     required this.strokeWidth,
-    required this.isDark,
   });
 
   @override
@@ -142,7 +138,7 @@ class _SpinningArcPainter extends CustomPainter {
     );
 
     // Background track
-    final backgroundTrackColor = isDark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.withValues(alpha: 0.2);
+    final backgroundTrackColor = context.colors.gridLine;
 
     final backgroundPaint = Paint()
       ..color = backgroundTrackColor

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 
-/// Reusable section title with optional info icon
-/// Used for section headings like "Metrics", "About", and in ScoreHeader
+/// Reusable section title with optional info icon.
 class SectionTitle extends StatelessWidget {
   final String title;
   final VoidCallback? onInfoTap;
@@ -25,7 +25,7 @@ class SectionTitle extends StatelessWidget {
             fontWeight: FontWeight.w400,
             height: 1.0,
             letterSpacing: 0,
-            color: Theme.of(context).textTheme.bodyLarge?.color,
+            color: context.colors.foregroundPrimary,
           ),
         ),
         if (onInfoTap != null) ...[
@@ -37,21 +37,13 @@ class SectionTitle extends StatelessWidget {
               height: 20,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Theme.of(context)
-                    .textTheme
-                    .bodySmall
-                    ?.color
-                    ?.withValues(alpha: 0.15),
+                color: context.colors.foregroundFaint,
               ),
               child: Center(
                 child: Icon(
                   Icons.help_outline,
                   size: 14,
-                  color: Theme.of(context)
-                      .textTheme
-                      .bodySmall
-                      ?.color
-                      ?.withValues(alpha: 0.7),
+                  color: context.colors.foregroundMuted,
                 ),
               ),
             ),

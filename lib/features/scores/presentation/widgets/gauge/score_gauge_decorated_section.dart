@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:rolla_fitness_app_demo/core/theme/theme_extensions.dart';
 import 'package:rolla_fitness_app_demo/features/scores/domain/enums/score_type.dart';
 import 'package:rolla_fitness_app_demo/features/scores/presentation/widgets/gauge/radial_gauge.dart';
 
@@ -26,9 +27,7 @@ class ScoreGaugeDecoratedSection extends StatelessWidget {
           // Ripple dotted background centered
           Positioned.fill(
             child: CustomPaint(
-              painter: RippleDottedBackgroundPainter(
-                isDark: Theme.of(context).brightness == Brightness.dark,
-              ),
+              painter: RippleDottedBackgroundPainter(context: context),
             ),
           ),
 
@@ -48,10 +47,10 @@ class ScoreGaugeDecoratedSection extends StatelessWidget {
 
 /// Custom painter for ripple/wavelength dotted background
 class RippleDottedBackgroundPainter extends CustomPainter {
-  final bool isDark;
+  final BuildContext context;
 
   RippleDottedBackgroundPainter({
-    required this.isDark,
+    required this.context,
   });
 
   @override
@@ -64,6 +63,8 @@ class RippleDottedBackgroundPainter extends CustomPainter {
     const dotsPerCircle = 28; // Dots per circle
     const dotRadius = 2.5;
 
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     for (int circleIndex = 0; circleIndex < circleCount; circleIndex++) {
       // Calculate alpha - aggressive fade in first 6 circles
       final baseAlpha = isDark ? 0.15 : 0.22;
@@ -72,7 +73,7 @@ class RippleDottedBackgroundPainter extends CustomPainter {
 
       // Create paint with progressive fade
       final paint = Paint()
-        ..color = isDark ? Colors.white.withValues(alpha: alpha) : Colors.grey.withValues(alpha: alpha)
+        ..color = context.colors.decorativeWithOpacity(alpha)
         ..style = PaintingStyle.fill;
 
       // Each circle gets progressively larger
@@ -94,6 +95,6 @@ class RippleDottedBackgroundPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant RippleDottedBackgroundPainter oldDelegate) {
-    return oldDelegate.isDark != isDark;
+    return Theme.of(oldDelegate.context).brightness != Theme.of(context).brightness;
   }
 }
