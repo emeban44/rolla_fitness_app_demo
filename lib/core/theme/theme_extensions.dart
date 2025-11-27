@@ -43,10 +43,14 @@ class AppColorsExtension {
   Color decorativeWithOpacity(double opacity) =>
       _isDark ? Colors.white.withValues(alpha: opacity) : Colors.grey.withValues(alpha: opacity);
 
-  // Shadow colors (always use black for shadows)
+  // Shadow colors
   Color get shadowLight => Colors.black.withValues(alpha: 0.05);
-  Color get shadowMedium => Colors.black.withValues(alpha: 0.1);
-  Color get shadowStrong => Colors.white.withValues(alpha: 0.8);
+  Color get shadowMedium => _isDark
+      ? Colors.black.withValues(alpha: 0.3)
+      : Colors.black.withValues(alpha: 0.1);
+  Color get shadowStrong => _isDark
+      ? Colors.black.withValues(alpha: 0.15)
+      : Colors.white.withValues(alpha: 0.8);
 
   // Accent colors
   Color get healthPurple => AppColors.healthPurple;
