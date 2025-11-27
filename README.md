@@ -1,6 +1,6 @@
-# Rolla Fitness App - Score Detail Preview Demo
+# Rolla Fitness App - Preview Demo
 
-A Flutter application demonstrating reusable UI components, clean architecture, and smooth interactions for the Rolla Score Detail screens.
+A Flutter application demonstrating reusable UI components, clean architecture, and smooth interactions.
 
 ## Architecture Overview
 
@@ -86,8 +86,8 @@ lib/
 
 ## Setup & Run Instructions
 
-Flutter version: 3.35.5
-Dart version: 3.9.2
+- Flutter version: 3.35.5
+- Dart version: 3.9.2
 
 **Install dependencies:**
 ```bash
@@ -101,13 +101,13 @@ flutter run
 
 ## Notes on Assumptions and Component Usage
 
-**Data Generation:** To ensure data is fresh and this demo app is time-independent, a data generation service runs on every app start and creates realistic fitness data for the past six months starting from today. This intentionally leaves some empty data spots to demonstrate "no data" cases - for example, every 10th of the month is left empty, and some metrics randomly have null scores. This approach allows the app to work standalone without a backend while showcasing various UI states.
+**Data Generation:** To ensure data is fresh and this demo app is time-independent, a data generation service runs on every app start and creates realistic fitness data for the past six months starting from today. This intentionally leaves some empty data spots to demonstrate empty cases - for example, every 10th of the month is left empty, and some metrics randomly have null scores. This approach allows the app to work standalone without a backend while showcasing various UI states.
 
 **Intentional Error States:** To fully demonstrate a realistic app flow, I've intentionally included error cases. On the home page, every third pull-to-refresh will trigger an error state showing an error snackbar - pressing "Try again" resolves it and returns to the loaded state. Similarly on the detail page, the last visited timeframe will intentionally emit an error state that can be fixed by pressing "Try again". This demonstrates proper error handling and recovery flows.
 
-**State Management Choice:** I opted for Cubits over Blocs for state management. Having worked extensively with Cubits in previous projects, I've found they provide a cleaner, more straightforward approach for this type of application. For the scope of this assignment, Cubits offer everything needed without the additional complexity of events and event handlers that Blocs require. The simpler emit-based pattern perfectly suits the reactive nature of this UI.
+**State Management Choice:** I opted for Cubits over Blocs for state management. Having worked extensively with Cubits in previous projects, I've found they provide a cleaner, more straightforward approach for the scope of this assignment. Cubits offer everything needed without the additional complexity of events and event handlers that Blocs require. The simpler emit-based pattern perfectly suits the reactive nature of this UI.
 
-**UI Philosophy:** The main goal was to create a smooth UX/UI that reacts to every user interaction.  The comprehensive component structure - with reusable widgets organized by atomic design principles - means this project could be extended in the future with minimal effort. Every animation and every state (loading, empty and error), was implemented to feel polished and intentional.
+**UI Philosophy:** The main goal was to create a smooth UX/UI that reacts to every user interaction.  The comprehensive component structure with reusable widgets, makes it easier to extend this project in the future with minimal effort. Every animation and every state (loading, empty and error) was implemented to feel polished and intentional.
 
 ---
 
